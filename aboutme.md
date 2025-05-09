@@ -1,16 +1,18 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Why would you want to be my friend?
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is Adnan Sadik. I may (or may not) have the following qualities:
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+- I like strategic games from Chess to Avalon, Poker  and virtually the silliest things one can come up with.
 
-What else do you need?
+- I like working with passionate people on passionate things.
+- I love watching and reading mystery fictions.
+
+Still not convinced? Well, I tried. That's what matters as my mom would say.
 
 ### My story
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+Once I was a wooden boy..

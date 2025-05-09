@@ -53,7 +53,7 @@ round-avatar: true
 social-network-links:
   email: "adnansadik235@kaist.ac.kr"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  linkedin: https://www.linkedin.com/in/adnan-sadik/
+  linkedin: adnan-sadik
   github: yayme
 
 #  medium: yourname

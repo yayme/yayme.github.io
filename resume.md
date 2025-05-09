@@ -2,7 +2,7 @@
 layout: post
 title: Resume
 subtitle: A concise summary of my experiences, projects, and achievements
-author: Your Name
+author: Adnan Sadik
 ---
 
 ## Work Experience
@@ -17,14 +17,14 @@ Developed ML pipelines for classifying sleep disorders and contributed to two re
 ### Users & Informations Lab, KAIST  
 **Undergraduate Researcher, Project: ChatGPT Voices**  
 *Aug 2024 -- Dec 2024*  
-Built a Bengali cultural benchmark dataset and evaluated LLMs on language and reasoning tasks.
+Built a Bengali cultural benchmark dataset and evaluated LLMs on language and reasoning tasks. Coauthored Research Paper in submission.
 
 ---
 
 ### Data Strategy Lab, KAIST  
 **Research Intern**  
 *Apr 2024 – May 2024*  
-Studied fairness in AI; reviewed and applied bias mitigation techniques.
+Studied fairness in AI; reviewed and researched bias mitigation techniques.
 
 ---
 

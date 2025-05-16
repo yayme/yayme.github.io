@@ -58,7 +58,7 @@ Used Bayesian inference and classification to optimize inventory and healthcare 
 
 ## Honors & Awards
 
-- **Top 25%, Best-in-University Prize** – Simon Marais Mathematics Competition, 2024  
+- **Top Quartile, Best-in-University Jane Street Prize** – Simon Marais Mathematics Competition, 2024  
 - **Bronze Medalist** – International Mathematical Olympiad (IMO), 2020, 2021  
 - **Bronze Medalist** – Asian Pacific Mathematical Olympiad (APMO), 2021, 2022  
 - **Bronze Medalist** – Bangladesh Olympiad in Informatics, 2022  

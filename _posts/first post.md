@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 
-subtitle: 
-gh-repo: 
+title: Sample title
+subtitle: No Subtitle
+gh-repo: yayme/normalsite
 gh-badge: [star, fork, follow]
-tags: []
+tags: [test]
 comments: true
 mathjax: true
-author: 
+author: Adnan Sadik
 ---
 
 {: .box-success}
@@ -15,5 +15,5 @@ This is a new blog post.
 
 ## Heading
 
-Write your content here.
+Here we go!
 

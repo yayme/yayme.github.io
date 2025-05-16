@@ -14,7 +14,7 @@ author: Adnan Sadik
 ### IBS Biomedical Mathematics Group, South Korea  
 **Machine Learning Research Intern**  
 *Dec 2024 – June 2025*  
-Developed ML pipelines for classifying sleep disorders and contributed to two research manuscripts.
+Developed ML pipelines for classifying sleep disorders and contributing to two research projects.
 
 ---
 

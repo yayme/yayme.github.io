@@ -33,7 +33,9 @@ Studied fairness in AI; reviewed and researched bias mitigation techniques.
 ---
 
 ## Projects
-### *Currently working on*: Volatility Inference with Stochastic Differential Equations and Data assimilation
+### *Currently working on*: 
+### Volatility Inference with Stochastic Differential Equations and Data assimilation:
+...
 ### Real-time Sarcasm Detector  
 *Python, PyTorch, NLP* – [GitHub](https://github.com/yayme/Bazinga-)  
 Built a BERT-based sarcasm classifier with Hugging Face and TweetEval for real-time inference.

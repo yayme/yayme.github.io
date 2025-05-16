@@ -4,6 +4,10 @@ title: Resume
 subtitle: A concise summary of my experiences, projects, and achievements
 author: Adnan Sadik
 ---
+## Interest:
+### Data -> Signal -> Model ->Decision ###
+** Statistics, Machine Learning, AI, Quantitative Finance, game theory, Social/Economic Modeling **
+
 
 ## Work Experience
 
@@ -29,6 +33,7 @@ Studied fairness in AI; reviewed and researched bias mitigation techniques.
 ---
 
 ## Projects
+### *Currently working on*: Volatility Inference with Stochastic Differential Equations and Data assimilation
 ### Real-time Sarcasm Detector  
 *Python, PyTorch, NLP* – [GitHub](https://github.com/yayme/Bazinga-)  
 Built a BERT-based sarcasm classifier with Hugging Face and TweetEval for real-time inference.
@@ -40,7 +45,7 @@ Created a real-time file sorter using NLP and vector similarity to classify cont
 ---
 
 ### Bayesian Filtering and Data Assimilation with Python  
-*Python* – [GitHub](https://github.com/yayme/Volatility-Inference-with-SDEs-Data-Assimilation)  
+*Python* – [GitHub](https://github.com/yayme/Data-Assimilation)  
 Implemented Kalman and Particle Filters for state estimation in noisy time-series environments.
 
 ---

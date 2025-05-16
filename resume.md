@@ -6,7 +6,7 @@ author: Adnan Sadik
 ---
 ## Interest:
 ### Data -> Signal -> Model ->Decision ###
-** Statistics, Machine Learning, AI, Quantitative Finance, game theory, Social/Economic Modeling **
+*Statistics, Machine Learning, AI, Quantitative Finance, game theory, Social/Economic Modeling*
 
 
 ## Work Experience

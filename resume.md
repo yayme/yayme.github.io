@@ -21,7 +21,7 @@ Developed ML pipelines for classifying sleep disorders and contributing to two r
 ### Users & Informations Lab, KAIST  
 **Undergraduate Researcher, Project: ChatGPT Voices**  
 *Aug 2024 -- Dec 2024*  
-Built a Bengali cultural benchmark dataset and evaluated LLMs on language and reasoning tasks. Coauthored Research Paper in submission.
+Built a cultural benchmark dataset for low resource language and evaluated LLMs on language and reasoning tasks. Coauthored Research Paper in submission.
 
 ---
 

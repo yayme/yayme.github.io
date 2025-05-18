@@ -3,7 +3,7 @@ layout: post
 title: The Two Envelope Paradox
 subtitle: The curious case of infinite switching
 gh-repo: yayme/normalsite
-gh-badge: [star, fork, follow]
+gh-badge: [follow]
 tags: [probability]
 comments: true
 mathjax: true

@@ -52,10 +52,11 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   email: "adnansadik235@kaist.ac.kr"
-  rss: true  # remove this line if you don't want to show an RSS link at the bottom
+  # rss: true  # remove this line if you don't want to show an RSS link at the bottom
   linkedin: adnan-sadik
   github: yayme
   google-scholar: https://scholar.google.com/citations?user=fAIOqccAAAAJ&hl=en
+  chesscom: https://www.chess.com/member/adnansadik
 
 #  medium: yourname
 #  reddit: yourname or r/yoursubreddit
@@ -74,7 +75,6 @@ social-network-links:
 #  mastodon: instance.url/@username
 #  bluesky: yourname
 #  ORCID: your ORCID ID
-
 #  discord: "invite_code" or "users/userid" or "invite/invite_code"
 #  kaggle: yourname
 #  hackerrank: yourname
@@ -99,6 +99,7 @@ share-links-active:
   vk: false
   reddit: false
   google-scholar: true
+  chesscom: true
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer

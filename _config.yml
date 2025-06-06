@@ -55,6 +55,7 @@ social-network-links:
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
   linkedin: adnan-sadik
   github: yayme
+  google-scholar: https://scholar.google.com/citations?user=fAIOqccAAAAJ&hl=en
 
 #  medium: yourname
 #  reddit: yourname or r/yoursubreddit
@@ -73,7 +74,7 @@ social-network-links:
 #  mastodon: instance.url/@username
 #  bluesky: yourname
 #  ORCID: your ORCID ID
-#  google-scholar: your google scholar
+
 #  discord: "invite_code" or "users/userid" or "invite/invite_code"
 #  kaggle: yourname
 #  hackerrank: yourname
@@ -97,6 +98,7 @@ share-links-active:
   linkedin: true
   vk: false
   reddit: false
+  google-scholar: true
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer

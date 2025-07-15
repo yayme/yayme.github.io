@@ -36,6 +36,11 @@ Studied fairness in AI; reviewed and researched bias mitigation techniques.
 ### *Currently working on*: 
 ### Volatility Inference with Stochastic Differential Equations and Data assimilation:
 ...
+### SignalCraft: Crypto Alpha Discovery System  
+*Python, Quant Research, Backtesting* – [GitHub](https://github.com/yayme/Crypto-SignalCraft)  
+Developed a modular pipeline to identify and backtest predictive signals from crypto spot data.  
+Achieved ~52% hit rate and Sharpe ratio > 1 using ensemble models and adaptive trading strategies.
+
 ### Real-time Sarcasm Detector  
 *Python, PyTorch, NLP* – [GitHub](https://github.com/yayme/Bazinga-)  
 Built a BERT-based sarcasm classifier with Hugging Face and TweetEval for real-time inference.

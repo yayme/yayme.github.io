@@ -1,5 +1,12 @@
 # Beautiful Jekyll
 
+---
+meta_title: "README | Adnan Sadik Site"
+meta_description: "Documentation and setup instructions for Adnan Sadik's Jekyll-based portfolio site."
+---
+
+# Beautiful Jekyll
+
 [![Gem Version](https://badge.fury.io/rb/beautiful-jekyll-theme.svg)](https://badge.fury.io/rb/beautiful-jekyll-theme)
 
 > By [Dean Attali](https://deanattali.com) &middot; [Demo](https://beautifuljekyll.com/)

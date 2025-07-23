@@ -1,3 +1,8 @@
+---
+meta_title: "Changelog | Adnan Sadik Site"
+meta_description: "Changelog and version history for Adnan Sadik's Jekyll-based portfolio site."
+---
+## Unreleased version
 ## Unreleased version
 - BREAKING CHANGE: Allow changing the order of the social network links that appear in the footer (#1152)
 - BREAKING CHANGE: `google-scholar` social network link no longer requires the prefix `citations?user=`; if you previously set this parameter, it needs to be updated (#1189)

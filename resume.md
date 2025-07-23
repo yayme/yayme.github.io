@@ -1,5 +1,6 @@
----
 layout: post
+meta_title: "Resume | Adnan Sadik"
+meta_description: "Resume of Adnan Sadik, showcasing skills, experience, and education."
 title: Resume
 subtitle: A concise summary of my experiences, projects, and achievements
 author: Adnan Sadik

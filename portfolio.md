@@ -1,9 +1,9 @@
----
 layout: page
+meta_title: "Portfolio | Adnan Sadik"
+meta_description: "Selected projects and research by Adnan Sadik, including AI, quant research, and data science."
 title: Portfolio
 subtitle: Selected Projects and Research
 author: Adnan Sadik
----
 
 ## Projects
 

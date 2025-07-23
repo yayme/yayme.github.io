@@ -1,9 +1,11 @@
+---
 layout: page
 meta_title: "Portfolio | Adnan Sadik"
 meta_description: "Selected projects and research by Adnan Sadik, including AI, quant research, and data science."
 title: Portfolio
 subtitle: Selected Projects and Research
 author: Adnan Sadik
+---
 
 ## Projects
 
@@ -23,13 +25,11 @@ Built a BERT-based sarcasm classifier with Hugging Face and TweetEval for real-t
 *Python, AI/ML* – [GitHub](https://github.com/yayme/Desktop_file_organizer)  
 Created a real-time file sorter using NLP and vector similarity to classify content-based documents.
 
----
 
 ### Bayesian Filtering and Data Assimilation with Python  
 *Python* – [GitHub](https://github.com/yayme/Data-Assimilation)  
 Implemented Kalman and Particle Filters for state estimation in noisy time-series environments.
 
----
 
 ### Statistical Decision Making - Class Project  
 *Python* – [GitHub](https://github.com/yayme/Statistical-Decision-Making)  

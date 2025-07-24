@@ -1,6 +1,5 @@
+---
 layout: page
-meta_title: "About Me | Adnan Sadik"
-meta_description: "Learn more about Adnan Sadik, his background, interests, and professional journey."
 title: About me
 subtitle: Why would you want to be my friend?
 ---

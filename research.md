@@ -10,9 +10,10 @@ keywords: "machine learning, financial AI, statistical learning, biomedical math
 ## Current Research
 
 ### Sleep Disorder Classification using Machine Learning
-**IBS Biomedical Mathematics Group, South Korea**  
+**[IBS Biomedical Mathematics Group](https://www.ibs.re.kr/bimag/), South Korea**  
 *Dec 2024 – June 2025*
 - Ongoing
+- Supervisor: [Prof. Jae Kyoung Kim](https://mathsci.kaist.ac.kr/~jaekkim/)
 
 ### Natural Language Processing and Cultural Computing
 **Users & Informations Lab, KAIST**  
@@ -20,7 +21,7 @@ keywords: "machine learning, financial AI, statistical learning, biomedical math
 - Developed cultural benchmark datasets for low-resource languages
 - Evaluated Large Language Models on language understanding and reasoning tasks
 - Research paper in submission
-- Supervisor: [Users & Informations Lab, KAIST](https://www.uixlab.io/)
+- Supervisor: [Users & Informations Lab, KAIST](https://uilab.kr/)
 
 
 ### AI Fairness and Bias Mitigation

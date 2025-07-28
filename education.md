@@ -32,6 +32,7 @@ author: Adnan Sadik
 ### Notable Academic Achievements
 - Full ride scholarship recipient
 - Dean's List (Fall 2023)
+-ISSS Scholarship recipient (Fall 2024)
 
 ### Current Focus Areas
 - Applied Statistics and Machine Learning

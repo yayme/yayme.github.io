@@ -16,13 +16,11 @@ keywords: "machine learning, financial AI, statistical learning, biomedical math
 - Supervisor: [Prof. Jae Kyoung Kim](https://mathsci.kaist.ac.kr/~jaekkim/)
 
 ### Natural Language Processing and Cultural Computing
-**Users & Informations Lab, KAIST**  
+**[Users & Informations Lab](https://uilab.kr/), KAIST**  
 *Aug 2024 -- Dec 2024*  
 - Developed cultural benchmark datasets for low-resource languages
 - Evaluated Large Language Models on language understanding and reasoning tasks
 - Research paper in submission
-- Supervisor: [Users & Informations Lab, KAIST](https://uilab.kr/)
-
 
 ### AI Fairness and Bias Mitigation
 **Data Strategy Lab, KAIST**  

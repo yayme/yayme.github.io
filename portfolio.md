@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Portfolio
-subtitle: Selected Projects and Research
+subtitle: Selected Projects 
 author: Adnan Sadik
 ---
 

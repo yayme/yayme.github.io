@@ -7,6 +7,11 @@ author: Adnan Sadik
 
 ## Current Research
 
+### Sleep Disorder Classification using Machine Learning
+**IBS Biomedical Mathematics Group, South Korea**  
+*Dec 2024 – June 2025*
+- Ongoing
+
 ### Natural Language Processing and Cultural Computing
 **Users & Informations Lab, KAIST**  
 *Aug 2024 -- Dec 2024*  
@@ -15,10 +20,6 @@ author: Adnan Sadik
 - Research paper in submission
 - Supervisor: [Users & Informations Lab, KAIST](https://www.uixlab.io/)
 
-### Sleep Disorder Classification using Machine Learning
-**IBS Biomedical Mathematics Group, South Korea**  
-*Dec 2024 – June 2025*
-- Ongoing
 
 ### AI Fairness and Bias Mitigation
 **Data Strategy Lab, KAIST**  
@@ -30,23 +31,11 @@ author: Adnan Sadik
 
 ## Research Interests
 
-### Machine Learning & AI
-- Deep Learning
-- Natural Language Processing
-- Time Series Analysis
-- Reinforcement Learning
+- **Financial AI & Mathematical Modeling**
+- **Statistical Learning Theory**
+- **Biomedical Mathematics**
+- **Time Series Analysis**
 
-### Mathematical Finance
-- Stochastic Differential Equations
-- Data Assimilation Methods
-- Quantitative Trading
-- Financial Time Series
-
-### Applied Mathematics
-- Statistical Learning Theory
-- Optimization
-- Probability Theory
-- Mathematical Modeling
 
 ## Publications and Preprints
 

@@ -3,6 +3,8 @@ layout: page
 title: Research
 subtitle: Research Projects and Publications
 author: Adnan Sadik
+meta_description: "Research work in Financial AI, Statistical Learning, and Biomedical Mathematics by Adnan Sadik at KAIST"
+keywords: "machine learning, financial AI, statistical learning, biomedical mathematics, KAIST research"
 ---
 
 ## Current Research

@@ -7,7 +7,7 @@ subtitle: is there harmony without chaos?
 <div class="events-section">
   <h2>Recent Events</h2>
   
-  <div class="events-slider">
+  <div class="events-container">
     <div class="event">
       <h3>July 2025</h3>
       <p><strong>KAIST KAI-X Advanced Undergraduate Math Workshop</strong></p>
@@ -39,53 +39,76 @@ subtitle: is there harmony without chaos?
 .events-section {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 2px solid #D6C6A9;
 }
 
-.events-slider {
-  display: flex;
-  overflow-x: auto;
-  gap: 1.5rem;
-  padding: 1rem 0;
-  scroll-behavior: smooth;
+.events-section h2 {
+  color: #3A2C29;
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
 
-.events-slider::-webkit-scrollbar {
-  height: 8px;
+.events-container {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 1rem;
+  background: linear-gradient(135deg, #F5E8C7 0%, #FAF3E0 100%);
+  border-radius: 12px;
+  border: 1px solid #D6C6A9;
+  box-shadow: 0 4px 8px rgba(58, 44, 41, 0.1);
 }
 
-.events-slider::-webkit-scrollbar-track {
-  background: #f1f1f1;
+.events-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.events-container::-webkit-scrollbar-track {
+  background: #D6C6A9;
   border-radius: 4px;
 }
 
-.events-slider::-webkit-scrollbar-thumb {
-  background: #888;
+.events-container::-webkit-scrollbar-thumb {
+  background: #C4470D;
   border-radius: 4px;
 }
 
-.events-slider::-webkit-scrollbar-thumb:hover {
-  background: #555;
+.events-container::-webkit-scrollbar-thumb:hover {
+  background: #D95F18;
 }
 
 .event {
-  min-width: 300px;
-  flex-shrink: 0;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #f9f9f9;
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #D6C6A9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(58, 44, 41, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(58, 44, 41, 0.15);
+}
+
+.event:last-child {
+  margin-bottom: 0;
 }
 
 .event h3 {
   margin-bottom: 0.5rem;
-  color: #333;
+  color: #3A2C29;
   font-size: 1.1rem;
+  font-weight: bold;
+  border-bottom: 2px solid #D95F18;
+  padding-bottom: 0.3rem;
+  display: inline-block;
 }
 
 .event p {
   margin-bottom: 0.5rem;
   font-weight: bold;
+  color: #6D5A4D;
 }
 
 .event ul {
@@ -95,5 +118,10 @@ subtitle: is there harmony without chaos?
 
 .event ul li {
   margin-bottom: 0.25rem;
+  color: #3A2C29;
+}
+
+.event ul li strong {
+  color: #C4470D;
 }
 </style>

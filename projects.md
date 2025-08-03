@@ -38,5 +38,8 @@ Used Bayesian inference and classification to optimize inventory and healthcare 
 ---
 
 ### Yut AI - Korean Traditional Board Game AI
-*Python, Game Theory, Bayesian Optimization* – [GitHub](https://github.com/yayme/COE-Yutnori)
-Developed intelligent agents for Yut, a traditional Korean board game competition. Tested minimax tree search and heuristic-based strategies. Final approach used heuristic evaluation with Bayesian optimization (Gaussian Process + UCB) for weight tuning across game phases, distance evaluation, and capture threat assessment. Consistently outperforms baseline strategy with 54-56% win rate.
+*Python, Game Theory, Bayesian Optimization* – [GitHub](https://github.com/yayme/COE-Yutnori)  
+Developed intelligent agents for Yut, a traditional Korean board game competition.  
+Tested minimax tree search and heuristic-based strategies.  
+Final approach used heuristic evaluation with Bayesian optimization (Gaussian Process + UCB) for weight tuning.  
+Consistently outperforms baseline strategy with 54-56% win rate.

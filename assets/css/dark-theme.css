@@ -1,21 +1,22 @@
 /* Dark Theme for Beautiful Jekyll Website */
 
-/* Toggle Button in Navbar */
+/* Toggle Button next to Logo */
 .theme-toggle {
   background: none !important;
   border: 2px solid var(--link-col);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 14px;
   transition: all 0.3s ease;
   color: var(--link-col) !important;
   padding: 0 !important;
-  margin-left: 10px;
+  margin-left: 15px;
+  vertical-align: middle;
 }
 
 .theme-toggle:hover {

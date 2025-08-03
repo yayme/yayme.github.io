@@ -1,0 +1,162 @@
+/* Dark Theme for Beautiful Jekyll Website */
+
+/* Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: var(--link-col);
+  color: var(--page-col);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--hover-col);
+  transform: scale(1.1);
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+  --page-col: #2C1810;           /* Dark brown background */
+  --text-col: #F5E8C7;          /* Light beige text */
+  --link-col: #FF8A4C;          /* Bright orange links */
+  --hover-col: #FF6B2B;         /* Brighter orange hover */
+  --navbar-col: #3A2418;        /* Darker navbar */
+  --navbar-text-col: #F5E8C7;   /* Light navbar text */
+  --navbar-border-col: #5A3825; /* Darker border */
+  --footer-col: #3A2418;        /* Dark footer */
+  --footer-text-col: #D6C6A9;   /* Muted footer text */
+  --footer-link-col: #F5E8C7;   /* Light footer links */
+  --footer-hover-col: #FF8A4C;  /* Orange footer hover */
+}
+
+/* Apply dark theme colors */
+[data-theme="dark"] body {
+  background-color: var(--page-col);
+  color: var(--text-col);
+}
+
+[data-theme="dark"] .navbar-custom {
+  background-color: var(--navbar-col);
+  border-bottom-color: var(--navbar-border-col);
+}
+
+[data-theme="dark"] .navbar-custom .navbar-brand,
+[data-theme="dark"] .navbar-custom .navbar-nav .nav-link {
+  color: var(--navbar-text-col);
+}
+
+[data-theme="dark"] .navbar-custom .navbar-nav .nav-link:hover {
+  color: var(--link-col);
+}
+
+[data-theme="dark"] a {
+  color: var(--link-col);
+}
+
+[data-theme="dark"] a:hover {
+  color: var(--hover-col);
+}
+
+/* Dark theme for cards and content blocks */
+[data-theme="dark"] .event {
+  background: rgba(58, 36, 24, 0.8);
+  border-color: var(--navbar-border-col);
+  color: var(--text-col);
+}
+
+[data-theme="dark"] .events-container {
+  background: linear-gradient(135deg, #3A2418 0%, #2C1810 100%);
+  border-color: var(--navbar-border-col);
+}
+
+[data-theme="dark"] .event h3 {
+  color: var(--text-col);
+  border-bottom-color: var(--link-col);
+}
+
+[data-theme="dark"] .event p {
+  color: var(--footer-text-col);
+}
+
+[data-theme="dark"] .event ul li {
+  color: var(--text-col);
+}
+
+[data-theme="dark"] .event ul li strong {
+  color: var(--link-col);
+}
+
+/* Footer dark theme */
+[data-theme="dark"] .footer {
+  background-color: var(--footer-col);
+  border-top-color: var(--navbar-border-col);
+}
+
+[data-theme="dark"] .footer,
+[data-theme="dark"] .footer p,
+[data-theme="dark"] .footer .list-inline-item a {
+  color: var(--footer-text-col);
+}
+
+[data-theme="dark"] .footer .list-inline-item a:hover {
+  color: var(--footer-hover-col);
+}
+
+/* Post and content styling */
+[data-theme="dark"] .post-preview {
+  border-bottom-color: var(--navbar-border-col);
+}
+
+[data-theme="dark"] .post-title {
+  color: var(--text-col);
+}
+
+[data-theme="dark"] .post-subtitle {
+  color: var(--footer-text-col);
+}
+
+[data-theme="dark"] .post-meta {
+  color: var(--footer-text-col);
+}
+
+/* Code blocks and pre elements */
+[data-theme="dark"] pre,
+[data-theme="dark"] code {
+  background-color: #1a1a1a;
+  color: #f8f8f2;
+  border-color: var(--navbar-border-col);
+}
+
+/* Tables */
+[data-theme="dark"] table {
+  color: var(--text-col);
+}
+
+[data-theme="dark"] table th,
+[data-theme="dark"] table td {
+  border-color: var(--navbar-border-col);
+}
+
+[data-theme="dark"] table thead th {
+  background-color: var(--navbar-col);
+}
+
+/* Blockquotes */
+[data-theme="dark"] blockquote {
+  border-left-color: var(--link-col);
+  color: var(--footer-text-col);
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

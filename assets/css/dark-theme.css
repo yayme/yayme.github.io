@@ -1,26 +1,28 @@
 /* Dark Theme for Beautiful Jekyll Website */
 
-/* Toggle Button */
+/* Toggle Button in Navbar */
 .theme-toggle {
-  position: fixed;
-  top: 80px;
-  right: 20px;
-  z-index: 9999;
-  background: var(--link-col);
-  color: var(--page-col);
-  border: none;
+  background: none !important;
+  border: 2px solid var(--link-col);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 20px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
   transition: all 0.3s ease;
+  color: var(--link-col) !important;
+  padding: 0 !important;
+  margin-left: 10px;
 }
 
 .theme-toggle:hover {
-  background: var(--hover-col);
-  transform: scale(1.1);
+  background: var(--link-col) !important;
+  color: var(--page-col) !important;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 /* Dark Theme Variables */

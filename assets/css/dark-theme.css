@@ -47,6 +47,55 @@
   color: var(--text-col);
 }
 
+/* Headers */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: var(--text-col);
+}
+
+/* Paragraphs and general text */
+[data-theme="dark"] p,
+[data-theme="dark"] div,
+[data-theme="dark"] span,
+[data-theme="dark"] li {
+  color: var(--text-col);
+}
+
+/* Lists */
+[data-theme="dark"] ul,
+[data-theme="dark"] ol {
+  color: var(--text-col);
+}
+
+/* Emphasis and strong text */
+[data-theme="dark"] em,
+[data-theme="dark"] i {
+  color: var(--footer-text-col);
+}
+
+[data-theme="dark"] strong,
+[data-theme="dark"] b {
+  color: var(--text-col);
+  font-weight: bold;
+}
+
+/* Horizontal rules */
+[data-theme="dark"] hr {
+  border-color: var(--navbar-border-col);
+  background-color: var(--navbar-border-col);
+}
+
+/* Page content containers */
+[data-theme="dark"] .container,
+[data-theme="dark"] .container-md,
+[data-theme="dark"] .main-content {
+  color: var(--text-col);
+}
+
 [data-theme="dark"] .navbar-custom {
   background-color: var(--navbar-col);
   border-bottom-color: var(--navbar-border-col);
@@ -131,6 +180,38 @@
   color: var(--footer-text-col);
 }
 
+/* Page content styling */
+[data-theme="dark"] .page-heading {
+  color: var(--text-col);
+}
+
+[data-theme="dark"] .post-heading {
+  color: var(--text-col);
+}
+
+[data-theme="dark"] .post-subheading {
+  color: var(--footer-text-col);
+}
+
+/* Ensure all markdown content is styled */
+[data-theme="dark"] .markdown-content,
+[data-theme="dark"] .page-content,
+[data-theme="dark"] .post-content {
+  color: var(--text-col);
+}
+
+[data-theme="dark"] .markdown-content h1,
+[data-theme="dark"] .markdown-content h2,
+[data-theme="dark"] .markdown-content h3,
+[data-theme="dark"] .page-content h1,
+[data-theme="dark"] .page-content h2,
+[data-theme="dark"] .page-content h3,
+[data-theme="dark"] .post-content h1,
+[data-theme="dark"] .post-content h2,
+[data-theme="dark"] .post-content h3 {
+  color: var(--text-col);
+}
+
 /* Code blocks and pre elements */
 [data-theme="dark"] pre,
 [data-theme="dark"] code {
@@ -162,4 +243,31 @@
 /* Smooth transitions for theme switching */
 * {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Universal dark mode text override - ensures all text is visible */
+[data-theme="dark"] * {
+  color: var(--text-col) !important;
+}
+
+/* But preserve specific link colors */
+[data-theme="dark"] a {
+  color: var(--link-col) !important;
+}
+
+[data-theme="dark"] a:hover {
+  color: var(--hover-col) !important;
+}
+
+/* And preserve navbar colors */
+[data-theme="dark"] .navbar-custom .navbar-brand,
+[data-theme="dark"] .navbar-custom .navbar-nav .nav-link {
+  color: var(--navbar-text-col) !important;
+}
+
+/* And footer colors */
+[data-theme="dark"] .footer,
+[data-theme="dark"] .footer p,
+[data-theme="dark"] .footer .list-inline-item a {
+  color: var(--footer-text-col) !important;
 }

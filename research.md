@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Research - Adnan Sadik | Academic Research Experiences and Publications
-subtitle: Current research in computational mathematics and statistical applications
+title: Research 
+subtitle: Current research in IoT machine Learning and Markovian dynamics.
 author: Adnan Sadik
 meta_description: "Research - Adnan Sadik | AI, Machine Learning & Statistical Learning projects in sleep disorder classification and LLM evaluation"
 keywords: "Adnan Sadik research, AI researcher, machine learning projects, data scientist, statistical learning, KAIST research"

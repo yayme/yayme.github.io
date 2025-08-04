@@ -54,9 +54,7 @@
   <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
 
   <!-- Canonical URL -->
-  {% assign canonical_url = page.url | replace:'index.html','' | absolute_url %}
-  {% assign canonical_url = canonical_url | replace:'//','/' | replace:'http:/','http://' | replace:'https:/','https://' %}
-  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
   <!-- Structured Data -->
   <script type="application/ld+json">

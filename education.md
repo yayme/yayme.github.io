@@ -2,11 +2,8 @@
 layout: page
 title: Education
 subtitle: Academic background in applied mathematics, statistics, and computational methods
-author: Adnan Sadik
 meta_description: "Education - Adnan Sadik | KAIST Mathematics & Computer Science with focus on machine learning and data science"
 keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine learning, computer science"
----
-author: Adnan Sadik
 ---
 
 ## Korea Advanced Institute of Science and Technology (KAIST)

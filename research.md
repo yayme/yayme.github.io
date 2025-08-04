@@ -7,6 +7,13 @@ meta_description: "Research - Adnan Sadik | AI, Machine Learning & Statistical L
 keywords: "Adnan Sadik research, AI researcher, machine learning projects, data scientist, statistical learning, KAIST research"
 ---
 
+## Research Interests
+
+- **Quantitative Finance and Financial AI**
+- **Applied Machine Learning and Data Science**
+- **Biomedical Mathematics and Modeling**
+- **Statistical Learning Theory**
+
 ## Current Research
 
 ### Sleep Disorder Classification using Machine Learning
@@ -29,14 +36,6 @@ keywords: "Adnan Sadik research, AI researcher, machine learning projects, data 
 - Studied fairness metrics and their applications
 - Analyzed impact of data bias on model performance
 - Focus: Algorithmic fairness, ethical AI
-
-## Research Interests
-
-- **Financial AI & Mathematical Modeling**
-- **Statistical Learning Theory**
-- **Biomedical Mathematics**
-- **Time Series Analysis**
-
 
 ## Publications and Preprints
 

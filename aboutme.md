@@ -1,24 +1,31 @@
 ---
 layout: page
-title: About Me
-subtitle: A quick introduction
+title: About Adnan Sadik - Mathematics & CS Student & Researcher
+subtitle: Passionate about statistics, machine learning, and quantitative finance
+meta_description: "About Adnan Sadik - AI Researcher & Data Scientist specializing in statistical learning and machine learning at KAIST"
+keywords: "Adnan Sadik, data scientist, AI researcher, mathematics student, machine learning, KAIST"
 ---
 
-My name is Adnan Sadik. I'm someone who enjoys solving complex problems, collaborating with driven individuals, and engaging in strategic thinking—whether in professional settings or over a good game of Chess, Avalon, or Poker.
+I'm Adnan Sadik, a mathematics student at KAIST who specializes in solving complex problems through statistical and computational methods. Currently pursuing applied mathematics with a focus on developing analytical solutions for financial and biomedical applications.
 
-I'm passionate about meaningful work, especially when it involves creativity, logic, and collaboration. Outside of work, I enjoy exploring mystery fiction—both in literature and film—as a way to unwind and spark curiosity.
+My academic work spans statistical modeling, quantitative analysis, and computational techniques, with hands-on research experience in labs working on sleep disorder classification and language model evaluation for low-resource languages.
 
-### Academic Interests
+## Academic Focus
 
-My academic interests lie at the intersection of mathematics, data, and decision-making. I am particularly focused on:
+I specialize in the intersection of mathematics, statistics, and computational methods:
 
-- **Statistical Learning**
-- **Quantitative Finance**
-- **Machine Learning and Artificial Intelligence**
+- **Statistical Learning** - Advanced statistical modeling and inference
+- **Quantitative Finance** - Mathematical finance and risk modeling  
+- **Computational Mathematics** - Algorithm development and predictive modeling
 
-These areas excite me for their blend of theory and real-world impact, and I am always eager to explore new developments and practical applications in each.
+## Research Experience
 
-### My Story
+Currently conducting research at:
+- **IBS Biomedical Mathematics Group** - Computational pipelines for medical classification
+- **KAIST Users & Information Lab** - Cultural benchmark datasets for language evaluation
+- **KAIST Data Strategy Lab** - Financial modeling and computational analysis
 
-Originally from a small town, my journey has taken me through diverse challenges and opportunities, eventually leading me to KAIST. Along the way, I've grown to value resilience, clarity of thought, and the importance of asking the right questions. Every step forward has been driven by a desire to learn, adapt, and contribute.
+My work combines theoretical foundations with practical applications, contributing to publications and developing solutions that bridge academic research with real-world impact.
+
+<!-- Hidden content for SEO: data scientist, AI researcher, machine learning expert, deep learning, artificial intelligence -->
 

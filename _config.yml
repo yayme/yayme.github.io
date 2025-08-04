@@ -132,7 +132,11 @@ post_search: true
 navbar-var-length: false
 
 # The keywords to associate with your website, for SEO purposes
-#keywords: "my,list,of,keywords"
+keywords: "Adnan Sadik, data scientist, machine learning, AI researcher, KAIST, statistical learning, quantitative finance, biomedical mathematics"
+
+# Canonical URL for SEO
+url: "https://yayme.github.io"
+baseurl: "/normalsite"
 
 ######################################
 # --- Colours / background image --- #
@@ -314,6 +318,7 @@ exclude:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189

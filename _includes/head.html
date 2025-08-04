@@ -46,6 +46,42 @@
 
   <meta name="description" content="{{ description }}">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/img/favicon-16x16.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Adnan Sadik",
+    "url": "{{ site.url }}{{ site.baseurl }}",
+    "sameAs": [
+      "https://linkedin.com/in/adnan-sadik",
+      "https://github.com/yayme",
+      "https://scholar.google.com/citations?user=fAIOqccAAAAJ&hl=en"
+    ],
+    "jobTitle": "Mathematics Student and Research Assistant",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "KAIST"
+    },
+    "alumniOf": {
+      "@type": "Organization",
+      "name": "KAIST"
+    },
+    "knowsAbout": ["Mathematics", "Statistical Learning", "Quantitative Finance", "Computational Methods", "Research"],
+    "description": "Mathematics student specializing in statistical learning, machine learning, data science, and AI research at KAIST"
+  }
+  </script>
+
   {% if site.mobile-theme-col %}
   <meta name="theme-color" content="{{ site.mobile-theme-col }}">
   {% endif %}

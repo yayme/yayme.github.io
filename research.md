@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Research
-subtitle: Research Projects and Publications
+title: Research - Adnan Sadik | Academic Research Experiences and Publications
+subtitle: Current research in computational mathematics and statistical applications
 author: Adnan Sadik
-meta_description: "Research work in Financial AI, Statistical Learning, and Biomedical Mathematics by Adnan Sadik at KAIST"
-keywords: "machine learning, financial AI, statistical learning, biomedical mathematics, KAIST research"
+meta_description: "Research - Adnan Sadik | AI, Machine Learning & Statistical Learning projects in sleep disorder classification and LLM evaluation"
+keywords: "Adnan Sadik research, AI researcher, machine learning projects, data scientist, statistical learning, KAIST research"
 ---
 
 ## Current Research

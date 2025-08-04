@@ -1,8 +1,10 @@
 ---
 layout: post
-title: Resume
-subtitle: A concise summary of my experiences, projects, and achievements
+title: Resume - Adnan Sadik | Overview of Interests, Experiences and Projects
+subtitle: Research experience in mathematics, statistics, and computational finance
 author: Adnan Sadik
+meta_description: "Resume - Adnan Sadik | Machine Learning & Data Science Experience in AI research and statistical learning"
+keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI researcher, KAIST"
 ---
 ## Interest:
 ### Data -> Signal -> Model ->Decision ###

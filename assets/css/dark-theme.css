@@ -246,7 +246,10 @@
 }
 
 /* Universal dark mode text override - ensures all text is visible */
-[data-theme="dark"] * {
+[data-theme="dark"] p,
+[data-theme="dark"] div:not(.footer):not(.navbar-custom),
+[data-theme="dark"] span:not(.fa):not(.fab):not(.fas):not(.far),
+[data-theme="dark"] li {
   color: var(--text-col) !important;
 }
 
@@ -270,4 +273,42 @@
 [data-theme="dark"] .footer p,
 [data-theme="dark"] .footer .list-inline-item a {
   color: var(--footer-text-col) !important;
+}
+
+/* Social media icons - preserve their original colors and visibility */
+[data-theme="dark"] .footer .list-inline-item a[href*="mailto"],
+[data-theme="dark"] .footer .list-inline-item a[href*="linkedin"],
+[data-theme="dark"] .footer .list-inline-item a[href*="github"],
+[data-theme="dark"] .footer .list-inline-item a[href*="scholar"],
+[data-theme="dark"] .footer .list-inline-item a[href*="chess"],
+[data-theme="dark"] .footer .list-inline-item a[href*="twitter"],
+[data-theme="dark"] .footer .list-inline-item a[href*="facebook"],
+[data-theme="dark"] .footer .list-inline-item a[href*="instagram"] {
+  color: var(--footer-text-col) !important;
+  opacity: 0.9;
+}
+
+[data-theme="dark"] .footer .list-inline-item a:hover {
+  color: var(--link-col) !important;
+  opacity: 1;
+}
+
+/* Font Awesome icons in footer */
+[data-theme="dark"] .footer .fa,
+[data-theme="dark"] .footer .fab,
+[data-theme="dark"] .footer .fas,
+[data-theme="dark"] .footer .far {
+  color: inherit !important;
+}
+
+/* Social network links specific styling */
+[data-theme="dark"] .social-links a,
+[data-theme="dark"] .list-inline-item a {
+  color: var(--footer-text-col) !important;
+  text-decoration: none;
+}
+
+[data-theme="dark"] .social-links a:hover,
+[data-theme="dark"] .list-inline-item a:hover {
+  color: var(--link-col) !important;
 }

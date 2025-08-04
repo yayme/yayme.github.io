@@ -1,0 +1,4 @@
+# GitHub Pages domain enforcement
+# This helps ensure canonical URL consistency
+# If you get a custom domain, replace this with your domain
+# For now, this ensures yayme.github.io/normalsite is canonical

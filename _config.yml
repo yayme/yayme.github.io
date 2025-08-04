@@ -138,6 +138,9 @@ keywords: "Adnan Sadik, data scientist, machine learning, AI researcher, KAIST, 
 url: "https://yayme.github.io"
 baseurl: "/normalsite"
 
+# Enforce HTTPS and canonical domain
+enforce_ssl: "yayme.github.io"
+
 ######################################
 # --- Colours / background image --- #
 ######################################

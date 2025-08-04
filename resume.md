@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resume - Adnan Sadik | Overview of Interests, Experiences and Projects
+title: Resume
 subtitle: Research experience in mathematics, statistics, and computational finance
 author: Adnan Sadik
 meta_description: "Resume - Adnan Sadik | Machine Learning & Data Science Experience in AI research and statistical learning"

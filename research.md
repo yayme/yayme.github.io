@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research 
+title: Research
 subtitle: Current research in IoT machine Learning and Markovian dynamics.
 author: Adnan Sadik
 meta_description: "Research - Adnan Sadik | AI, Machine Learning & Statistical Learning projects in sleep disorder classification and LLM evaluation"

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Adnan Sadik - Mathematics & CS Student & Researcher
+title: About Me
 subtitle: Passionate about statistics, machine learning, and quantitative finance
 meta_description: "About Adnan Sadik - AI Researcher & Data Scientist specializing in statistical learning and machine learning at KAIST"
 keywords: "Adnan Sadik, data scientist, AI researcher, mathematics student, machine learning, KAIST"

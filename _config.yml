@@ -141,6 +141,9 @@ description: "Personal academic website of Adnan Sadik, mathematics student and 
 url: "https://yayme.github.io"
 baseurl: ""
 
+# Language setting for SEO
+lang: "en"
+
 ######################################
 # --- Colours / background image --- #
 ######################################

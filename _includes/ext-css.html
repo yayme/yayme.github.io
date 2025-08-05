@@ -1,7 +1,25 @@
+{% comment %}
+  Optimized CSS loading to reduce render blocking
+{% endcomment %}
 {% if include.css.sri %}
-  <link href="{{ include.css.href }}" rel="stylesheet" integrity="{{ include.css.sri }}" crossorigin="anonymous">
+  {% if include.css.href contains "font-awesome" %}
+    <link href="{{ include.css.href }}" rel="stylesheet" integrity="{{ include.css.sri }}" crossorigin="anonymous" media="print" onload="this.media='all'">
+    <noscript><link href="{{ include.css.href }}" rel="stylesheet" integrity="{{ include.css.sri }}" crossorigin="anonymous"></noscript>
+  {% else %}
+    <link href="{{ include.css.href }}" rel="stylesheet" integrity="{{ include.css.sri }}" crossorigin="anonymous">
+  {% endif %}
 {% elsif include.css.href %}
-  <link rel="stylesheet" href="{{ include.css.href }}">
+  {% if include.css.href contains "font-awesome" %}
+    <link rel="stylesheet" href="{{ include.css.href }}" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="{{ include.css.href }}"></noscript>
+  {% else %}
+    <link rel="stylesheet" href="{{ include.css.href }}">
+  {% endif %}
 {% else %}
-  <link rel="stylesheet" href="{{ include.css }}">
+  {% if include.css contains "font-awesome" %}
+    <link rel="stylesheet" href="{{ include.css }}" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="{{ include.css }}"></noscript>
+  {% else %}
+    <link rel="stylesheet" href="{{ include.css }}">
+  {% endif %}
 {% endif %}

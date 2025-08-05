@@ -247,15 +247,25 @@
 
   <!-- Critical CSS for above-the-fold content -->
   <style>
+    /* Default light theme critical CSS */
     body{font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:1rem;line-height:1.5;color:#3A2C29;background-color:#FAF3E0}
-    .navbar{background-color:#F5E8C7!important}
-    .navbar-brand{color:#3A2C29!important}
-    .navbar-nav .nav-link{color:#3A2C29!important}
+    .navbar{background-color:#F5E8C7}
+    .navbar-brand{color:#3A2C29}
+    .navbar-nav .nav-link{color:#3A2C29}
     h1,h2,h3,h4,h5,h6{font-family:Lora,"Times New Roman",serif;font-weight:800;color:#3A2C29}
     a{color:#D95F18;text-decoration:none}
     a:hover{color:#C4470D;text-decoration:underline}
     .page-heading h1{font-size:2.5rem}
     @media (max-width:768px){.page-heading h1{font-size:2rem}}
+    
+    /* Dark theme critical CSS overrides */
+    [data-theme="dark"] body{color:#F5E8C7;background-color:#2C1810}
+    [data-theme="dark"] .navbar{background-color:#3A2418}
+    [data-theme="dark"] .navbar-brand{color:#F5E8C7}
+    [data-theme="dark"] .navbar-nav .nav-link{color:#F5E8C7}
+    [data-theme="dark"] h1,[data-theme="dark"] h2,[data-theme="dark"] h3,[data-theme="dark"] h4,[data-theme="dark"] h5,[data-theme="dark"] h6{color:#F5E8C7}
+    [data-theme="dark"] a{color:#FF8A4C}
+    [data-theme="dark"] a:hover{color:#FF6B2B}
   </style>
 
   {% if site.fb_app_id %}

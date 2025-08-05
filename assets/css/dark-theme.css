@@ -181,16 +181,34 @@
 }
 
 /* Page content styling */
-[data-theme="dark"] .page-heading {
+[data-theme="dark"] .page-heading,
+[data-theme="dark"] .page-heading h1,
+[data-theme="dark"] .page-heading .page-subheading {
+  color: var(--text-col) !important;
+}
+
+[data-theme="dark"] .post-heading,
+[data-theme="dark"] .post-heading h1,
+[data-theme="dark"] .post-heading h2 {
+  color: var(--text-col) !important;
+}
+
+[data-theme="dark"] .post-subheading,
+[data-theme="dark"] .page-subheading {
+  color: var(--footer-text-col) !important;
+}
+
+/* Header section styling */
+[data-theme="dark"] .header-section,
+[data-theme="dark"] .intro-header {
   color: var(--text-col);
 }
 
-[data-theme="dark"] .post-heading {
-  color: var(--text-col);
-}
-
-[data-theme="dark"] .post-subheading {
-  color: var(--footer-text-col);
+[data-theme="dark"] .intro-header h1,
+[data-theme="dark"] .intro-header h2,
+[data-theme="dark"] .intro-header .page-subheading,
+[data-theme="dark"] .intro-header .post-subheading {
+  color: var(--text-col) !important;
 }
 
 /* Ensure all markdown content is styled */

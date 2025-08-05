@@ -33,6 +33,7 @@
 
   <title>{{ title }}</title>
 
+  <!-- SEO Meta Tags -->
   {% capture author %}
     {%- if page.author -%}
       {{  page.author | strip_html }}
@@ -40,11 +41,42 @@
       {{ site.author }}
     {%- endif -%}
   {% endcapture %}
+  
   {% if author != "" %}
   <meta name="author" content="{{ author }}">
   {% endif %}
 
   <meta name="description" content="{{ description }}">
+  
+  <!-- Enhanced Meta Tags for Name Recognition -->
+  {% if page.meta_description %}
+  <meta name="description" content="{{ page.meta_description }}">
+  {% else %}
+  <meta name="description" content="{{ description }}">
+  {% endif %}
+  
+  {% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords }}">
+  {% elsif site.keywords %}
+  <meta name="keywords" content="{{ site.keywords }}">
+  {% endif %}
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+  
+  <!-- Language and Region -->
+  <meta name="language" content="English">
+  <meta name="geo.region" content="KR">
+  <meta name="geo.placename" content="South Korea">
+  
+  <!-- Website Classification -->
+  <meta name="classification" content="Personal Website, Academic Portfolio, Research">
+  <meta name="category" content="Education, Research, Mathematics, Machine Learning">
+  <meta name="coverage" content="Worldwide">
+  <meta name="distribution" content="Global">
+  <meta name="rating" content="General">
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
@@ -56,29 +88,93 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
-  <!-- Structured Data -->
+  <!-- Enhanced Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
+    "@type": ["Person", "Student", "Researcher"],
     "name": "Adnan Sadik",
+    "givenName": "Adnan",
+    "familyName": "Sadik",
     "url": "{{ site.url }}{{ site.baseurl }}",
+    "mainEntityOfPage": "{{ site.url }}{{ site.baseurl }}",
     "sameAs": [
       "https://linkedin.com/in/adnan-sadik",
       "https://github.com/yayme",
-      "https://scholar.google.com/citations?user=fAIOqccAAAAJ&hl=en"
+      "https://scholar.google.com/citations?user=fAIOqccAAAAJ&hl=en",
+      "https://www.chess.com/member/adnansadik"
     ],
     "jobTitle": "Mathematics Student and Research Assistant",
     "worksFor": {
       "@type": "Organization",
-      "name": "KAIST"
+      "name": "KAIST",
+      "url": "https://www.kaist.ac.kr"
+    },
+    "affiliation": {
+      "@type": "Organization", 
+      "name": "Korea Advanced Institute of Science and Technology (KAIST)"
     },
     "alumniOf": {
       "@type": "Organization",
       "name": "KAIST"
     },
-    "knowsAbout": ["Mathematics", "Statistical Learning", "Quantitative Finance", "Computational Methods", "Research"],
-    "description": "Mathematics student specializing in statistical learning, machine learning, data science, and AI research at KAIST"
+    "studiesAt": {
+      "@type": "Organization",
+      "name": "KAIST"
+    },
+    "knowsAbout": [
+      "Mathematics", 
+      "Statistical Learning", 
+      "Quantitative Finance", 
+      "Machine Learning",
+      "Biomedical Mathematics",
+      "Data Science",
+      "Artificial Intelligence",
+      "Research"
+    ],
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Research Assistant",
+      "occupationLocation": {
+        "@type": "Place",
+        "name": "South Korea"
+      }
+    },
+    "description": "Mathematics student specializing in statistical learning, machine learning, data science, and AI research at KAIST",
+    "email": "adnansadik235@kaist.ac.kr",
+    "nationality": {
+      "@type": "Country",
+      "name": "South Korea"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "KR",
+      "addressRegion": "South Korea"
+    }
+  }
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}{{ site.baseurl }}",
+    "description": "Personal academic website of Adnan Sadik, mathematics student and researcher at KAIST specializing in statistical learning, machine learning, and quantitative finance",
+    "author": {
+      "@type": "Person",
+      "name": "Adnan Sadik"
+    },
+    "publisher": {
+      "@type": "Person", 
+      "name": "Adnan Sadik"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "{{ site.url }}{{ site.baseurl }}/?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   }
   </script>
 
@@ -155,34 +251,51 @@
   {%- endcapture -%}
   {%- assign img=img | strip -%}
 
+  <!-- Enhanced Open Graph Meta Tags -->
   <meta property="og:title" content="{{ title }}">
-  <meta property="og:description" content="{{ description }}">
-
+  <meta property="og:description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ description }}{% endif %}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:locale" content="en_US">
+  
   {% if img != "" %}
   <meta property="og:image" content="{{ img | absolute_url }}">
+  <meta property="og:image:alt" content="Adnan Sadik - Mathematics Student and Researcher">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   {% endif %}
 
   {% if page.id %}
   <meta property="og:type" content="article">
   {% if author != "" %}
   <meta property="og:article:author" content="{{ author }}">
+  <meta property="article:author" content="{{ author }}">
   {% endif %}
   <meta property="og:article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  <meta property="og:article:section" content="{% if page.layout == 'post' %}Blog{% else %}Academic{% endif %}">
+  <meta property="og:article:tag" content="Mathematics, Machine Learning, Research, KAIST">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   {% else %}
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="profile">
+  <meta property="profile:first_name" content="Adnan">
+  <meta property="profile:last_name" content="Sadik">
   <meta property="og:url" content="{{ page.url | absolute_url | strip_index }}">
   {% endif %}
 
+  <!-- Enhanced Twitter Card Meta Tags -->
   {% if img != "" and img != site.avatar %}
   <meta name="twitter:card" content="summary_large_image">
   {% else %}
   <meta name="twitter:card" content="summary">
   {% endif %}
-  <meta name="twitter:site" content="@{{ site.social-network-links.twitter }}">
-  <meta name="twitter:creator" content="@{{ site.social-network-links.twitter }}">
-
-  <meta property="twitter:title" content="{{ title }}">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ description }}{% endif %}">
+  <meta name="twitter:creator" content="@AdnanSadik">
+  <meta name="twitter:site" content="@AdnanSadik">
+  {% if img != "" %}
+  <meta name="twitter:image" content="{{ img | absolute_url }}">
+  <meta name="twitter:image:alt" content="Adnan Sadik - Mathematics Student and Researcher">
+  {% endif %}  <meta property="twitter:title" content="{{ title }}">
   <meta property="twitter:description" content="{{ description }}">
 
   {% if img != "" %}

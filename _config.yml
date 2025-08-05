@@ -10,7 +10,7 @@
 ############################
 
 # Name of website
-title: Normal(0,1) Website
+title: Adnan Sadik
 
 # Your name to show in the footer
 author: Adnan Sadik
@@ -132,7 +132,10 @@ post_search: true
 navbar-var-length: false
 
 # The keywords to associate with your website, for SEO purposes
-keywords: "Adnan Sadik, data scientist, machine learning, AI researcher, KAIST, statistical learning, quantitative finance, biomedical mathematics"
+keywords: "Adnan Sadik, Adnan Sadik KAIST, data scientist, machine learning, AI researcher, KAIST, statistical learning, quantitative finance, biomedical mathematics, mathematics student, research assistant, Korean university, South Korea researcher"
+
+# SEO Description for the site
+description: "Personal academic website of Adnan Sadik, mathematics student and research assistant at KAIST specializing in statistical learning, machine learning, quantitative finance, and biomedical mathematics."
 
 # Canonical URL for SEO
 url: "https://yayme.github.io"

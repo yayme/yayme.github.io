@@ -2,8 +2,10 @@
 layout: page
 title: About Me
 subtitle: Passionate about statistics, machine learning, and quantitative finance
-meta_description: "About Adnan Sadik - AI Researcher & Data Scientist specializing in statistical learning and machine learning at KAIST"
-keywords: "Adnan Sadik, data scientist, AI researcher, mathematics student, machine learning, KAIST"
+meta_description: "About Adnan Sadik - Mathematics student at KAIST passionate about statistical learning, machine learning, quantitative finance, and strategic thinking. Personal story and academic interests."
+keywords: "Adnan Sadik about, Adnan Sadik biography, KAIST mathematics student, statistical learning, machine learning, quantitative finance, chess player, mystery fiction, academic interests"
+share-title: "About Adnan Sadik - Mathematics Student at KAIST"
+share-description: "Learn about Adnan Sadik, mathematics student at KAIST with interests in statistical learning, machine learning, and quantitative finance."
 ---
 
 My name is Adnan Sadik. I'm someone who enjoys solving complex problems, collaborating with driven individuals, and engaging in strategic thinking—whether in professional settings or over a good game of Chess, Avalon, or Poker.

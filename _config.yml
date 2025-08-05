@@ -106,7 +106,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "https://yayme.github.io/normalsite/"
+url-pretty: "https://yayme.github.io/"
 
 # Add the website title to the title of every page
 title-on-all-pages: true
@@ -139,7 +139,7 @@ description: "Personal academic website of Adnan Sadik, mathematics student and 
 
 # Canonical URL for SEO
 url: "https://yayme.github.io"
-baseurl: "/normalsite"
+baseurl: ""
 
 ######################################
 # --- Colours / background image --- #

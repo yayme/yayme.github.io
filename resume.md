@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resume
-subtitle: Research experience in mathematics, statistics, and computational finance
+subtitle: Minimalistic Resume
 author: Adnan Sadik
 meta_description: "Resume - Adnan Sadik | Machine Learning & Data Science Experience in AI research and statistical learning"
 keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI researcher, KAIST"

@@ -16,7 +16,8 @@ keywords: "Adnan Sadik research, AI researcher, machine learning projects, data 
 
 ## Current Research
 
-### Sleep Disorder Classification using Machine Learning | Modeling Stochastic Delay in Birth and death processes in biological systems
+### Sleep Disorder Classification using Machine Learning | 
+### Modeling Stochastic Delay in Birth and death processes in biological systems
 **[IBS Biomedical Mathematics Group](https://www.ibs.re.kr/bimag/), South Korea**  
 *Dec 2024 – June 2025*
 - Ongoing

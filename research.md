@@ -19,7 +19,7 @@ keywords: "Adnan Sadik research, AI researcher, machine learning projects, data 
 ### Sleep Disorder Classification using Machine Learning | 
 ### Modeling Stochastic Delay in Birth and death processes in biological systems
 **[IBS Biomedical Mathematics Group](https://www.ibs.re.kr/bimag/), South Korea**  
-*Dec 2024 – June 2025*
+*Dec 2024 – Aug 2025*
 - Ongoing
 - Supervisor: [Prof. Jae Kyoung Kim](https://mathsci.kaist.ac.kr/~jaekkim/)
 
@@ -28,7 +28,7 @@ keywords: "Adnan Sadik research, AI researcher, machine learning projects, data 
 *Aug 2024 -- Dec 2024*  
 - Developed cultural benchmark datasets for low-resource languages
 - Evaluated Large Language Models on language understanding and reasoning tasks
-- Research paper in submission
+- Research paper in submission<sup>[1](#preprint-1)</sup>
 
 ### AI Fairness and Bias Mitigation
 **Data Strategy Lab, KAIST**  
@@ -41,6 +41,7 @@ keywords: "Adnan Sadik research, AI researcher, machine learning projects, data 
 ## Publications and Preprints
 
 ### Preprints
+<a id="preprint-1"></a>
 1. **BLUCK: A Benchmark Dataset for Bengali Linguistic Understanding and Cultural Knowledge**  
    Daeen Kabir, Minhajur Rahman Chowdhury Mahim, Sheikh Shafayat, **Adnan Sadik**, Arian Ahmed, Eunsu Kim, Alice Oh  
    *arXiv preprint* [arXiv:2505.21092](https://arxiv.org/abs/2505.21092)

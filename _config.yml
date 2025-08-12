@@ -9,8 +9,11 @@
 # --- Required options --- #
 ############################
 
-# Name of website
-title: Normal(0,1) Website
+# Name of website (for browser tabs and SEO)
+title: Adnan Sadik
+
+# Website branding title (displayed in navbar)
+navbar-title: Normal(0,1) Website
 
 # Your name to show in the footer
 author: Adnan Sadik

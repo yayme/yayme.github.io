@@ -9,11 +9,6 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 
 <div class="projects-container">
 
-<div class="projects-header">
-<h1>🚀 Projects</h1>
-<p>Selected works in machine learning, quantitative finance, and data science</p>
-</div>
-
 <div class="projects-section">
 
 <div class="current-project-card">
@@ -130,37 +125,6 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
   max-width: 1000px;
   margin: 0 auto;
   padding: 1rem;
-}
-
-.projects-header {
-  text-align: center;
-  margin-bottom: 2rem;
-  padding: 2rem;
-  background: linear-gradient(135deg, #F5E8C7 0%, #FAF3E0 100%);
-  border: 2px solid #D6C6A9;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(58, 44, 41, 0.1);
-  transition: all 0.3s ease;
-}
-
-.projects-header:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(58, 44, 41, 0.15);
-  border-color: #D95F18;
-}
-
-.projects-header h1 {
-  color: #3A2C29;
-  font-size: 2.2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.projects-header p {
-  color: #6D5A4D;
-  font-size: 1.1rem;
-  font-style: italic;
-  margin: 0;
 }
 
 .current-project-card, .completed-projects-card {
@@ -342,19 +306,6 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 }
 
 /* Dark Mode Support */
-[data-theme="dark"] .projects-header {
-  background: linear-gradient(135deg, #3A2418 0%, #2C1810 100%);
-  border-color: #5A3825;
-}
-
-[data-theme="dark"] .projects-header h1 {
-  color: #F5E8C7 !important;
-}
-
-[data-theme="dark"] .projects-header p {
-  color: #D6C6A9 !important;
-}
-
 [data-theme="dark"] .current-project-card,
 [data-theme="dark"] .completed-projects-card {
   background: rgba(58, 36, 24, 0.8);
@@ -418,14 +369,6 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 @media (max-width: 768px) {
   .projects-container {
     padding: 0.5rem;
-  }
-  
-  .projects-header {
-    padding: 1.5rem;
-  }
-  
-  .projects-header h1 {
-    font-size: 1.8rem;
   }
   
   .current-project-card, .completed-projects-card {

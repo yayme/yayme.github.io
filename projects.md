@@ -124,8 +124,6 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 
 </div>
 
-</div>
-
 <style>
 /* Projects Page Styling */
 .projects-container {

@@ -297,10 +297,24 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
   color: #F5E8C7;
 }
 
+[data-theme="dark"] .interest-card h2,
+[data-theme="dark"] .interest-card h3 {
+  color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .interest-card h3 {
+  color: #FF8A4C !important;
+}
+
 [data-theme="dark"] .section-card {
   background: rgba(58, 36, 24, 0.8);
   border-color: #5A3825;
   color: #F5E8C7;
+}
+
+[data-theme="dark"] .section-card h2 {
+  color: #F5E8C7 !important;
+  border-bottom-color: #FF8A4C;
 }
 
 [data-theme="dark"] .experience-item,
@@ -309,6 +323,27 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
   background: rgba(58, 36, 24, 0.6);
   border-color: #5A3825;
   color: #F5E8C7;
+}
+
+[data-theme="dark"] .experience-item h3,
+[data-theme="dark"] .experience-item h4,
+[data-theme="dark"] .project-item h3,
+[data-theme="dark"] .project-item h4,
+[data-theme="dark"] .leadership-item h3,
+[data-theme="dark"] .leadership-item h4 {
+  color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .company-header h3 {
+  color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .role {
+  color: #FF8A4C !important;
+}
+
+[data-theme="dark"] .date {
+  color: #D6C6A9 !important;
 }
 
 [data-theme="dark"] .experience-item:hover,
@@ -320,6 +355,7 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 
 [data-theme="dark"] .tech-stack {
   background: #FF8A4C;
+  color: #2C1810;
 }
 
 [data-theme="dark"] .project-link {
@@ -336,6 +372,11 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
   background: rgba(255, 138, 76, 0.1);
   border-left-color: #FF8A4C;
   color: #F5E8C7;
+}
+
+[data-theme="dark"] .award-item strong,
+[data-theme="dark"] .interest-item h4 {
+  color: #F5E8C7 !important;
 }
 
 /* Responsive Design */

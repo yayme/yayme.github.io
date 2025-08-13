@@ -1,11 +1,16 @@
 ---
-layout: post
+layout: page
 title: Resume
 subtitle: Minimalistic Resume
 author: Adnan Sadik
 meta_description: "Resume - Adnan Sadik | Machine Learning & Data Science Experience in AI research and statistical learning"
 keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI researcher, KAIST"
 ---
+
+<div class="resume-header">
+<h1>Resume</h1>
+<h2>Minimalistic Resume</h2>
+</div>
 
 <div class="resume-container">
 
@@ -146,6 +151,45 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 </div>
 
 <style>
+/* Resume Header Styling */
+.resume-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #F5E8C7 0%, #FAF3E0 100%);
+  border: 2px solid #D6C6A9;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(58, 44, 41, 0.1);
+}
+
+.resume-header h1 {
+  color: #3A2C29;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.resume-header h2 {
+  color: #D95F18;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Dark Mode Support for Resume Header */
+[data-theme="dark"] .resume-header {
+  background: linear-gradient(135deg, #3A2418 0%, #2C1810 100%);
+  border-color: #5A3825;
+}
+
+[data-theme="dark"] .resume-header h1 {
+  color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .resume-header h2 {
+  color: #FF8A4C !important;
+}
+
 /* Resume Card Styling */
 .resume-container {
   max-width: 900px;

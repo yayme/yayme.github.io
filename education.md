@@ -22,19 +22,19 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
 <div class="coursework-card">
 <h3>📚 Math Relevant Coursework</h3>
 <div class="course-grid">
-<div class="course-item">Elementary Probability Theory</div>
-<div class="course-item">Mathematical Statistics</div>
-<div class="course-item">Intro to Linear Algebra</div>
-<div class="course-item">Probability and Statistics</div>
+<div class="course-item">Elementary Probability Theory <span class="course-code">MAS350</span></div>
+<div class="course-item">Mathematical Statistics <span class="course-code">MAS355</span></div>
+<div class="course-item">Intro to Linear Algebra <span class="course-code">MAS109</span></div>
+<div class="course-item">Probability and Statistics <span class="course-code">MAS250</span></div>
 </div>
 </div>
 
 <div class="coursework-card">
 <h3>💻 Computer Science Relevant Coursework</h3>
 <div class="course-grid">
-<div class="course-item">Machine Learning</div>
-<div class="course-item">Intro to Algorithms</div>
-<div class="course-item">Intro to AI: Statistical Decision Making</div>
+<div class="course-item">Machine Learning <span class="course-code">CS360</span></div>
+<div class="course-item">Intro to Algorithms <span class="course-code">CS300</span></div>
+<div class="course-item">Intro to AI: Statistical Decision Making <span class="course-code">CoE201</span></div>
 </div>
 </div>
 </div>
@@ -47,6 +47,9 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
 <span class="semester">Spring 2025</span>
 <span class="professor">Professor Jaemin Yoo</span>
 <a href="https://dai.kaist.ac.kr/members" class="lab-link">Data AI lab, KAIST</a>
+</div>
+<div class="study-description">
+<p>Investigating the integration of market sentiment analysis from social media data with traditional financial indicators for enhanced portfolio management strategies. Exploring multi-agent reinforcement learning frameworks for automated portfolio optimization and risk management in dynamic market environments.</p>
 </div>
 </div>
 </div>
@@ -208,6 +211,19 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-code {
+  background: #D95F18;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
 }
 
 .course-item::before {
@@ -283,6 +299,19 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
 .lab-link:hover {
   color: #C4470D !important;
   text-decoration: underline !important;
+}
+
+.study-description {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #D6C6A9;
+}
+
+.study-description p {
+  color: #3A2C29;
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
 }
 
 .workshop-topics {
@@ -407,6 +436,11 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
   border-color: #FF8A4C;
 }
 
+[data-theme="dark"] .course-code {
+  background: #FF8A4C;
+  color: #2C1810;
+}
+
 [data-theme="dark"] .study-item h4,
 [data-theme="dark"] .workshop-item h4,
 [data-theme="dark"] .achievement-item h4,
@@ -430,6 +464,14 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
 
 [data-theme="dark"] .lab-link:hover {
   color: #FF6B2B !important;
+}
+
+[data-theme="dark"] .study-description {
+  border-top-color: #5A3825;
+}
+
+[data-theme="dark"] .study-description p {
+  color: #F5E8C7 !important;
 }
 
 [data-theme="dark"] .topic-item {

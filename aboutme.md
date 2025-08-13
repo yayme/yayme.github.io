@@ -25,8 +25,8 @@ share-description: "Learn about Adnan Sadik, mathematics student at KAIST with i
 <div class="interest-grid">
 <div class="interest-item">
 <div class="interest-icon">📊</div>
-<h4>Statistical Learning</h4>
-<p>Exploring the mathematical foundations of data analysis and inference</p>
+<h4>Statistics and Stochastic Processes</h4>
+<p>Exploring mathematical foundations of randomness, probability, and statistical inference</p>
 </div>
 
 <div class="interest-item">

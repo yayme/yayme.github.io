@@ -44,6 +44,41 @@ redirect_from:
   </div>
 </div>
 
+<div class="blog-posts-section">
+  <h2>📝 Blog Posts</h2>
+  
+  <div class="posts-container">
+    {% assign recent_posts = site.posts | slice: 0, 5 %}
+    {% if recent_posts.size > 0 %}
+      {% for post in recent_posts %}
+        <article class="post-card">
+          <div class="post-header">
+            <h3><a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a></h3>
+            <div class="post-meta">
+              <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+              {% if post.tags.size > 0 %}
+                <div class="post-tags">
+                  {% for tag in post.tags limit: 3 %}
+                    <span class="tag">{{ tag }}</span>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+          {% if post.excerpt %}
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          {% endif %}
+          <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
+        </article>
+      {% endfor %}
+    {% else %}
+      <div class="no-posts">
+        <p>No blog posts yet. Check back soon!</p>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
 <style>
 /* Homepage title font size adjustment */
 .page-heading h1 {
@@ -66,6 +101,235 @@ redirect_from:
   color: #3A2C29;
   margin-bottom: 1rem;
   font-weight: bold;
+}
+
+/* Dark Mode Support for Recent Events */
+[data-theme="dark"] .events-section h2 {
+  color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .events-container {
+  background: linear-gradient(135deg, #3A2418 0%, #2C1810 100%);
+  border-color: #5A3825;
+}
+
+[data-theme="dark"] .event {
+  background: rgba(58, 36, 24, 0.6);
+  border-color: #5A3825;
+  color: #F5E8C7;
+}
+
+[data-theme="dark"] .event:hover {
+  background: rgba(58, 36, 24, 0.8);
+  border-color: #FF8A4C;
+}
+
+[data-theme="dark"] .event h3 {
+  color: #F5E8C7 !important;
+  border-bottom-color: #FF8A4C;
+}
+
+[data-theme="dark"] .event p {
+  color: #D6C6A9 !important;
+}
+
+[data-theme="dark"] .event ul li {
+  color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .event ul li strong {
+  color: #FF8A4C !important;
+}
+
+/* Blog Posts Section Styling */
+.blog-posts-section {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #D6C6A9;
+}
+
+.blog-posts-section h2 {
+  color: #3A2C29;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.posts-container {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.post-card {
+  background: linear-gradient(135deg, #F5E8C7 0%, #FAF3E0 100%);
+  border: 1px solid #D6C6A9;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 12px rgba(58, 44, 41, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(217, 95, 24, 0.05), transparent);
+  transition: all 0.6s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(58, 44, 41, 0.15);
+  border-color: #D95F18;
+}
+
+.post-card:hover::before {
+  left: 100%;
+}
+
+.post-header {
+  margin-bottom: 1rem;
+}
+
+.post-title {
+  color: #3A2C29 !important;
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  line-height: 1.3;
+}
+
+.post-title:hover {
+  color: #D95F18 !important;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.post-date {
+  color: #6D5A4D;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.post-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #D95F18;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.post-excerpt {
+  color: #3A2C29;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  background: #3A2C29;
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.read-more:hover {
+  background: #D95F18;
+  transform: scale(1.05);
+}
+
+.no-posts {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(245, 232, 199, 0.3);
+  border: 1px dashed #D6C6A9;
+  border-radius: 10px;
+}
+
+.no-posts p {
+  color: #6D5A4D;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Dark Mode Support for Blog Posts */
+[data-theme="dark"] .blog-posts-section {
+  border-top-color: #5A3825;
+}
+
+[data-theme="dark"] .blog-posts-section h2 {
+  color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .post-card {
+  background: linear-gradient(135deg, #3A2418 0%, #2C1810 100%);
+  border-color: #5A3825;
+}
+
+[data-theme="dark"] .post-card:hover {
+  border-color: #FF8A4C;
+}
+
+[data-theme="dark"] .post-title {
+  color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .post-title:hover {
+  color: #FF8A4C !important;
+}
+
+[data-theme="dark"] .post-date {
+  color: #D6C6A9 !important;
+}
+
+[data-theme="dark"] .post-excerpt {
+  color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .tag {
+  background: #FF8A4C;
+  color: #2C1810;
+}
+
+[data-theme="dark"] .read-more {
+  background: #FF8A4C;
+  color: #2C1810 !important;
+}
+
+[data-theme="dark"] .read-more:hover {
+  background: #FF6B2B;
+}
+
+[data-theme="dark"] .no-posts {
+  background: rgba(58, 36, 24, 0.6);
+  border-color: #5A3825;
+}
+
+[data-theme="dark"] .no-posts p {
+  color: #D6C6A9 !important;
 }
 
 .events-container {

@@ -26,7 +26,7 @@ keywords: "Adnan Sadik research, AI researcher, machine learning projects, data 
 </div>
 <div class="interest-area">
 <div class="interest-icon">📊</div>
-<h3>Statistical Learning Theory</h3>
+<h3>Statistics and Stochastic Processes</h3>
 </div>
 </div>
 </div>

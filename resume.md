@@ -16,33 +16,45 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 </div>
 
 <div class="section-card">
-<h2>Work Experience</h2>
+<h2 id="work-experience">Work Experience</h2>
 
 <div class="experience-item">
-<div class="company-header">
-<h3>IBS Biomedical Mathematics Group, South Korea</h3>
-<span class="role">Machine Learning Research Intern</span>
-<span class="date">Dec 2024 – June 2025</span>
-</div>
-<p>Developed ML pipelines for classifying sleep disorders and contributing to two research projects.</p>
-</div>
-
-<div class="experience-item">
-<div class="company-header">
-<h3>Users & Informations Lab, KAIST</h3>
-<span class="role">Undergraduate Researcher, Project: ChatGPT Voices</span>
-<span class="date">Aug 2024 -- Dec 2024</span>
-</div>
-<p>Built a cultural benchmark dataset for low resource language and evaluated LLMs on language and reasoning tasks. Coauthored Research Paper in submission.</p>
+  <div class="company-header">
+    <h3>IBS Biomedical Mathematics Group, South Korea</h3>
+    <span class="role">Machine Learning Research Intern</span>
+    <span class="date">Dec 2024 – June 2025</span>
+  </div>
+  <p>Developed ML pipelines for classifying sleep disorders and contributing to two research projects.</p>
 </div>
 
 <div class="experience-item">
-<div class="company-header">
-<h3>Data Strategy Lab, KAIST</h3>
-<span class="role">Research Intern</span>
-<span class="date">Apr 2024 – May 2024</span>
+  <div class="company-header">
+    <h3>Users & Informations Lab, KAIST</h3>
+    <span class="role">Undergraduate Researcher, Project: ChatGPT Voices</span>
+    <span class="date">Aug 2024 -- Dec 2024</span>
+  </div>
+  <p>Built a cultural benchmark dataset for low resource language and evaluated LLMs on language and reasoning tasks. Coauthored Research Paper in submission.</p>
 </div>
-<p>Studied fairness in AI; reviewed and researched bias mitigation techniques.</p>
+
+<div class="experience-item">
+  <div class="company-header">
+    <h3>Data Strategy Lab, KAIST</h3>
+    <span class="role">Research Intern</span>
+    <span class="date">Apr 2024 – May 2024</span>
+  </div>
+  <p>Studied fairness in AI; reviewed and researched bias mitigation techniques.</p>
+</div>
+
+<!-- New section for Other Experience -->
+<h3 style="margin-top:2rem; color:#D95F18;">Other Experience</h3>
+
+<div class="experience-item">
+  <div class="company-header">
+    <h3>Art of Problem Solving (AoPS)</h3>
+    <span class="role">Olympiad Math Grader</span>
+    <span class="date">2023 – Present</span>
+  </div>
+  <p>Graded advanced mathematics olympiad problems and provided detailed feedback to students participating in international-level competitions.</p>
 </div>
 
 </div>

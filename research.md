@@ -50,6 +50,12 @@ keywords: "Adnan Sadik research, AI researcher, machine learning projects, data 
 <a href="https://mathsci.kaist.ac.kr/~jaekkim/" class="supervisor-link">Prof. Jae Kyoung Kim</a>
 </div>
 </div>
+<div class="project-content">
+<ul class="research-highlights">
+<li>Designed and implemented full ML workflows from signal preprocessing to model training and result interpretation</li>
+<li>Working on modeling stochastic delay in birth and death processes in complex biological systems</li>
+</ul>
+</div>
 </div>
 
 <div class="research-project">

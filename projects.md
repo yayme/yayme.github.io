@@ -38,8 +38,6 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 </a>
 </div>
 
-</div>
-
 <div class="project-item">
 <div class="project-header">
 <h3>Real-time Sarcasm Detector</h3>
@@ -113,8 +111,6 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 <a href="https://github.com/yayme/COE-Yutnori" class="project-link">
 <span class="link-icon">📂</span> View on GitHub
 </a>
-</div>
-
 </div>
 
 </div>

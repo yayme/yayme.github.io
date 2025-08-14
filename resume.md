@@ -119,6 +119,17 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 </div>
 
 <div class="section-card">
+<h2>Certifications</h2>
+
+<div class="certification-item">
+<h4>Bloomberg Market Concepts (BMC)</h4>
+<p>Comprehensive financial markets education covering Economics, Currencies, Fixed Income, and Equities.</p>
+<a href="https://portal.bloombergforeducation.com/certificates/5gjUKVbqNyprfVUKpEvhMjSj" class="certification-link" target="_blank">🏆 View Certificate</a>
+</div>
+
+</div>
+
+<div class="section-card">
 <h2>Leadership and Volunteer Experience</h2>
 
 <div class="leadership-item">
@@ -290,6 +301,48 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
   border-left-width: 6px;
 }
 
+.certification-item {
+  background: rgba(255, 138, 76, 0.05);
+  border: 1px solid #D6C6A9;
+  border-left: 4px solid #D95F18;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.certification-item:hover {
+  transform: translateX(5px);
+  border-left-width: 6px;
+  background: rgba(255, 138, 76, 0.08);
+  border-color: #C4470D;
+}
+
+.certification-item h4 {
+  color: #3A2C29;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.certification-link {
+  display: inline-block;
+  background: #D95F18;
+  color: white !important;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.certification-link:hover {
+  background: #C4470D;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(196, 71, 13, 0.3);
+}
+
 /* Dark Mode Support */
 [data-theme="dark"] .interest-card {
   background: linear-gradient(135deg, #3A2418 0%, #2C1810 100%);
@@ -319,7 +372,8 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 
 [data-theme="dark"] .experience-item,
 [data-theme="dark"] .project-item,
-[data-theme="dark"] .leadership-item {
+[data-theme="dark"] .leadership-item,
+[data-theme="dark"] .certification-item {
   background: rgba(58, 36, 24, 0.6);
   border-color: #5A3825;
   color: #F5E8C7;
@@ -330,7 +384,8 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 [data-theme="dark"] .project-item h3,
 [data-theme="dark"] .project-item h4,
 [data-theme="dark"] .leadership-item h3,
-[data-theme="dark"] .leadership-item h4 {
+[data-theme="dark"] .leadership-item h4,
+[data-theme="dark"] .certification-item h4 {
   color: #F5E8C7 !important;
 }
 
@@ -348,7 +403,8 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 
 [data-theme="dark"] .experience-item:hover,
 [data-theme="dark"] .project-item:hover,
-[data-theme="dark"] .leadership-item:hover {
+[data-theme="dark"] .leadership-item:hover,
+[data-theme="dark"] .certification-item:hover {
   background: rgba(58, 36, 24, 0.8);
   border-color: #FF8A4C;
 }
@@ -364,6 +420,15 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 }
 
 [data-theme="dark"] .project-link:hover {
+  background: #FF6B2B;
+}
+
+[data-theme="dark"] .certification-link {
+  background: #FF8A4C;
+  color: #2C1810 !important;
+}
+
+[data-theme="dark"] .certification-link:hover {
   background: #FF6B2B;
 }
 

@@ -34,7 +34,7 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
 <div class="course-grid">
 <div class="course-item">Machine Learning <span class="course-code">CS360</span></div>
 <div class="course-item">Intro to Algorithms <span class="course-code">CS300</span></div>
-<div class="course-item">Intro to AI: Statistical Decision Making <span class="course-code">CoE201</span></div>
+<div class="course-item">Intro to AI: Statistical Decision Making <span class="course-code">CoE202</span></div>
 </div>
 </div>
 </div>
@@ -49,7 +49,10 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
 <a href="https://dai.kaist.ac.kr/members" class="lab-link">Data AI lab, KAIST</a>
 </div>
 <div class="study-description">
-<p>Investigating the integration of market sentiment analysis from social media data with traditional financial indicators for enhanced portfolio management strategies. Exploring multi-agent reinforcement learning frameworks for automated portfolio optimization and risk management in dynamic market environments.</p>
+<ul class="study-highlights">
+  <li>Investigating the integration of market sentiment analysis from social media data with traditional financial indicators for enhanced portfolio management strategies.</li>
+  <li>Exploring multi-agent reinforcement learning frameworks for automated portfolio optimization and risk management.</li>
+</ul>
 </div>
 </div>
 </div>

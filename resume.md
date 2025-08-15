@@ -54,7 +54,8 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
     <span class="role">Olympiad Math Grader</span>
     <span class="date">2023 – Present</span>
   </div>
-  <p>Graded advanced mathematics olympiad problems and provided detailed feedback to students participating in international-level competitions.</p>
+  <p>Graded advanced mathematics olympiad problems and provided detailed feedback to students participating in math competitions.</p>
+  
 </div>
 
 </div>

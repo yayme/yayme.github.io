@@ -13,11 +13,7 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 
 <div class="current-project-card">
 <h2>⚡ Currently Working On</h2>
-<div class="project-item featured">
-<h3>Volatility Inference with Stochastic Differential Equations and Data Assimilation</h3>
-<div class="project-status">In Progress</div>
-<p>Advanced mathematical modeling project focusing on financial market volatility prediction using stochastic calculus and data assimilation techniques.</p>
-</div>
+<!-- No current project at the moment -->
 </div>
 
 <div class="completed-projects-card">
@@ -70,21 +66,6 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 
 <div class="project-item">
 <div class="project-header">
-<h3>Bayesian Filtering and Data Assimilation with Python</h3>
-<div class="tech-stack">
-<span class="tech-tag">Python</span>
-<span class="tech-tag">Bayesian Statistics</span>
-<span class="tech-tag">Time Series</span>
-</div>
-</div>
-<p>Implemented Kalman and Particle Filters for state estimation in noisy time-series environments, demonstrating advanced statistical modeling techniques.</p>
-<a href="https://github.com/yayme/Data-Assimilation" class="project-link">
-<span class="link-icon">📂</span> View on GitHub
-</a>
-</div>
-
-<div class="project-item">
-<div class="project-header">
 <h3>Statistical Decision Making - Class Project</h3>
 <div class="tech-stack">
 <span class="tech-tag">Python</span>
@@ -109,6 +90,26 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 </div>
 <p>Developed strategy bots for Yut, a traditional Korean board game competition. Tested minimax tree search and heuristic-based strategies. Final approach used heuristic evaluation with Bayesian optimization (Gaussian Process + UCB) for weight tuning. Consistently outperforms baseline strategy with 54-56% win rate.</p>
 <a href="https://github.com/yayme/COE-Yutnori" class="project-link">
+<span class="link-icon">📂</span> View on GitHub
+</a>
+</div>
+
+<div class="project-item">
+<div class="project-header">
+<h3>Volatility Inference with SDEs & Data Assimilation</h3>
+<div class="tech-stack">
+<span class="tech-tag">Python</span>
+<span class="tech-tag">pandas</span>
+<span class="tech-tag">numpy</span>
+<span class="tech-tag">matplotlib</span>
+<span class="tech-tag">arch</span>
+</div>
+</div>
+<ul class="project-highlights">
+  <li>Conducted an exploratory study combining Heston-lite stochastic differential equation with naive, Kalman, and particle filter data assimilation, and compared the results with GARCH(1,1) volatility estimates.</li>
+  <li>Studied why Kalman filter–like methods offer advantages over GARCH due to the nonstationary nature of crypto markets.</li>
+</ul>
+<a href="https://github.com/yayme/Volatility-Inference-with-SDEs-Data-Assimilation" class="project-link">
 <span class="link-icon">📂</span> View on GitHub
 </a>
 </div>

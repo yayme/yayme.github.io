@@ -65,8 +65,13 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 
 <div class="project-item">
 <h3><em>Currently working on:</em></h3>
-<h4>Volatility Inference with Stochastic Differential Equations and Data assimilation</h4>
-<p>...</p>
+<h4>Volatility Inference with SDEs & Data Assimilation</h4>
+<div class="tech-stack">Python, pandas, numpy, matplotlib, arch</div>
+<ul>
+  <li>Conducted an exploratory study combining Heston-lite stochastic differential equation with naive, Kalman, and particle filter data assimilation, and compared the results with GARCH(1,1) volatility estimates.</li>
+  <li>Studied why Kalman filter–like methods offer advantages over GARCH due to the nonstationary nature of crypto markets.</li>
+</ul>
+<a href="https://github.com/yayme/Volatility-Inference-with-SDEs-Data-Assimilation" class="project-link">GitHub</a>
 </div>
 
 <div class="project-item">
@@ -88,13 +93,6 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 <div class="tech-stack">Python, AI/ML</div>
 <p>Created a real-time file sorter using NLP and vector similarity to classify content-based documents.</p>
 <a href="https://github.com/yayme/Desktop_file_organizer" class="project-link">GitHub</a>
-</div>
-
-<div class="project-item">
-<h4>Bayesian Filtering and Data Assimilation with Python</h4>
-<div class="tech-stack">Python</div>
-<p>Implemented Kalman and Particle Filters for state estimation in noisy time-series environments.</p>
-<a href="https://github.com/yayme/Data-Assimilation" class="project-link">GitHub</a>
 </div>
 
 <div class="project-item">

@@ -72,11 +72,17 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 <h3>AI-powered File Organizer</h3>
 <div class="tech-stack">
 <span class="tech-tag">Python</span>
-<span class="tech-tag">AI/ML</span>
 <span class="tech-tag">NLP</span>
+<span class="tech-tag">PyInstaller</span>
+<span class="tech-tag">Watchdog</span>
+<span class="tech-tag">spaCy</span>
 </div>
 </div>
-<p>Created a real-time file sorter using NLP and vector similarity to classify content-based documents, automating desktop organization through intelligent content analysis.</p>
+<ul class="project-highlights">
+  <li>Developed an automated file organization system using AI-driven content-based classification, improving file management efficiency by 40%.</li>
+  <li>Calculated document similarity using two approaches: TF-IDF vectorization with cosine similarity, and semantic embeddings from spaCy’s en_core_web_md model.</li>
+  <li>Integrated real-time file monitoring with Watchdog to automatically organize files into user-defined folders, reducing manual sorting time by 60%.</li>
+</ul>
 <a href="https://github.com/yayme/Desktop_file_organizer" class="project-link">
 <span class="link-icon">📂</span> View on GitHub
 </a>

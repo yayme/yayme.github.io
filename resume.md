@@ -68,8 +68,8 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 <h4>Volatility Inference with SDEs & Data Assimilation</h4>
 <div class="tech-stack">Python, Stochastic Differential Equations, Data Assimilation</div>
 <ul>
-  <li>Estimated instantaneous volatility of cryptocurrency by combining a Heston-lite SDE with Kalman and Particle Filter; absolute log returns used as ground truth (Kalman $R^2 \approx 0.9998$, Particle Filter $R^2 \approx 0.48$–$0.67$, GARCH $R^2 \approx 0.09$–$0.17$), showing both filters outperform traditional GARCH models.</li>
-  <li>Estimated smoothed volatility of cryptocurrency by combining a mean-reverting SDE with Kalman and Particle Filter; 100-period rolling std used as ground truth (Kalman $R^2 \approx 0.996$–$0.997$, Particle Filter $R^2 \approx 0.995$–$0.999$, GARCH $R^2 \approx 0.33$–$0.63$), demonstrating both methods outperform GARCH for smoothed volatility tracking.</li>
+  <li>Estimated instantaneous volatility of cryptocurrency by combining a Heston-lite SDE with Kalman and Particle Filter; absolute log returns used as ground truth. Kalman R² ≈ 0.9998, Particle Filter R² ≈ 0.48–0.67, GARCH R² ≈ 0.09–0.17. Both filters outperform traditional GARCH models.</li>
+  <li>Estimated smoothed volatility of cryptocurrency by combining a mean-reverting SDE with Kalman and Particle Filter; 100-period rolling std used as ground truth. Kalman R² ≈ 0.996–0.997, Particle Filter R² ≈ 0.995–0.999, GARCH R² ≈ 0.33–0.63. Both methods outperform GARCH for smoothed volatility tracking.</li>
 </ul>
 <a href="https://github.com/yayme/Volatility-Inference-with-SDEs-Data-Assimilation" class="project-link">GitHub</a>
 </div>

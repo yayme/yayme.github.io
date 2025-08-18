@@ -66,10 +66,10 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 <div class="project-item">
 <h3><em>Currently working on:</em></h3>
 <h4>Volatility Inference with SDEs & Data Assimilation</h4>
-<div class="tech-stack">Python, pandas, numpy, matplotlib, arch</div>
+<div class="tech-stack">Python, Stochastic Differential Equations, Data Assimilation</div>
 <ul>
-  <li>Conducted an exploratory study combining Heston-lite stochastic differential equation with naive, Kalman, and particle filter data assimilation, and compared the results with GARCH(1,1) volatility estimates.</li>
-  <li>Studied why Kalman filter–like methods offer advantages over GARCH due to the nonstationary nature of crypto markets.</li>
+  <li>Estimated instantaneous volatility of cryptocurrency by combining a Heston-lite SDE with Kalman and Particle Filter; absolute log returns used as ground truth (Kalman $R^2 \approx 0.9998$, Particle Filter $R^2 \approx 0.48$–$0.67$, GARCH $R^2 \approx 0.09$–$0.17$), showing both filters outperform traditional GARCH models.</li>
+  <li>Estimated smoothed volatility of cryptocurrency by combining a mean-reverting SDE with Kalman and Particle Filter; 100-period rolling std used as ground truth (Kalman $R^2 \approx 0.996$–$0.997$, Particle Filter $R^2 \approx 0.995$–$0.999$, GARCH $R^2 \approx 0.33$–$0.63$), demonstrating both methods outperform GARCH for smoothed volatility tracking.</li>
 </ul>
 <a href="https://github.com/yayme/Volatility-Inference-with-SDEs-Data-Assimilation" class="project-link">GitHub</a>
 </div>

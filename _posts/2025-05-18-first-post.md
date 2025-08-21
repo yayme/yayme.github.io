@@ -41,11 +41,5 @@ It **feels** like free money, but without knowing how the envelopes were filled,
 In short:  
 > Infinite switching? Bad idea. Stick to your first love—uh, envelope.
 
-## Moral of the story
 
-Sometimes in probability, reasoning too hard makes you lose your cash **and** your mind.
-
-🎩💸✨
-
----
 

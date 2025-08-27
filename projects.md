@@ -92,10 +92,15 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 <div class="tech-stack">
 <span class="tech-tag">Python</span>
 <span class="tech-tag">Bayesian Inference</span>
-<span class="tech-tag">Decision Theory</span>
+<span class="tech-tag">Classification Models</span>
 </div>
 </div>
-<p>Used Bayesian inference and classification to optimize inventory and healthcare decision models, showcasing practical applications of statistical theory.</p>
+<ul class="project-highlights">
+  <li>Implemented Bayesian inference methods (MLE, MAP, posterior mean) for robust parameter estimation in probabilistic models.</li>
+  <li>Optimized inventory with the Newsvendor Problem, reducing losses by 49.08% vs heuristic methods.</li>
+  <li>Developed and deployed multiple classification models, including KNN, Logistic Regression, and Single feature models, to predict healthcare readmissions, achieving AUCs of 0.68, 0.80, and 0.78, respectively.</li>
+  <li>Achieved up to 7.8% cost savings through predictive model optimization, improving decision-making in healthcare resource allocation.</li>
+</ul>
 <a href="https://github.com/yayme/Statistical-Decision-Making" class="project-link">
 <span class="link-icon">📂</span> View on GitHub
 </a>

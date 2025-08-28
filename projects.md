@@ -11,9 +11,10 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 
 <div class="projects-section">
 
-<div class="current-project-card">
-<h2>⚡ Currently Working On</h2>
-<div class="project-item featured">
+<div class="completed-projects-card">
+<h2>✅ Completed Projects</h2>
+
+<div class="project-item">
 <div class="project-header">
 <h3>Volatility Inference with SDEs & Data Assimilation</h3>
 <div class="tech-stack">
@@ -30,10 +31,6 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 <span class="link-icon">📂</span> View on GitHub
 </a>
 </div>
-</div>
-
-<div class="completed-projects-card">
-<h2>✅ Completed Projects</h2>
 
 <div class="project-item">
 <div class="project-header">

@@ -73,7 +73,6 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 <h2>Projects</h2>
 
 <div class="project-item">
-<h3><em>Currently working on:</em></h3>
 <h4>Volatility Inference with SDEs & Data Assimilation</h4>
 <div class="tech-stack">Python, Stochastic Differential Equations, Data Assimilation</div>
 <ul>

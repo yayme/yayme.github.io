@@ -264,10 +264,10 @@
 }
 
 /* Universal dark mode text override - ensures all text is visible */
-[data-theme="dark"] p,
-[data-theme="dark"] div:not(.footer):not(.navbar-custom),
-[data-theme="dark"] span:not(.fa):not(.fab):not(.fas):not(.far),
-[data-theme="dark"] li {
+[data-theme="dark"] p:not([style*="color"]),
+[data-theme="dark"] div:not(.footer):not(.navbar-custom):not([style*="color"]),
+[data-theme="dark"] span:not(.fa):not(.fab):not(.fas):not(.far):not(.role):not([style*="color"]),
+[data-theme="dark"] li:not([style*="color"]) {
   color: var(--text-col) !important;
 }
 
@@ -280,24 +280,9 @@
   color: var(--hover-col) !important;
 }
 
-/* Preserve orange accent text in dark mode - maintain visual hierarchy */
-[data-theme="dark"] h3[style*="color:#D95F18"],
-[data-theme="dark"] h4[style*="color:#D95F18"],
-[data-theme="dark"] h5[style*="color:#D95F18"],
-[data-theme="dark"] span[style*="color:#D95F18"],
-[data-theme="dark"] p[style*="color:#D95F18"],
-[data-theme="dark"] div[style*="color:#D95F18"],
-[data-theme="dark"] .orange-text,
-[data-theme="dark"] .role,
-[data-theme="dark"] .accent-text {
-  color: var(--link-col) !important;
-}
-
-/* Preserve orange elements with !important in their styles */
-[data-theme="dark"] *[style*="color:#D95F18!important"],
-[data-theme="dark"] *[style*="color: #D95F18 !important"],
-[data-theme="dark"] h1[style*="color:#D95F18"],
-[data-theme="dark"] h2[style*="color:#D95F18"] {
+/* Preserve inline styled orange elements */
+[data-theme="dark"] *[style*="color:#D95F18"],
+[data-theme="dark"] *[style*="color: #D95F18"] {
   color: var(--link-col) !important;
 }
 
@@ -349,30 +334,5 @@
 
 [data-theme="dark"] .social-links a:hover,
 [data-theme="dark"] .list-inline-item a:hover {
-  color: var(--link-col) !important;
-}
-
-/* Additional orange accent preservation - catch any remaining orange elements */
-[data-theme="dark"] .role,
-[data-theme="dark"] .highlight-text,
-[data-theme="dark"] .accent-color,
-[data-theme="dark"] .section-title,
-[data-theme="dark"] .orange-accent {
-  color: var(--link-col) !important;
-}
-
-/* Specific selectors for elements that should remain orange in dark mode */
-[data-theme="dark"] [style*="color: #D95F18"],
-[data-theme="dark"] [style*="color:#D95F18"] {
-  color: var(--link-col) !important;
-}
-
-/* Make sure these override the universal text color rule */
-[data-theme="dark"] h1[style*="#D95F18"],
-[data-theme="dark"] h2[style*="#D95F18"],
-[data-theme="dark"] h3[style*="#D95F18"],
-[data-theme="dark"] h4[style*="#D95F18"],
-[data-theme="dark"] h5[style*="#D95F18"],
-[data-theme="dark"] h6[style*="#D95F18"] {
   color: var(--link-col) !important;
 }

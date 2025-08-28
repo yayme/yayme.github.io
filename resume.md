@@ -20,6 +20,15 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 
 <div class="experience-item">
   <div class="company-header">
+    <h3>Huawei, Hong Kong SAR</h3>
+    <span class="role">Research & Software Intern (Incoming)</span>
+    <span class="date">Dec 2025 – Mar 2026</span>
+  </div>
+  <p>I will work on optimizing LLM inference in C++ with a focus on transformers, tensor operations, decoding, and cache efficiency.</p>
+</div>
+
+<div class="experience-item">
+  <div class="company-header">
     <h3>IBS Biomedical Mathematics Group, South Korea</h3>
     <span class="role">Machine Learning Research Intern</span>
     <span class="date">Dec 2024 – June 2025</span>

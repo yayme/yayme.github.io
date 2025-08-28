@@ -45,7 +45,7 @@ redirect_from:
 </div>
 
 <div class="blog-posts-section">
-  <h2>📝 Blog Posts</h2>
+  <h2><a href="{{ '/blog' | relative_url }}" class="blog-section-title">📝 Blog Posts</a></h2>
   
   <div class="blog-posts-container">
     {% assign recent_posts = site.posts | slice: 0, 5 %}
@@ -76,6 +76,10 @@ redirect_from:
         <p>No blog posts yet. Check back soon!</p>
       </div>
     {% endif %}
+  </div>
+  
+  <div class="view-all-posts">
+    <a href="{{ '/blog' | relative_url }}" class="view-all-btn">View All Posts →</a>
   </div>
 </div>
 
@@ -153,6 +157,18 @@ redirect_from:
   margin-bottom: 1.5rem;
   font-weight: bold;
   text-align: center;
+}
+
+.blog-section-title {
+  color: #3A2C29 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.blog-section-title:hover {
+  color: #D95F18 !important;
+  transform: translateY(-2px);
 }
 
 .posts-container, .blog-posts-container {
@@ -303,6 +319,32 @@ redirect_from:
   margin: 0;
 }
 
+.view-all-posts {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #D6C6A9;
+}
+
+.view-all-btn {
+  background: #D95F18;
+  color: white !important;
+  padding: 0.7rem 2rem;
+  border-radius: 25px;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(217, 95, 24, 0.2);
+}
+
+.view-all-btn:hover {
+  background: #C4470D;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(217, 95, 24, 0.3);
+}
+
 /* Dark Mode Support for Blog Posts */
 [data-theme="dark"] .blog-posts-section {
   border-top-color: #5A3825;
@@ -310,6 +352,14 @@ redirect_from:
 
 [data-theme="dark"] .blog-posts-section h2 {
   color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .blog-section-title {
+  color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .blog-section-title:hover {
+  color: #FF8A4C !important;
 }
 
 [data-theme="dark"] .blog-posts-container {
@@ -365,6 +415,21 @@ redirect_from:
 
 [data-theme="dark"] .no-posts p {
   color: #D6C6A9 !important;
+}
+
+[data-theme="dark"] .view-all-posts {
+  border-top-color: #5A3825;
+}
+
+[data-theme="dark"] .view-all-btn {
+  background: #FF8A4C;
+  color: #2C1810 !important;
+  box-shadow: 0 2px 8px rgba(255, 138, 76, 0.2);
+}
+
+[data-theme="dark"] .view-all-btn:hover {
+  background: #FF6B2B;
+  box-shadow: 0 4px 15px rgba(255, 138, 76, 0.3);
 }
 
 .events-container {

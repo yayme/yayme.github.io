@@ -28,6 +28,7 @@ navbar-links:
   Projects: "projects"
   Education: "education"
   Research: "research"
+  Blog: "blog"
   # Resources:
   #   - Beautiful Jekyll: "https://beautifuljekyll.com"
   #   - Learn markdown: "https://www.markdowntutorial.com/"

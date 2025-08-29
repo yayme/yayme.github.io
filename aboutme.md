@@ -18,6 +18,10 @@ share-description: "Learn about Adnan Sadik, mathematics student at KAIST with i
 </div>
 </div>
 
+<div class="linkedin-badge-card">
+<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="adnan-sadik" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://kr.linkedin.com/in/adnan-sadik?trk=profile-badge">Adnan Sadik</a></div>
+</div>
+
 <div class="interests-card">
 <h3>Academic Interests</h3>
 <p>My academic interests lie at the intersection of mathematics, data, and decision-making. I am particularly focused on:</p>
@@ -140,6 +144,23 @@ share-description: "Learn about Adnan Sadik, mathematics student at KAIST with i
   font-weight: 700;
 }
 
+.linkedin-badge-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #D6C6A9;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 12px rgba(58, 44, 41, 0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.linkedin-badge-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(58, 44, 41, 0.12);
+  border-color: #C4470D;
+}
+
 .interests-card, .story-card, .hobbies-card {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid #D6C6A9;
@@ -249,6 +270,11 @@ share-description: "Learn about Adnan Sadik, mathematics student at KAIST with i
 /* Dark Mode Support */
 [data-theme="dark"] .intro-card {
   background: linear-gradient(135deg, #3A2418 0%, #2C1810 100%);
+  border-color: #5A3825;
+}
+
+[data-theme="dark"] .linkedin-badge-card {
+  background: rgba(58, 36, 24, 0.8);
   border-color: #5A3825;
 }
 

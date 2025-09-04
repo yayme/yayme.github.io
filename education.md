@@ -20,12 +20,21 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
 
 <div class="coursework-section">
 <div class="coursework-card">
-<h3>📚 Math Relevant Coursework</h3>
+<h3>� Other/Extra Coursework</h3>
+<div class="course-grid">
+  <div class="course-item">Special Topics in Economics: Modern Macroeconomic Theory and Dynamic Programming <span class="course-code">ECON4XX</span></div>
+</div>
+</div>
+<div class="coursework-card">
+<h3>�📚 Math Relevant Coursework</h3>
 <div class="course-grid">
 <div class="course-item">Elementary Probability Theory <span class="course-code">MAS350</span></div>
 <div class="course-item">Mathematical Statistics <span class="course-code">MAS355</span></div>
 <div class="course-item">Intro to Linear Algebra <span class="course-code">MAS109</span></div>
 <div class="course-item">Probability and Statistics <span class="course-code">MAS250</span></div>
+ <div class="course-item">Analysis I <span class="course-code">MAS211</span></div>
+ <div class="course-item">Analysis II <span class="course-code">MAS212</span></div>
+ <div class="course-item">Introduction to Mathematical Biology <span class="course-code">MASXXX</span></div>
 </div>
 </div>
 
@@ -35,6 +44,9 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
 <div class="course-item">Machine Learning <span class="course-code">CS360</span></div>
 <div class="course-item">Intro to Algorithms <span class="course-code">CS300</span></div>
 <div class="course-item">Intro to AI: Statistical Decision Making <span class="course-code">CoE202</span></div>
+ <div class="course-item">Data Structure <span class="course-code">CS206</span></div>
+ <div class="course-item">Programming Language <span class="course-code">CS220</span></div>
+ <div class="course-item">Introduction to Database <span class="course-code">CS311</span></div>
 </div>
 </div>
 </div>
@@ -70,37 +82,38 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
 </div>
 </div>
 
-<div class="achievements-card">
-<h3>🏆 Notable Academic Achievements</h3>
-<div class="achievement-grid">
-<div class="achievement-item">
-<div class="achievement-icon">🎯</div>
-<h4>Full Ride Scholarship</h4>
-<p>Recipient</p>
-</div>
-<div class="achievement-item">
-<div class="achievement-icon">📋</div>
-<h4>Dean's List</h4>
-<p>Fall 2023</p>
-</div>
-<div class="achievement-item">
-<div class="achievement-icon">🌟</div>
-<h4>ISSS Scholarship</h4>
-<p>Fall 2024</p>
-</div>
+<div class="coursework-card">
+<h3>📚 Math Relevant Coursework</h3>
+<div class="course-grid">
+  <div class="course-item">Elementary Probability Theory <span class="course-code">MAS350</span></div>
+  <div class="course-item">Mathematical Statistics <span class="course-code">MAS355</span></div>
+  <div class="course-item">Intro to Linear Algebra <span class="course-code">MAS109</span></div>
+  <div class="course-item">Probability and Statistics <span class="course-code">MAS250</span></div>
+  <div class="course-item">Analysis I <span class="course-code">MAS211</span></div>
+  <div class="course-item">Analysis II <span class="course-code">MAS212</span></div>
+  <div class="course-item">Introduction to Mathematical Biology <span class="course-code">MASXXX</span></div>
 </div>
 </div>
 
-<div class="focus-card">
-<h3>🎯 Current Focus Areas</h3>
-<div class="focus-grid">
-<div class="focus-item">
-<div class="focus-icon">📊</div>
-<h4>Applied Statistics & Machine Learning</h4>
+<div class="coursework-card">
+<h3>💻 Computer Science Relevant Coursework</h3>
+<div class="course-grid">
+  <div class="course-item">Machine Learning <span class="course-code">CS360</span></div>
+  <div class="course-item">Intro to Algorithms <span class="course-code">CS300</span></div>
+  <div class="course-item">Intro to AI: Statistical Decision Making <span class="course-code">CoE202</span></div>
+  <div class="course-item">Data Structure <span class="course-code">CS206</span></div>
+  <div class="course-item">Programming Language <span class="course-code">CS220</span></div>
+  <div class="course-item">Introduction to Database <span class="course-code">CS311</span></div>
 </div>
-<div class="focus-item">
-<div class="focus-icon">🤖</div>
-<h4>Artificial Intelligence</h4>
+</div>
+
+<div class="coursework-card">
+<h3>📖 Other/Extra Coursework</h3>
+<div class="course-grid">
+  <div class="course-item">Special Topics in Economics: Modern Macroeconomic Theory and Dynamic Programming <span class="course-code">ECON4XX</span></div>
+  <div class="course-item">Introduction to Economics <span class="course-code">ECON101</span></div>
+</div>
+</div>
 </div>
 <div class="focus-item">
 <div class="focus-icon">💹</div>

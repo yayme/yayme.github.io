@@ -9,29 +9,80 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
 <div class="education-container">
 
 <div class="university-card">
-<div class="university-header">
-<h2>Korea Advanced Institute of Science and Technology (KAIST)</h2>
-<div class="degree-info">
-<span class="degree">B.Sc. in Mathematical Sciences and Computer Science (Double Major)</span>
-<span class="duration">2023 – Present</span>
-</div>
-</div>
+  <div class="university-header">
+    <h2>Korea Advanced Institute of Science and Technology (KAIST)</h2>
+    <div class="degree-info">
+      <span class="degree">B.Sc. in Mathematical Sciences and Computer Science (Double Major)</span>
+      <span class="duration">2023 – Present</span>
+    </div>
+  </div>
 </div>
 
-<div class="coursework-section">
-<div class="coursework-card">
-<h3>� Other/Extra Coursework</h3>
-<div class="course-grid">
-  <div class="course-item">Special Topics in Economics: Modern Macroeconomic Theory and Dynamic Programming <span class="course-code">ECON4XX</span></div>
+<div class="education-sections">
+  <div class="workshop-card">
+    <h3>🎓 Advanced Programs</h3>
+    <div class="workshop-item">
+      <h4>KAI-X Advanced Undergraduate Workshop</h4>
+      <span class="semester">Summer 2025</span>
+      <div class="workshop-topics">
+        <div class="topic-item">Fourier Analysis and Dispersive PDEs</div>
+        <div class="topic-item">Introduction to Statistical Learning Theory</div>
+        <div class="topic-item">Introduction to Mathematical Finance</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="study-card">
+    <h3>🔬 Individual Study</h3>
+    <div class="study-item">
+      <h4>Financial AI</h4>
+      <div class="study-details">
+        <span class="semester">Spring 2025</span>
+        <span class="professor">Professor Jaemin Yoo</span>
+        <a href="https://dai.kaist.ac.kr/members" class="lab-link">Data AI lab, KAIST</a>
+      </div>
+      <div class="study-description">
+        <ul class="study-highlights">
+          <li>Investigating the integration of market sentiment analysis from social media data with traditional financial indicators for enhanced portfolio management strategies.</li>
+          <li>Exploring multi-agent reinforcement learning frameworks for automated portfolio optimization and risk management.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="coursework-card">
+    <h3>📚 Math Relevant Coursework</h3>
+    <div class="course-grid">
+      <div class="course-item">Elementary Probability Theory <span class="course-code">MAS350</span></div>
+      <div class="course-item">Mathematical Statistics <span class="course-code">MAS355</span></div>
+      <div class="course-item">Intro to Linear Algebra <span class="course-code">MAS109</span></div>
+      <div class="course-item">Probability and Statistics <span class="course-code">MAS250</span></div>
+      <div class="course-item">Analysis I <span class="course-code">MAS211</span></div>
+      <div class="course-item">Analysis II <span class="course-code">MAS212</span></div>
+      <div class="course-item">Introduction to Mathematical Biology <span class="course-code">MASXXX</span></div>
+    </div>
+  </div>
+
+  <div class="coursework-card">
+    <h3>💻 Computer Science Relevant Coursework</h3>
+    <div class="course-grid">
+      <div class="course-item">Machine Learning <span class="course-code">CS360</span></div>
+      <div class="course-item">Intro to Algorithms <span class="course-code">CS300</span></div>
+      <div class="course-item">Intro to AI: Statistical Decision Making <span class="course-code">CoE202</span></div>
+      <div class="course-item">Data Structure <span class="course-code">CS206</span></div>
+      <div class="course-item">Programming Language <span class="course-code">CS220</span></div>
+      <div class="course-item">Introduction to Database <span class="course-code">CS311</span></div>
+    </div>
+  </div>
+
+  <div class="coursework-card">
+    <h3>📖 Other/Extra Coursework</h3>
+    <div class="course-grid">
+      <div class="course-item">Special Topics in Economics: Modern Macroeconomic Theory and Dynamic Programming <span class="course-code">ECON4XX</span></div>
+      <div class="course-item">Introduction to Economics <span class="course-code">ECON101</span></div>
+    </div>
+  </div>
 </div>
-</div>
-<div class="coursework-card">
-<h3>�📚 Math Relevant Coursework</h3>
-<div class="course-grid">
-<div class="course-item">Elementary Probability Theory <span class="course-code">MAS350</span></div>
-<div class="course-item">Mathematical Statistics <span class="course-code">MAS355</span></div>
-<div class="course-item">Intro to Linear Algebra <span class="course-code">MAS109</span></div>
-<div class="course-item">Probability and Statistics <span class="course-code">MAS250</span></div>
  <div class="course-item">Analysis I <span class="course-code">MAS211</span></div>
  <div class="course-item">Analysis II <span class="course-code">MAS212</span></div>
  <div class="course-item">Introduction to Mathematical Biology <span class="course-code">MASXXX</span></div>

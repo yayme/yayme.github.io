@@ -78,93 +78,44 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
   <div class="coursework-card">
     <h3>📖 Other/Extra Coursework</h3>
     <div class="course-grid">
-      <div class="course-item">Special Topics in Economics: Modern Macroeconomic Theory and Dynamic Programming <span class="course-code">ECON4XX</span></div>
-      <div class="course-item">Introduction to Economics <span class="course-code">ECON101</span></div>
+      <div class="course-item">Special Topics in Economics: Modern Macroeconomic Theory and Dynamic Programming <span class="course-code">HSS310</span></div>
+      <div class="course-item">Introduction to Economics <span class="course-code">HSS159</span></div>
     </div>
   </div>
 </div>
- <div class="course-item">Analysis I <span class="course-code">MAS211</span></div>
- <div class="course-item">Analysis II <span class="course-code">MAS212</span></div>
- <div class="course-item">Introduction to Mathematical Biology <span class="course-code">MASXXX</span></div>
-</div>
 </div>
 
-<div class="coursework-card">
-<h3>💻 Computer Science Relevant Coursework</h3>
-<div class="course-grid">
-<div class="course-item">Machine Learning <span class="course-code">CS360</span></div>
-<div class="course-item">Intro to Algorithms <span class="course-code">CS300</span></div>
-<div class="course-item">Intro to AI: Statistical Decision Making <span class="course-code">CoE202</span></div>
- <div class="course-item">Data Structure <span class="course-code">CS206</span></div>
- <div class="course-item">Programming Language <span class="course-code">CS220</span></div>
- <div class="course-item">Introduction to Database <span class="course-code">CS311</span></div>
+<div class="achievements-card">
+<h3>🏆 Notable Academic Achievements</h3>
+<div class="achievement-grid">
+<div class="achievement-item">
+<div class="achievement-icon">🎯</div>
+<h4>Full Ride Scholarship</h4>
+<p>Recipient</p>
 </div>
+<div class="achievement-item">
+<div class="achievement-icon">📋</div>
+<h4>Dean's List</h4>
+<p>Fall 2023</p>
 </div>
-</div>
-
-<div class="study-card">
-<h3>🔬 Individual Study</h3>
-<div class="study-item">
-<h4>Financial AI</h4>
-<div class="study-details">
-<span class="semester">Spring 2025</span>
-<span class="professor">Professor Jaemin Yoo</span>
-<a href="https://dai.kaist.ac.kr/members" class="lab-link">Data AI lab, KAIST</a>
-</div>
-<div class="study-description">
-<ul class="study-highlights">
-  <li>Investigating the integration of market sentiment analysis from social media data with traditional financial indicators for enhanced portfolio management strategies.</li>
-  <li>Exploring multi-agent reinforcement learning frameworks for automated portfolio optimization and risk management.</li>
-</ul>
+<div class="achievement-item">
+<div class="achievement-icon">🌟</div>
+<h4>ISSS Scholarship</h4>
+<p>Fall 2024</p>
 </div>
 </div>
 </div>
 
-<div class="workshop-card">
-<h3>🎓 Advanced Programs</h3>
-<div class="workshop-item">
-<h4>KAI-X Advanced Undergraduate Workshop</h4>
-<span class="semester">Summer 2025</span>
-<div class="workshop-topics">
-<div class="topic-item">Fourier Analysis and Dispersive PDEs</div>
-<div class="topic-item">Introduction to Statistical Learning Theory</div>
-<div class="topic-item">Introduction to Mathematical Finance</div>
+<div class="focus-card">
+<h3>🎯 Current Focus Areas</h3>
+<div class="focus-grid">
+<div class="focus-item">
+<div class="focus-icon">📊</div>
+<h4>Applied Statistics & Machine Learning</h4>
 </div>
-</div>
-</div>
-
-<div class="coursework-card">
-<h3>📚 Math Relevant Coursework</h3>
-<div class="course-grid">
-  <div class="course-item">Elementary Probability Theory <span class="course-code">MAS350</span></div>
-  <div class="course-item">Mathematical Statistics <span class="course-code">MAS355</span></div>
-  <div class="course-item">Intro to Linear Algebra <span class="course-code">MAS109</span></div>
-  <div class="course-item">Probability and Statistics <span class="course-code">MAS250</span></div>
-  <div class="course-item">Analysis I <span class="course-code">MAS211</span></div>
-  <div class="course-item">Analysis II <span class="course-code">MAS212</span></div>
-  <div class="course-item">Introduction to Mathematical Biology <span class="course-code">MASXXX</span></div>
-</div>
-</div>
-
-<div class="coursework-card">
-<h3>💻 Computer Science Relevant Coursework</h3>
-<div class="course-grid">
-  <div class="course-item">Machine Learning <span class="course-code">CS360</span></div>
-  <div class="course-item">Intro to Algorithms <span class="course-code">CS300</span></div>
-  <div class="course-item">Intro to AI: Statistical Decision Making <span class="course-code">CoE202</span></div>
-  <div class="course-item">Data Structure <span class="course-code">CS206</span></div>
-  <div class="course-item">Programming Language <span class="course-code">CS220</span></div>
-  <div class="course-item">Introduction to Database <span class="course-code">CS311</span></div>
-</div>
-</div>
-
-<div class="coursework-card">
-<h3>📖 Other/Extra Coursework</h3>
-<div class="course-grid">
-  <div class="course-item">Special Topics in Economics: Modern Macroeconomic Theory and Dynamic Programming <span class="course-code">ECON4XX</span></div>
-  <div class="course-item">Introduction to Economics <span class="course-code">ECON101</span></div>
-</div>
-</div>
+<div class="focus-item">
+<div class="focus-icon">🤖</div>
+<h4>Artificial Intelligence</h4>
 </div>
 <div class="focus-item">
 <div class="focus-icon">💹</div>
@@ -261,11 +212,61 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
     </div>
   </div>
 
-.coursework-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
+</div>
+
+<style>
+/* Education Page Styling */
+.education-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.university-card {
+  background: linear-gradient(135deg, #F5E8C7 0%, #FAF3E0 100%);
+  border: 2px solid #D6C6A9;
+  border-radius: 15px;
+  padding: 2.5rem;
   margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(58, 44, 41, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.university-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(58, 44, 41, 0.15);
+  border-color: #D95F18;
+}
+
+.university-header h2 {
+  color: #3A2C29;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.degree-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.degree {
+  color: #D95F18;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.duration {
+  color: #6D5A4D;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.education-sections {
+  display: grid;
+  gap: 2rem;
 }
 
 .coursework-card, .study-card, .workshop-card, .achievements-card, .focus-card {

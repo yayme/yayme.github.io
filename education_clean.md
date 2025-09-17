@@ -101,11 +101,6 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
         <h4>ISSS Scholarship</h4>
         <p>Fall 2024</p>
       </div>
-      <div class="achievement-item">
-        <div class="achievement-icon">🏅</div>
-        <h4>KAIplus Scholarship</h4>
-        <p>Fall 2025</p>
-      </div>
     </div>
   </div>
 

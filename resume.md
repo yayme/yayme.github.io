@@ -42,7 +42,7 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
     <span class="role">Undergraduate Researcher, Project: ChatGPT Voices</span>
     <span class="date">Aug 2024 -- Dec 2024</span>
   </div>
-  <p>Built a cultural benchmark dataset for low resource language and evaluated LLMs on language and reasoning tasks. Coauthored Research Paper in submission.</p>
+  <p>Built a cultural benchmark dataset for low resource language and evaluated LLMs on language and reasoning tasks. Coauthored research paper accepted into AACL-IJCNLP 2025 Workshop.</p>
 </div>
 
 <div class="experience-item">

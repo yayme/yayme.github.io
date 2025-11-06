@@ -110,7 +110,7 @@ keywords: "Adnan Sadik research, AI researcher, machine learning projects, data 
 Daeen Kabir, Minhajur Rahman Chowdhury Mahim, Sheikh Shafayat, <strong>Adnan Sadik</strong>, Arian Ahmed, Eunsu Kim, Alice Oh
 </div>
 <div class="pub-venue">
-<em>arXiv preprint</em>
+<em>AACL-IJCNLP 2025 Workshop published</em>
 <a href="https://arxiv.org/abs/2505.21092" class="arxiv-link" target="_blank">arXiv:2505.21092</a>
 </div>
 </div>

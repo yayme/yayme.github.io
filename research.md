@@ -71,7 +71,7 @@ keywords: "Adnan Sadik research, AI researcher, machine learning projects, data 
 <ul class="research-highlights">
 <li>Developed cultural benchmark datasets for low-resource languages</li>
 <li>Evaluated Large Language Models on language understanding and reasoning tasks</li>
-<li>Research paper in submission<sup><a href="#preprint-1" class="ref-link">[1]</a></sup></li>
+<li>Accepted into AACL-IJCNLP 2025 Workshop<sup><a href="#preprint-1" class="ref-link">[1]</a></sup></li>
 </ul>
 </div>
 </div>
@@ -98,10 +98,10 @@ keywords: "Adnan Sadik research, AI researcher, machine learning projects, data 
 </div>
 
 <div class="publications-card">
-<h2>📚 Publications and Preprints</h2>
+<h2>📚 Publications</h2>
 
 <div class="publications-section">
-<h3>Preprints</h3>
+<h3>Publications</h3>
 <div class="publication-item" id="preprint-1">
 <div class="pub-number">1.</div>
 <div class="pub-content">

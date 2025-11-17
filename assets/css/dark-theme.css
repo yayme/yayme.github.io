@@ -330,3 +330,28 @@
 [data-theme="dark"] .list-inline-item a:hover {
   color: var(--link-col) !important;
 }
+
+/* Navbar Quote Styling */
+.navbar-quote {
+  flex-grow: 1;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.quote-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #666;
+  opacity: 0.8;
+}
+
+@media (max-width: 991px) {
+  .navbar-quote {
+    display: none;
+  }
+}
+
+[data-theme="dark"] .quote-text {
+  color: #D6C6A9;
+  opacity: 0.9;
+}

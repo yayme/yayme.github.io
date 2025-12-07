@@ -27,6 +27,8 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
   <p>I will work on optimizing LLM inference in C++ with a focus on transformers, tensor operations, decoding, and cache efficiency.</p>
 </div>
 
+
+
 <div class="experience-item">
   <div class="company-header">
     <h3>IBS Biomedical Mathematics Group, South Korea</h3>
@@ -34,6 +36,14 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
     <span class="date">Dec 2024 – June 2025</span>
   </div>
   <p>Developed ML pipelines for classifying sleep disorders and contributing to two research projects.</p>
+</div>
+<div class="experience-item">
+  <div class="company-header">
+    <h3>Mercor</h3>
+    <span class="role">AI Reasoning Expert & Mathematical Problem Designer</span>
+    <span class="date">Sep 2025 – Dec 2025</span>
+  </div>
+  <p>Designed mathematical reasoning problems for IMO Frontier Math project. Created challenging problem sets testing advanced mathematical concepts and logical reasoning for AI model evaluation.</p>
 </div>
 
 <div class="experience-item">

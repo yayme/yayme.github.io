@@ -80,6 +80,45 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 </div>
 
 <div class="section-card">
+<h2>Technical Skills</h2>
+
+<div class="skills-section">
+  <h3>Programming Languages & Frameworks</h3>
+  
+  <div class="skill-category">
+    <h4>Data Science & Machine Learning</h4>
+    <p><strong>Python:</strong> NumPy, Pandas, Scikit-learn, PyTorch, Matplotlib, Seaborn, SciPy</p>
+  </div>
+  
+  <div class="skill-category">
+    <h4>Backend Development</h4>
+    <p><strong>Python:</strong> Django, Flask, FastAPI, REST APIs</p>
+  </div>
+  
+  <div class="skill-category">
+    <h4>Systems & General Purpose</h4>
+    <p><strong>C++</strong> (STL, algorithms), <strong>C</strong>, <strong>Java</strong>, <strong>Scala</strong>, <strong>F#</strong>, <strong>SQL</strong></p>
+  </div>
+</div>
+
+<div class="skills-section">
+  <h3>Software Engineering</h3>
+  <p>Object-Oriented Programming (OOP), Algorithm Design, Functional Programming, Concurrency, Multithreading, Parallel Computing</p>
+</div>
+
+<div class="skills-section">
+  <h3>Tools & Technologies</h3>
+  <p>Git, Terminal, Shell Scripting, Anaconda, LaTeX, PowerPoint, Jupyter, Docker</p>
+</div>
+
+<div class="skills-section">
+  <h3>Mathematics & Statistics</h3>
+  <p>Linear Algebra, Calculus, Probability, Statistics, Optimization, Numerical Methods, Mathematical Modeling, Stochastic Processes</p>
+</div>
+
+</div>
+
+<div class="section-card">
 <h2>Projects</h2>
 
 <div class="project-item">

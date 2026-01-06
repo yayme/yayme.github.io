@@ -364,4 +364,53 @@
   <!-- LinkedIn Profile Badge Script -->
   <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 
+  <!-- Structured Data (JSON-LD) for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Adnan Sadik",
+    "url": "https://yayme.github.io",
+    "image": "https://yayme.github.io/assets/img/avatar-icon.png",
+    "jobTitle": "Mathematics Student & Research Assistant",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "KAIST (Korea Advanced Institute of Science and Technology)"
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "KAIST"
+    },
+    "knowsAbout": ["Machine Learning", "Statistical Learning", "Quantitative Finance", "Biomedical Mathematics", "Artificial Intelligence", "Data Science"],
+    "sameAs": [
+      "https://www.linkedin.com/in/adnan-sadik",
+      "https://github.com/yayme",
+      "https://scholar.google.com/citations?user=fAIOqccAAAAJ&hl=en"
+    ],
+    "email": "adnansadik235@kaist.ac.kr"
+  }
+  </script>
+
+  {% if page.layout == "post" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ page.title }}",
+    "author": {
+      "@type": "Person",
+      "name": "Adnan Sadik"
+    },
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{{ page.date | date_to_xmlschema }}",
+    "description": "{{ page.subtitle | default: page.excerpt | strip_html | truncate: 160 }}",
+    "url": "{{ site.url }}{{ page.url }}",
+    "publisher": {
+      "@type": "Person",
+      "name": "Adnan Sadik"
+    }
+  }
+  </script>
+  {% endif %}
+
 </head>

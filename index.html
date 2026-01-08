@@ -12,6 +12,13 @@ redirect_from:
   - /normalsite/home
 ---
 
+<div class="chat-button-container">
+  <a href="mailto:adnansadik235@gmail.com" class="chat-button">
+    <span class="chat-icon">💬</span>
+    Let's have a chat
+  </a>
+</div>
+
 <div class="events-section">
   <h2>Recent Events</h2>
   
@@ -101,6 +108,73 @@ redirect_from:
 </div>
 
 <style>
+/* Chat Button Styling */
+.chat-button-container {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeInDown 0.8s ease;
+}
+
+.chat-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #D95F18 0%, #C4470D 100%);
+  color: white !important;
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(217, 95, 24, 0.3);
+  border: 2px solid transparent;
+}
+
+.chat-button:hover {
+  background: linear-gradient(135deg, #C4470D 0%, #D95F18 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(217, 95, 24, 0.4);
+  border-color: #D95F18;
+}
+
+.chat-button:active {
+  transform: translateY(-1px);
+}
+
+.chat-icon {
+  font-size: 1.3rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark Mode Support for Chat Button */
+[data-theme="dark"] .chat-button {
+  background: linear-gradient(135deg, #FF8A4C 0%, #FF6B2B 100%);
+  box-shadow: 0 4px 15px rgba(255, 138, 76, 0.3);
+}
+
+[data-theme="dark"] .chat-button:hover {
+  background: linear-gradient(135deg, #FF6B2B 0%, #FF8A4C 100%);
+  box-shadow: 0 6px 20px rgba(255, 138, 76, 0.4);
+  border-color: #FF8A4C;
+}
+
 /* Homepage title font size adjustment */
 .page-heading h1 {
   font-size: 2.5rem !important;

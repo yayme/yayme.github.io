@@ -1,113 +1,570 @@
 ---
 layout: home
 title: Home
-subtitle: Statistics • Machine Learning • Quantitative Finance
-meta_description: "Adnan Sadik - Mathematics student and researcher at KAIST specializing in statistical learning, machine learning, quantitative finance, and biomedical mathematics. Academic portfolio and research projects."
-keywords: "Adnan Sadik, Adnan Sadik KAIST, mathematics student, machine learning researcher, statistical learning, quantitative finance, biomedical mathematics, data science, AI research, KAIST student, Korean university, research portfolio"
-share-title: "Adnan Sadik - Mathematics Student & Researcher at KAIST"
-share-description: "Academic portfolio of Adnan Sadik, mathematics student at KAIST working on machine learning, statistical learning, and quantitative finance research."
+subtitle: Quant-Focused Profile · Probability · Statistics · Machine Learning · Markets
+meta_description: "Adnan Sadik - Quant-focused mathematics researcher at KAIST. IMO medalist, Jane Street Prize winner, specializing in probability theory, machine learning, and quantitative finance."
+keywords: "Adnan Sadik, quantitative finance, quant researcher, KAIST mathematics, IMO medalist, Jane Street Prize, WorldQuant, probability theory, machine learning, statistical learning, competitive programming"
+share-title: "Adnan Sadik - Quant-Focused Profile"
+share-description: "IMO Medalist | Jane Street Prize Winner | Quant Finance · Machine Learning · Statistical Reasoning"
 redirect_from:
   - /normalsite/
   - /normalsite/index.html
   - /normalsite/home
 ---
 
-<div class="chat-button-container">
-  <a href="mailto:adnansadik235@gmail.com" class="chat-button">
-    <span class="chat-icon">💬</span>
-    Let's have a chat
-  </a>
-</div>
-
-<div class="events-section">
-  <h2>Recent Events</h2>
-  
-  <div class="events-container">
-    <div class="event">
-      <h3>November 2025</h3>
-      <p><strong>BLUCK Paper Accepted</strong></p>
-      <ul>
-        <li>Paper accepted into AACL-IJCNLP 2025 Workshop</li>
-        <li>Cultural benchmark dataset for linguistic understanding of low resource languages.</li>
-      </ul>
-    </div>
-    
-    <div class="event">
-      <h3>September 2025</h3>
-      <p><strong>KAIplus Scholarship</strong></p>
-      <ul>
-        <li>Received KAIplus Scholarship for Fall 2025 semester</li>
-      </ul>
-    </div>
-    
-    <div class="event">
-      <h3>July 2025</h3>
-      <p><strong>KAIST KAI-X Advanced Undergraduate Math Workshop</strong></p>
-      <ul>
-        <li>Topics: Fourier Series & Dispersive PDEs, Statistical Learning, Financial Mathematics</li>
-      </ul>
-    </div>
-    
-    <div class="event">
-      <h3>March 2025</h3>
-      <p><strong>Discover Citadel
-      </strong></p>
-      <ul>
-        <li><strong>1st place in Trading Challenge</strong></li>
-        <li><strong>1st place in Quant Challenge</strong></li>
-      </ul>
-    </div>
-    
-    <div class="event">
-      <h3>December 2024</h3>
-      <p><strong>Simon Marais Mathematics Competition</strong></p>
-      <ul>
-        <li><strong>Jane Street Prize Winner</strong> - Best in University, Top Quartile</li>
-      </ul>
+<div class="mindmap-container">
+  <!-- Central Hub -->
+  <div class="central-node">
+    <div class="node-content">
+      <h2>Quant-Focused Profile</h2>
+      <p class="subtitle">Probability · Statistics · Machine Learning · Markets</p>
     </div>
   </div>
-</div>
 
-<div class="blog-posts-section">
-  <h2><a href="{{ '/blog' | relative_url }}" class="blog-section-title">📝 Blog Posts</a></h2>
-  
-  <div class="blog-posts-container">
-    {% assign recent_posts = site.posts | slice: 0, 5 %}
-    {% if recent_posts.size > 0 %}
-      {% for post in recent_posts %}
-        <article class="post-card">
-          <div class="post-header">
-            <h3><a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a></h3>
-            <div class="post-meta">
-              <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-              {% if post.tags.size > 0 %}
-                <div class="post-tags">
-                  {% for tag in post.tags limit: 3 %}
-                    <span class="tag">{{ tag }}</span>
-                  {% endfor %}
-                </div>
-              {% endif %}
-            </div>
-          </div>
-          {% if post.excerpt %}
-            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-          {% endif %}
-          <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
-        </article>
-      {% endfor %}
-    {% else %}
-      <div class="no-posts">
-        <p>No blog posts yet. Check back soon!</p>
+  <!-- Connection Lines (Visual) -->
+  <svg class="connection-lines" width="100%" height="100%" style="position: absolute; top: 0; left: 0; pointer-events: none; z-index: 0;">
+    <line class="conn-line line1" x1="50%" y1="50%" x2="20%" y2="15%" />
+    <line class="conn-line line2" x1="50%" y1="50%" x2="80%" y2="15%" />
+    <line class="conn-line line3" x1="50%" y1="50%" x2="10%" y2="45%" />
+    <line class="conn-line line4" x1="50%" y1="50%" x2="90%" y2="45%" />
+    <line class="conn-line line5" x1="50%" y1="50%" x2="15%" y2="75%" />
+    <line class="conn-line line6" x1="50%" y1="50%" x2="85%" y2="75%" />
+    <line class="conn-line line7" x1="50%" y1="50%" x2="35%" y2="95%" />
+    <line class="conn-line line8" x1="50%" y1="50%" x2="65%" y2="95%" />
+  </svg>
+
+  <!-- Branch Nodes -->
+  <div class="branch-grid">
+    <!-- Node 1: Early Signals -->
+    <div class="branch-node node-1" data-category="foundation">
+      <div class="node-header">
+        <span class="node-number">01</span>
+        <h3>Early Signals</h3>
       </div>
-    {% endif %}
-  </div>
-  
-  <div class="view-all-posts">
-    <a href="{{ '/blog' | relative_url }}" class="view-all-btn">View All Posts →</a>
+      <div class="node-body">
+        <div class="node-item">IMO Medalist</div>
+        <div class="node-item">Top Competitive Programmer</div>
+      </div>
+    </div>
+
+    <!-- Node 2: Academic Core -->
+    <div class="branch-node node-2" data-category="foundation">
+      <div class="node-header">
+        <span class="node-number">02</span>
+        <h3>Academic Core (KAIST)</h3>
+      </div>
+      <div class="node-body">
+        <div class="node-section">
+          <strong>Primary Interests:</strong>
+          <div class="node-item">Probability Theory</div>
+          <div class="node-item">Statistics</div>
+          <div class="node-item">Machine Learning</div>
+        </div>
+        <div class="node-section">
+          <strong>Publications:</strong>
+          <div class="node-item">Generative AI (NLP)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Node 3: Research Experience -->
+    <div class="branch-node node-3" data-category="experience">
+      <div class="node-header">
+        <span class="node-number">03</span>
+        <h3>Research Experience</h3>
+      </div>
+      <div class="node-body">
+        <div class="node-item highlight">Institute for Basic Science (IBS)</div>
+        <div class="node-item">Applied Mathematics + Deep Learning</div>
+        <div class="node-section">
+          <strong>Industry Collaboration:</strong>
+          <div class="node-item">Samsung (via IBS)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Node 4: Industry Experience -->
+    <div class="branch-node node-4" data-category="experience">
+      <div class="node-header">
+        <span class="node-number">04</span>
+        <h3>Industry Experience</h3>
+      </div>
+      <div class="node-body">
+        <div class="node-item highlight">R&D Engineer Intern — Huawei</div>
+        <div class="node-item">Algorithm Design Projects</div>
+      </div>
+    </div>
+
+    <!-- Node 5: Quant Credentials -->
+    <div class="branch-node node-5" data-category="credentials">
+      <div class="node-header">
+        <span class="node-number">05</span>
+        <h3>Quant Credentials</h3>
+      </div>
+      <div class="node-body">
+        <div class="node-item">Bloomberg Market Concepts (BMC)</div>
+        <div class="node-item">WorldQuant Challenge — Silver</div>
+        <div class="node-item">Simon Marais Mathematics Competition</div>
+        <div class="node-item highlight">Jane Street Prize — Top University Scorer</div>
+      </div>
+    </div>
+
+    <!-- Node 6: Core Strengths -->
+    <div class="branch-node node-6" data-category="strengths">
+      <div class="node-header">
+        <span class="node-number">06</span>
+        <h3>Core Strengths</h3>
+      </div>
+      <div class="node-body">
+        <div class="node-item">Mathematical Problem Solving</div>
+        <div class="node-item">Statistical Reasoning</div>
+        <div class="node-item">Machine Learning</div>
+      </div>
+    </div>
+
+    <!-- Node 7: Tech Stack -->
+    <div class="branch-node node-7" data-category="technical">
+      <div class="node-header">
+        <span class="node-number">07</span>
+        <h3>Tech Stack</h3>
+      </div>
+      <div class="node-body">
+        <div class="node-item">C++ (Performance-Oriented)</div>
+        <div class="node-item">Python</div>
+        <div class="node-item">Data Science & ML Libraries</div>
+      </div>
+    </div>
+
+    <!-- Node 8: Competitive Edge -->
+    <div class="branch-node node-8" data-category="edge">
+      <div class="node-header">
+        <span class="node-number">08</span>
+        <h3>Competitive Edge</h3>
+      </div>
+      <div class="node-body">
+        <div class="node-item">Top Chess Player at KAIST</div>
+        <div class="node-item">Decision-Making Under Uncertainty</div>
+      </div>
+    </div>
+
+    <!-- Node 9: Target Roles -->
+    <div class="branch-node node-9" data-category="target">
+      <div class="node-header">
+        <span class="node-number">09</span>
+        <h3>Target Roles</h3>
+      </div>
+      <div class="node-body">
+        <div class="node-item highlight">Quantitative Finance</div>
+        <div class="node-item">Data Science</div>
+        <div class="node-item">FinTech</div>
+      </div>
+    </div>
   </div>
 </div>
 
 <style>
+/* Mind Map Container */
+.mindmap-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #F5E8C7 0%, #FAF3E0 100%);
+}
+
+/* Central Node */
+.central-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.central-node .node-content {
+  background: linear-gradient(135deg, #D95F18 0%, #C4470D 100%);
+  color: white;
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(217, 95, 24, 0.4);
+  border: 3px solid #3A2C29;
+  text-align: center;
+  min-width: 320px;
+}
+
+.central-node h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: white !important;
+}
+
+.central-node .subtitle {
+  margin: 0.8rem 0 0 0;
+  font-size: 0.9rem;
+  opacity: 0.95;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 10px 40px rgba(217, 95, 24, 0.4);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.02);
+    box-shadow: 0 15px 50px rgba(217, 95, 24, 0.5);
+  }
+}
+
+/* Connection Lines */
+.connection-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.conn-line {
+  stroke: #D95F18;
+  stroke-width: 2;
+  stroke-dasharray: 5, 5;
+  opacity: 0.3;
+  animation: dashMove 20s linear infinite;
+}
+
+@keyframes dashMove {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+/* Branch Grid */
+.branch-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  z-index: 5;
+}
+
+/* Branch Nodes */
+.branch-node {
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #D6C6A9;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.branch-node::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(217, 95, 24, 0.05), transparent);
+  transition: all 0.6s ease;
+}
+
+.branch-node:hover::before {
+  left: 100%;
+}
+
+.branch-node:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(58, 44, 41, 0.15);
+  border-color: #D95F18;
+}
+
+/* Node positioning in grid */
+.node-1 { grid-column: 1; grid-row: 1; }
+.node-2 { grid-column: 3; grid-row: 1; }
+.node-3 { grid-column: 1; grid-row: 2; }
+.node-4 { grid-column: 3; grid-row: 2; }
+.node-5 { grid-column: 1; grid-row: 3; }
+.node-6 { grid-column: 3; grid-row: 3; }
+.node-7 { grid-column: 1; grid-row: 4; }
+.node-8 { grid-column: 2; grid-row: 4; }
+.node-9 { grid-column: 3; grid-row: 4; }
+
+/* Node Header */
+.node-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #D95F18;
+}
+
+.node-number {
+  background: #3A2C29;
+  color: white;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.node-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3A2C29;
+  line-height: 1.2;
+}
+
+/* Node Body */
+.node-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.node-section {
+  margin-bottom: 0.8rem;
+}
+
+.node-section:last-child {
+  margin-bottom: 0;
+}
+
+.node-section strong {
+  display: block;
+  color: #6D5A4D;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.node-item {
+  background: rgba(245, 232, 199, 0.5);
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #3A2C29;
+  font-weight: 500;
+  border-left: 3px solid #D6C6A9;
+  transition: all 0.2s ease;
+}
+
+.node-item:hover {
+  background: rgba(217, 95, 24, 0.1);
+  border-left-color: #D95F18;
+  transform: translateX(3px);
+}
+
+.node-item.highlight {
+  background: rgba(217, 95, 24, 0.15);
+  border-left-color: #D95F18;
+  font-weight: 600;
+  color: #C4470D;
+}
+
+/* Category-based color accents */
+[data-category="foundation"] .node-header {
+  border-bottom-color: #4A90E2;
+}
+
+[data-category="foundation"] .node-number {
+  background: #4A90E2;
+}
+
+[data-category="experience"] .node-header {
+  border-bottom-color: #27AE60;
+}
+
+[data-category="experience"] .node-number {
+  background: #27AE60;
+}
+
+[data-category="credentials"] .node-header {
+  border-bottom-color: #E67E22;
+}
+
+[data-category="credentials"] .node-number {
+  background: #E67E22;
+}
+
+[data-category="strengths"] .node-header {
+  border-bottom-color: #9B59B6;
+}
+
+[data-category="strengths"] .node-number {
+  background: #9B59B6;
+}
+
+[data-category="technical"] .node-header {
+  border-bottom-color: #2C3E50;
+}
+
+[data-category="technical"] .node-number {
+  background: #2C3E50;
+}
+
+[data-category="edge"] .node-header {
+  border-bottom-color: #C0392B;
+}
+
+[data-category="edge"] .node-number {
+  background: #C0392B;
+}
+
+[data-category="target"] .node-header {
+  border-bottom-color: #D4AF37;
+}
+
+[data-category="target"] .node-number {
+  background: #D4AF37;
+}
+
+/* Dark Mode Support */
+[data-theme="dark"] .mindmap-container {
+  background: linear-gradient(135deg, #2C1810 0%, #1A0F09 100%);
+}
+
+[data-theme="dark"] .central-node .node-content {
+  background: linear-gradient(135deg, #FF8A4C 0%, #FF6B2B 100%);
+  border-color: #F5E8C7;
+  color: #1A0F09;
+}
+
+[data-theme="dark"] .central-node h2 {
+  color: #1A0F09 !important;
+}
+
+[data-theme="dark"] .conn-line {
+  stroke: #FF8A4C;
+}
+
+[data-theme="dark"] .branch-node {
+  background: rgba(58, 36, 24, 0.9);
+  border-color: #5A3825;
+}
+
+[data-theme="dark"] .branch-node:hover {
+  border-color: #FF8A4C;
+}
+
+[data-theme="dark"] .node-header h3 {
+  color: #F5E8C7;
+}
+
+[data-theme="dark"] .node-item {
+  background: rgba(90, 56, 37, 0.5);
+  color: #F5E8C7;
+  border-left-color: #5A3825;
+}
+
+[data-theme="dark"] .node-item:hover {
+  background: rgba(255, 138, 76, 0.2);
+  border-left-color: #FF8A4C;
+}
+
+[data-theme="dark"] .node-item.highlight {
+  background: rgba(255, 138, 76, 0.3);
+  border-left-color: #FF8A4C;
+  color: #FF8A4C;
+}
+
+[data-theme="dark"] .node-section strong {
+  color: #D6C6A9;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .branch-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .node-1 { grid-column: 1; grid-row: 1; }
+  .node-2 { grid-column: 2; grid-row: 1; }
+  .node-3 { grid-column: 1; grid-row: 2; }
+  .node-4 { grid-column: 2; grid-row: 2; }
+  .node-5 { grid-column: 1; grid-row: 3; }
+  .node-6 { grid-column: 2; grid-row: 3; }
+  .node-7 { grid-column: 1; grid-row: 4; }
+  .node-8 { grid-column: 2; grid-row: 4; }
+  .node-9 { grid-column: 1 / -1; grid-row: 5; }
+}
+
+@media (max-width: 768px) {
+  .mindmap-container {
+    padding: 2rem 0.5rem;
+  }
+  
+  .central-node .node-content {
+    padding: 1.5rem 2rem;
+    min-width: 280px;
+  }
+  
+  .central-node h2 {
+    font-size: 1.4rem;
+  }
+  
+  .central-node .subtitle {
+    font-size: 0.8rem;
+  }
+  
+  .branch-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .node-1, .node-2, .node-3, .node-4, .node-5, 
+  .node-6, .node-7, .node-8, .node-9 {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  
+  .branch-node {
+    padding: 1.2rem;
+  }
+  
+  .connection-lines {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .central-node .node-content {
+    min-width: 240px;
+    padding: 1.2rem 1.5rem;
+  }
+  
+  .central-node h2 {
+    font-size: 1.2rem;
+  }
+  
+  .node-header h3 {
+    font-size: 1rem;
+  }
+  
+  .node-item {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
+</style>
 /* Chat Button Styling */
 .chat-button-container {
   text-align: center;
@@ -176,430 +633,5 @@ redirect_from:
   color: #2C1810 !important;
   box-shadow: 0 6px 20px rgba(255, 138, 76, 0.6);
   border-color: #FF8A4C;
-}
-
-/* Homepage title font size adjustment */
-.page-heading h1 {
-  font-size: 2.5rem !important;
-}
-
-@media (max-width: 768px) {
-  .page-heading h1 {
-    font-size: 2rem !important;
-  }
-}
-
-.events-section {
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid #D6C6A9;
-}
-
-.events-section h2 {
-  color: #3A2C29;
-  margin-bottom: 1rem;
-  font-weight: bold;
-}
-
-/* Dark Mode Support for Recent Events */
-[data-theme="dark"] .events-section h2 {
-  color: #F5E8C7 !important;
-}
-
-[data-theme="dark"] .events-container {
-  background: linear-gradient(135deg, #3A2418 0%, #2C1810 100%);
-  border-color: #5A3825;
-}
-
-[data-theme="dark"] .event {
-  background: rgba(58, 36, 24, 0.6);
-  border-color: #5A3825;
-  color: #F5E8C7;
-}
-
-[data-theme="dark"] .event:hover {
-  background: rgba(58, 36, 24, 0.8);
-  border-color: #FF8A4C;
-}
-
-[data-theme="dark"] .event h3 {
-  color: #F5E8C7 !important;
-  border-bottom-color: #FF8A4C;
-}
-
-[data-theme="dark"] .event p {
-  color: #D6C6A9 !important;
-}
-
-[data-theme="dark"] .event ul li {
-  color: #F5E8C7 !important;
-}
-
-[data-theme="dark"] .event ul li strong {
-  color: #FF8A4C !important;
-}
-
-/* Blog Posts Section Styling */
-.blog-posts-section {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 2px solid #D6C6A9;
-}
-
-.blog-posts-section h2 {
-  color: #3A2C29;
-  margin-bottom: 1.5rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-.blog-section-title {
-  color: #3A2C29 !important;
-  text-decoration: none !important;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.blog-section-title:hover {
-  color: #D95F18 !important;
-  transform: translateY(-2px);
-}
-
-.posts-container, .blog-posts-container {
-  max-height: 400px;
-  overflow-y: auto;
-  padding: 1rem;
-  background: linear-gradient(135deg, #F5E8C7 0%, #FAF3E0 100%);
-  border-radius: 12px;
-  border: 1px solid #D6C6A9;
-  box-shadow: 0 4px 8px rgba(58, 44, 41, 0.1);
-}
-
-.blog-posts-container::-webkit-scrollbar {
-  width: 8px;
-}
-
-.blog-posts-container::-webkit-scrollbar-track {
-  background: #D6C6A9;
-  border-radius: 4px;
-}
-
-.blog-posts-container::-webkit-scrollbar-thumb {
-  background: #C4470D;
-  border-radius: 4px;
-}
-
-.blog-posts-container::-webkit-scrollbar-thumb:hover {
-  background: #D95F18;
-}
-
-.post-card {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid #D6C6A9;
-  border-radius: 10px;
-  padding: 1.2rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 4px rgba(58, 44, 41, 0.08);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.post-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(217, 95, 24, 0.05), transparent);
-  transition: all 0.6s ease;
-}
-
-.post-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(58, 44, 41, 0.15);
-  border-color: #D95F18;
-}
-
-.post-card:hover::before {
-  left: 100%;
-}
-
-.post-card:last-child {
-  margin-bottom: 0;
-}
-
-.post-header {
-  margin-bottom: 1rem;
-}
-
-.post-title {
-  color: #3A2C29 !important;
-  text-decoration: none !important;
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-  line-height: 1.3;
-}
-
-.post-title:hover {
-  color: #D95F18 !important;
-}
-
-.post-meta {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.post-date {
-  color: #6D5A4D;
-  font-size: 0.9rem;
-  font-style: italic;
-}
-
-.post-tags {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.tag {
-  background: #D95F18;
-  color: white;
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
-.post-excerpt {
-  color: #3A2C29;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-.read-more {
-  background: #3A2C29;
-  color: white !important;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  text-decoration: none !important;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.read-more:hover {
-  background: #D95F18;
-  transform: scale(1.05);
-}
-
-.no-posts {
-  text-align: center;
-  padding: 2rem;
-  background: rgba(245, 232, 199, 0.3);
-  border: 1px dashed #D6C6A9;
-  border-radius: 10px;
-}
-
-.no-posts p {
-  color: #6D5A4D;
-  font-style: italic;
-  margin: 0;
-}
-
-.view-all-posts {
-  text-align: center;
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid #D6C6A9;
-}
-
-.view-all-btn {
-  background: #D95F18;
-  color: white !important;
-  padding: 0.7rem 2rem;
-  border-radius: 25px;
-  text-decoration: none !important;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-  display: inline-block;
-  box-shadow: 0 2px 8px rgba(217, 95, 24, 0.2);
-}
-
-.view-all-btn:hover {
-  background: #C4470D;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(217, 95, 24, 0.3);
-}
-
-/* Dark Mode Support for Blog Posts */
-[data-theme="dark"] .blog-posts-section {
-  border-top-color: #5A3825;
-}
-
-[data-theme="dark"] .blog-posts-section h2 {
-  color: #F5E8C7 !important;
-}
-
-[data-theme="dark"] .blog-section-title {
-  color: #F5E8C7 !important;
-}
-
-[data-theme="dark"] .blog-section-title:hover {
-  color: #FF8A4C !important;
-}
-
-[data-theme="dark"] .blog-posts-container {
-  background: linear-gradient(135deg, #3A2418 0%, #2C1810 100%);
-  border-color: #5A3825;
-}
-
-[data-theme="dark"] .post-card {
-  background: rgba(58, 36, 24, 0.6);
-  border-color: #5A3825;
-  color: #F5E8C7;
-}
-
-[data-theme="dark"] .post-card:hover {
-  border-color: #FF8A4C;
-  background: rgba(58, 36, 24, 0.8);
-}
-
-[data-theme="dark"] .post-title {
-  color: #F5E8C7 !important;
-}
-
-[data-theme="dark"] .post-title:hover {
-  color: #FF8A4C !important;
-}
-
-[data-theme="dark"] .post-date {
-  color: #D6C6A9 !important;
-}
-
-[data-theme="dark"] .post-excerpt {
-  color: #F5E8C7 !important;
-}
-
-[data-theme="dark"] .tag {
-  background: #FF8A4C;
-  color: #2C1810;
-}
-
-[data-theme="dark"] .read-more {
-  background: #FF8A4C;
-  color: #2C1810 !important;
-}
-
-[data-theme="dark"] .read-more:hover {
-  background: #FF6B2B;
-}
-
-[data-theme="dark"] .no-posts {
-  background: rgba(58, 36, 24, 0.6);
-  border-color: #5A3825;
-}
-
-[data-theme="dark"] .no-posts p {
-  color: #D6C6A9 !important;
-}
-
-[data-theme="dark"] .view-all-posts {
-  border-top-color: #5A3825;
-}
-
-[data-theme="dark"] .view-all-btn {
-  background: #FF8A4C;
-  color: #2C1810 !important;
-  box-shadow: 0 2px 8px rgba(255, 138, 76, 0.2);
-}
-
-[data-theme="dark"] .view-all-btn:hover {
-  background: #FF6B2B;
-  box-shadow: 0 4px 15px rgba(255, 138, 76, 0.3);
-}
-
-.events-container {
-  max-height: 400px;
-  overflow-y: auto;
-  padding: 1rem;
-  background: linear-gradient(135deg, #F5E8C7 0%, #FAF3E0 100%);
-  border-radius: 12px;
-  border: 1px solid #D6C6A9;
-  box-shadow: 0 4px 8px rgba(58, 44, 41, 0.1);
-}
-
-.events-container::-webkit-scrollbar {
-  width: 8px;
-}
-
-.events-container::-webkit-scrollbar-track {
-  background: #D6C6A9;
-  border-radius: 4px;
-}
-
-.events-container::-webkit-scrollbar-thumb {
-  background: #C4470D;
-  border-radius: 4px;
-}
-
-.events-container::-webkit-scrollbar-thumb:hover {
-  background: #D95F18;
-}
-
-.event {
-  margin-bottom: 1.5rem;
-  padding: 1.2rem;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid #D6C6A9;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(58, 44, 41, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.event:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(58, 44, 41, 0.15);
-}
-
-.event:last-child {
-  margin-bottom: 0;
-}
-
-.event h3 {
-  margin-bottom: 0.5rem;
-  color: #3A2C29;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-bottom: 2px solid #D95F18;
-  padding-bottom: 0.3rem;
-  display: inline-block;
-}
-
-.event p {
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  color: #6D5A4D;
-}
-
-.event ul {
-  margin-left: 1rem;
-  margin-bottom: 0;
-}
-
-.event ul li {
-  margin-bottom: 0.25rem;
-  color: #3A2C29;
-}
-
-.event ul li strong {
-  color: #C4470D;
 }
 </style>

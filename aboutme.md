@@ -1,87 +1,594 @@
 ---
 layout: page
 title: About Me
-subtitle: Passionate about statistics, machine learning, and quantitative finance
-meta_description: "About Adnan Sadik - Mathematics student at KAIST passionate about statistical learning, machine learning, quantitative finance, and strategic thinking. Personal story and academic interests."
-keywords: "Adnan Sadik about, Adnan Sadik biography, KAIST mathematics student, statistical learning, machine learning, quantitative finance, chess player, mystery fiction, academic interests"
-share-title: "About Adnan Sadik - Mathematics Student at KAIST"
-share-description: "Learn about Adnan Sadik, mathematics student at KAIST with interests in statistical learning, machine learning, and quantitative finance."
+subtitle: Statistics • Machine Learning • Quantitative Finance
+meta_description: "Adnan Sadik - Mathematics student and researcher at KAIST specializing in statistical learning, machine learning, quantitative finance, and biomedical mathematics. Academic portfolio and research projects."
+keywords: "Adnan Sadik, Adnan Sadik KAIST, mathematics student, machine learning researcher, statistical learning, quantitative finance, biomedical mathematics, data science, AI research, KAIST student, Korean university, research portfolio"
+share-title: "Adnan Sadik - Mathematics Student & Researcher at KAIST"
+share-description: "Academic portfolio of Adnan Sadik, mathematics student at KAIST working on machine learning, statistical learning, and quantitative finance research."
 ---
 
-<div class="about-container">
-
-<div class="intro-card">
-<div class="intro-content">
-<p>My name is <strong>Adnan Sadik</strong>. I'm someone who enjoys solving complex problems, collaborating with driven individuals, and engaging in strategic thinking—whether in professional settings or over a good game of Chess, Avalon, or Poker.</p>
-
-<p>I'm passionate about meaningful work, especially when it involves creativity, logic, and collaboration. Outside of work, I enjoy exploring mystery fiction—both in literature and film—as a way to unwind and spark curiosity.</p>
-</div>
+<div class="chat-button-container">
+  <a href="mailto:adnansadik235@gmail.com" class="chat-button">
+    <span class="chat-icon">💬</span>
+    Let's have a chat
+  </a>
 </div>
 
-<div class="linkedin-badge-card">
-<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="adnan-sadik" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://kr.linkedin.com/in/adnan-sadik?trk=profile-badge">Adnan Sadik</a></div>
+<div class="events-section">
+  <h2>Recent Events</h2>
+  
+  <div class="events-container">
+    <div class="event">
+      <h3>November 2025</h3>
+      <p><strong>BLUCK Paper Accepted</strong></p>
+      <ul>
+        <li>Paper accepted into AACL-IJCNLP 2025 Workshop</li>
+        <li>Cultural benchmark dataset for linguistic understanding of low resource languages.</li>
+      </ul>
+    </div>
+    
+    <div class="event">
+      <h3>September 2025</h3>
+      <p><strong>KAIplus Scholarship</strong></p>
+      <ul>
+        <li>Received KAIplus Scholarship for Fall 2025 semester</li>
+      </ul>
+    </div>
+    
+    <div class="event">
+      <h3>July 2025</h3>
+      <p><strong>KAIST KAI-X Advanced Undergraduate Math Workshop</strong></p>
+      <ul>
+        <li>Topics: Fourier Series & Dispersive PDEs, Statistical Learning, Financial Mathematics</li>
+      </ul>
+    </div>
+    
+    <div class="event">
+      <h3>March 2025</h3>
+      <p><strong>Discover Citadel
+      </strong></p>
+      <ul>
+        <li><strong>1st place in Trading Challenge</strong></li>
+        <li><strong>1st place in Quant Challenge</strong></li>
+      </ul>
+    </div>
+    
+    <div class="event">
+      <h3>December 2024</h3>
+      <p><strong>Simon Marais Mathematics Competition</strong></p>
+      <ul>
+        <li><strong>Jane Street Prize Winner</strong> - Best in University, Top Quartile</li>
+      </ul>
+    </div>
+  </div>
 </div>
 
-<div class="interests-card">
-<h3>Academic Interests</h3>
-<p>My academic interests lie at the intersection of mathematics, data, and decision-making. I am particularly focused on:</p>
-
-<div class="interest-grid">
-<div class="interest-item">
-<div class="interest-icon">📊</div>
-<h4>Statistics and Stochastic Processes</h4>
-<p>Exploring mathematical foundations of randomness, probability, and statistical inference</p>
+<div class="blog-posts-section">
+  <h2><a href="{{ '/blog' | relative_url }}" class="blog-section-title">📝 Blog Posts</a></h2>
+  
+  <div class="blog-posts-container">
+    {% assign recent_posts = site.posts | slice: 0, 5 %}
+    {% if recent_posts.size > 0 %}
+      {% for post in recent_posts %}
+        <article class="post-card">
+          <div class="post-header">
+            <h3><a href="{{ post.url | relative_url }}" class="post-title">{{ post.title }}</a></h3>
+            <div class="post-meta">
+              <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+              {% if post.tags.size > 0 %}
+                <div class="post-tags">
+                  {% for tag in post.tags limit: 3 %}
+                    <span class="tag">{{ tag }}</span>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+          {% if post.excerpt %}
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          {% endif %}
+          <a href="{{ post.url | relative_url }}" class="read-more">Read More →</a>
+        </article>
+      {% endfor %}
+    {% else %}
+      <div class="no-posts">
+        <p>No blog posts yet. Check back soon!</p>
+      </div>
+    {% endif %}
+  </div>
+  
+  <div class="view-all-posts">
+    <a href="{{ '/blog' | relative_url }}" class="view-all-btn">View All Posts →</a>
+  </div>
 </div>
 
-<div class="interest-item">
-<div class="interest-icon">💹</div>
-<h4>Quantitative Finance</h4>
-<p>Applying mathematical models to financial markets and risk management</p>
-</div>
+<style>
+/* Chat Button Styling */
+.chat-button-container {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeInDown 0.8s ease;
+}
 
-<div class="interest-item">
-<div class="interest-icon">🤖</div>
-<h4>Machine Learning & AI</h4>
-<p>Developing intelligent systems that learn from data and make decisions</p>
-</div>
-</div>
+.chat-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #D95F18 0%, #C4470D 100%);
+  color: white !important;
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(217, 95, 24, 0.3);
+  border: 2px solid transparent;
+}
 
-<p><em>These areas excite me for their blend of theory and real-world impact, and I am always eager to explore new developments and practical applications in each.</em></p>
-</div>
+.chat-button:hover {
+  background: linear-gradient(135deg, #C4470D 0%, #D95F18 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(217, 95, 24, 0.4);
+  border-color: #D95F18;
+}
 
-<div class="story-card">
-<h3>My Story</h3>
-<div class="story-content">
-<p>Originally from a small town, my journey has taken me through diverse challenges and opportunities, eventually leading me to <strong>KAIST</strong>. Along the way, I've grown to value resilience, clarity of thought, and the importance of asking the right questions.</p>
+.chat-button:active {
+  transform: translateY(-1px);
+}
 
-<p>Every step forward has been driven by a desire to learn, adapt, and contribute.</p>
-</div>
-</div>
+.chat-icon {
+  font-size: 1.3rem;
+  animation: bounce 2s infinite;
+}
 
-<div class="hobbies-card">
-<h3>Beyond Academics</h3>
-<div class="hobby-grid">
-<div class="hobby-item">
-<div class="hobby-icon">♟️</div>
-<h4>Strategic Games</h4>
-<p>Chess, Avalon, Poker</p>
-</div>
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
 
-<div class="hobby-item">
-<div class="hobby-icon">📚</div>
-<h4>Mystery Fiction</h4>
-<p>Literature & Film</p>
-</div>
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-<div class="hobby-item">
-<div class="hobby-icon">🧠</div>
-<h4>Problem Solving</h4>
-<p>Complex challenges</p>
-</div>
-</div>
-</div>
+/* Dark Mode Support for Chat Button */
+[data-theme="dark"] .chat-button {
+  background: linear-gradient(135deg, #5A3825 0%, #3A2418 100%);
+  color: #F5E8C7 !important;
+  box-shadow: 0 4px 15px rgba(90, 56, 37, 0.5);
+  border: 2px solid #FF8A4C;
+}
 
-</div>
+[data-theme="dark"] .chat-button:hover {
+  background: linear-gradient(135deg, #FF8A4C 0%, #FF6B2B 100%);
+  color: #2C1810 !important;
+  box-shadow: 0 6px 20px rgba(255, 138, 76, 0.6);
+  border-color: #FF8A4C;
+}
+
+.events-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #D6C6A9;
+}
+
+.events-section h2 {
+  color: #3A2C29;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* Dark Mode Support for Recent Events */
+[data-theme="dark"] .events-section h2 {
+  color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .events-container {
+  background: linear-gradient(135deg, #3A2418 0%, #2C1810 100%);
+  border-color: #5A3825;
+}
+
+[data-theme="dark"] .event {
+  background: rgba(58, 36, 24, 0.6);
+  border-color: #5A3825;
+  color: #F5E8C7;
+}
+
+[data-theme="dark"] .event:hover {
+  background: rgba(58, 36, 24, 0.8);
+  border-color: #FF8A4C;
+}
+
+[data-theme="dark"] .event h3 {
+  color: #F5E8C7 !important;
+  border-bottom-color: #FF8A4C;
+}
+
+[data-theme="dark"] .event p {
+  color: #D6C6A9 !important;
+}
+
+[data-theme="dark"] .event ul li {
+  color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .event ul li strong {
+  color: #FF8A4C !important;
+}
+
+/* Blog Posts Section Styling */
+.blog-posts-section {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #D6C6A9;
+}
+
+.blog-posts-section h2 {
+  color: #3A2C29;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.blog-section-title {
+  color: #3A2C29 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.blog-section-title:hover {
+  color: #D95F18 !important;
+  transform: translateY(-2px);
+}
+
+.posts-container, .blog-posts-container {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 1rem;
+  background: linear-gradient(135deg, #F5E8C7 0%, #FAF3E0 100%);
+  border-radius: 12px;
+  border: 1px solid #D6C6A9;
+  box-shadow: 0 4px 8px rgba(58, 44, 41, 0.1);
+}
+
+.blog-posts-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.blog-posts-container::-webkit-scrollbar-track {
+  background: #D6C6A9;
+  border-radius: 4px;
+}
+
+.blog-posts-container::-webkit-scrollbar-thumb {
+  background: #C4470D;
+  border-radius: 4px;
+}
+
+.blog-posts-container::-webkit-scrollbar-thumb:hover {
+  background: #D95F18;
+}
+
+.post-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #D6C6A9;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(58, 44, 41, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(217, 95, 24, 0.05), transparent);
+  transition: all 0.6s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(58, 44, 41, 0.15);
+  border-color: #D95F18;
+}
+
+.post-card:hover::before {
+  left: 100%;
+}
+
+.post-card:last-child {
+  margin-bottom: 0;
+}
+
+.post-header {
+  margin-bottom: 1rem;
+}
+
+.post-title {
+  color: #3A2C29 !important;
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  line-height: 1.3;
+}
+
+.post-title:hover {
+  color: #D95F18 !important;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.post-date {
+  color: #6D5A4D;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.post-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #D95F18;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.post-excerpt {
+  color: #3A2C29;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  background: #3A2C29;
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.read-more:hover {
+  background: #D95F18;
+  transform: scale(1.05);
+}
+
+.no-posts {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(245, 232, 199, 0.3);
+  border: 1px dashed #D6C6A9;
+  border-radius: 10px;
+}
+
+.no-posts p {
+  color: #6D5A4D;
+  font-style: italic;
+  margin: 0;
+}
+
+.view-all-posts {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #D6C6A9;
+}
+
+.view-all-btn {
+  background: #D95F18;
+  color: white !important;
+  padding: 0.7rem 2rem;
+  border-radius: 25px;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(217, 95, 24, 0.2);
+}
+
+.view-all-btn:hover {
+  background: #C4470D;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(217, 95, 24, 0.3);
+}
+
+/* Dark Mode Support for Blog Posts */
+[data-theme="dark"] .blog-posts-section {
+  border-top-color: #5A3825;
+}
+
+[data-theme="dark"] .blog-posts-section h2 {
+  color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .blog-section-title {
+  color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .blog-section-title:hover {
+  color: #FF8A4C !important;
+}
+
+[data-theme="dark"] .blog-posts-container {
+  background: linear-gradient(135deg, #3A2418 0%, #2C1810 100%);
+  border-color: #5A3825;
+}
+
+[data-theme="dark"] .post-card {
+  background: rgba(58, 36, 24, 0.6);
+  border-color: #5A3825;
+  color: #F5E8C7;
+}
+
+[data-theme="dark"] .post-card:hover {
+  border-color: #FF8A4C;
+  background: rgba(58, 36, 24, 0.8);
+}
+
+[data-theme="dark"] .post-title {
+  color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .post-title:hover {
+  color: #FF8A4C !important;
+}
+
+[data-theme="dark"] .post-date {
+  color: #D6C6A9 !important;
+}
+
+[data-theme="dark"] .post-excerpt {
+  color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .tag {
+  background: #FF8A4C;
+  color: #2C1810;
+}
+
+[data-theme="dark"] .read-more {
+  background: #FF8A4C;
+  color: #2C1810 !important;
+}
+
+[data-theme="dark"] .read-more:hover {
+  background: #FF6B2B;
+}
+
+[data-theme="dark"] .no-posts {
+  background: rgba(58, 36, 24, 0.6);
+  border-color: #5A3825;
+}
+
+[data-theme="dark"] .no-posts p {
+  color: #D6C6A9 !important;
+}
+
+[data-theme="dark"] .view-all-posts {
+  border-top-color: #5A3825;
+}
+
+[data-theme="dark"] .view-all-btn {
+  background: #FF8A4C;
+  color: #2C1810 !important;
+  box-shadow: 0 2px 8px rgba(255, 138, 76, 0.2);
+}
+
+[data-theme="dark"] .view-all-btn:hover {
+  background: #FF6B2B;
+  box-shadow: 0 4px 15px rgba(255, 138, 76, 0.3);
+}
+
+.events-container {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 1rem;
+  background: linear-gradient(135deg, #F5E8C7 0%, #FAF3E0 100%);
+  border-radius: 12px;
+  border: 1px solid #D6C6A9;
+  box-shadow: 0 4px 8px rgba(58, 44, 41, 0.1);
+}
+
+.events-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.events-container::-webkit-scrollbar-track {
+  background: #D6C6A9;
+  border-radius: 4px;
+}
+
+.events-container::-webkit-scrollbar-thumb {
+  background: #C4470D;
+  border-radius: 4px;
+}
+
+.events-container::-webkit-scrollbar-thumb:hover {
+  background: #D95F18;
+}
+
+.event {
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #D6C6A9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(58, 44, 41, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(58, 44, 41, 0.15);
+}
+
+.event:last-child {
+  margin-bottom: 0;
+}
+
+.event h3 {
+  margin-bottom: 0.5rem;
+  color: #3A2C29;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-bottom: 2px solid #D95F18;
+  padding-bottom: 0.3rem;
+  display: inline-block;
+}
+
+.event p {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #6D5A4D;
+}
+
+.event ul {
+  margin-left: 1rem;
+  margin-bottom: 0;
+}
+
+.event ul li {
+  margin-bottom: 0.25rem;
+  color: #3A2C29;
+}
+
+.event ul li strong {
+  color: #C4470D;
+}
+</style>
+
 
 <!-- Hidden content for SEO: data scientist, AI researcher, machine learning expert, deep learning, artificial intelligence -->
 

@@ -30,6 +30,9 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 <a href="https://github.com/yayme/Volatility-Inference-with-SDEs-Data-Assimilation" class="project-link">
 <span class="link-icon">📂</span> View on GitHub
 </a>
+<a href="https://drive.google.com/file/d/1zqIqxCBXAAsep4-_TvGf_RJfOWSF8ySd/view?usp=sharing" class="project-link">
+<span class="link-icon">📄</span> Full Report
+</a>
 </div>
 
 <div class="project-item">

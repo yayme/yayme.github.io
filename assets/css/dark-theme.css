@@ -26,6 +26,14 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
+@media (max-width: 1199.98px) {
+  .theme-toggle {
+    margin-left: 0.75rem;
+    margin-right: auto;
+    order: 0;
+  }
+}
+
 /* Dark Theme Variables */
 [data-theme="dark"] {
   --page-col: #2C1810;           /* Dark brown background */

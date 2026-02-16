@@ -59,6 +59,7 @@ redirect_from:
 
   <div class="contact-section">
     <p>If you'd like to discuss opportunities or learn more about my experience and skills, feel free to <a href="mailto:adnansadik235@gmail.com" class="contact-link">reach out</a>.</p>
+    <p class="voronoi-reference">Background animation reference: <a href="https://en.wikipedia.org/wiki/Voronoi_diagram" target="_blank" rel="noopener noreferrer">Voronoi diagram</a>.</p>
   </div>
 </div>
 
@@ -168,6 +169,12 @@ redirect_from:
   margin: 0;
 }
 
+.contact-section .voronoi-reference {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #6B544B;
+}
+
 .contact-link {
   color: #D95F18;
   text-decoration: none;
@@ -222,6 +229,10 @@ redirect_from:
 
 [data-theme="dark"] .contact-section p {
   color: #F5E8C7;
+}
+
+[data-theme="dark"] .contact-section .voronoi-reference {
+  color: #D9C3A4;
 }
 
 [data-theme="dark"] .contact-link {
@@ -363,7 +374,7 @@ redirect_from:
   }
 
   const minFrame = 4;
-  const durationMs = 6000;
+  const durationMs = 8500;
   let start = performance.now();
   let lastRender = 0;
 

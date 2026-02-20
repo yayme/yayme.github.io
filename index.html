@@ -375,6 +375,9 @@ redirect_from:
 
     if (count < totalPoints) {
       requestAnimationFrame(animate);
+    } else {
+      // Draw final frame when animation completes
+      drawFrame(totalPoints);
     }
   };
 

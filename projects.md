@@ -50,6 +50,7 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 </a>
 </div>
 
+
 <div class="project-item">
 <div class="project-header">
 <h3>Yut AI - Korean Traditional Board Game AI</h3>
@@ -61,21 +62,6 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 </div>
 <p>Developed strategy bots for Yut, a traditional Korean board game competition. Tested minimax tree search and heuristic-based strategies. Final approach used heuristic evaluation with Bayesian optimization (Gaussian Process + UCB) for weight tuning. Consistently outperforms baseline strategy with 54-56% win rate.</p>
 <a href="https://github.com/yayme/COE-Yutnori" class="project-link">
-<span class="link-icon">📂</span> View on GitHub
-</a>
-</div>
-
-<div class="project-item">
-<div class="project-header">
-<h3>Real-time Sarcasm Detector</h3>
-<div class="tech-stack">
-<span class="tech-tag">Python</span>
-<span class="tech-tag">PyTorch</span>
-<span class="tech-tag">NLP</span>
-</div>
-</div>
-<p>Built a BERT-based sarcasm classifier with Hugging Face and TweetEval for real-time inference, demonstrating advanced natural language processing capabilities.</p>
-<a href="https://github.com/yayme/Bazinga-" class="project-link">
 <span class="link-icon">📂</span> View on GitHub
 </a>
 </div>
@@ -121,17 +107,18 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 </a>
 </div>
 
+
 <div class="project-item">
 <div class="project-header">
-<h3>Yut AI - Korean Traditional Board Game AI</h3>
+<h3>Real-time Sarcasm Detector</h3>
 <div class="tech-stack">
 <span class="tech-tag">Python</span>
-<span class="tech-tag">Game Theory</span>
-<span class="tech-tag">Bayesian Optimization</span>
+<span class="tech-tag">PyTorch</span>
+<span class="tech-tag">NLP</span>
 </div>
 </div>
-<p>Developed strategy bots for Yut, a traditional Korean board game competition. Tested minimax tree search and heuristic-based strategies. Final approach used heuristic evaluation with Bayesian optimization (Gaussian Process + UCB) for weight tuning. Consistently outperforms baseline strategy with 54-56% win rate.</p>
-<a href="https://github.com/yayme/COE-Yutnori" class="project-link">
+<p>Built a BERT-based sarcasm classifier with Hugging Face and TweetEval for real-time inference, demonstrating advanced natural language processing capabilities.</p>
+<a href="https://github.com/yayme/Bazinga-" class="project-link">
 <span class="link-icon">📂</span> View on GitHub
 </a>
 </div>

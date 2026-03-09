@@ -16,6 +16,25 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 
 <div class="project-item">
 <div class="project-header">
+<h3>Sparse Attention CUDA Kernel</h3>
+<div class="tech-stack">
+<span class="tech-tag">CUDA</span>
+<span class="tech-tag">C++</span>
+<span class="tech-tag">PyTorch</span>
+</div>
+</div>
+<ul class="project-highlights">
+  <li>Wrote a sparse attention kernel in CUDA with Longformer style masking (local window + global stride tokens); tiles with no active pairs are skipped entirely, bringing complexity from $O(n^2)$ down to $O(n \cdot w)$.</li>
+  <li>Initial version stored a full score array per thread scaled with sequence length which spilled to global memory at longer sequences; rewrote with Flash Attention style online softmax, dropping per-thread memory to $O(1)$ and achieving $1.4$--$1.8\times$ speedup.</li>
+  <li>Wrapped kernels as a PyTorch extension via pybind11 and benchmarked against PyTorch dense attention on a T4 GPU across sequence lengths $64$ to $512$.</li>
+</ul>
+<a href="https://github.com/yayme/CUDA-kernel" class="project-link">
+<span class="link-icon">📂</span> View on GitHub
+</a>
+</div>
+
+<div class="project-item">
+<div class="project-header">
 <h3>Volatility Inference with SDEs & Data Assimilation</h3>
 <div class="tech-stack">
 <span class="tech-tag">Python</span>

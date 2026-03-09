@@ -24,7 +24,7 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
     <span class="role">Research & Software Intern (Incoming)</span>
     <span class="date">Dec 2025 – Mar 2026</span>
   </div>
-  <p>I will work on optimizing LLM inference in C++ with a focus on transformers, tensor operations, decoding, and cache efficiency.</p>
+  <p>I worked on optimizing LLM inference in C++ with a focus on transformers, tensor operations, decoding, and cache efficiency.</p>
 </div>
 
 
@@ -122,6 +122,12 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 <h2>Projects</h2>
 
 <div class="project-item">
+<h4>Sparse Attention CUDA Kernel</h4>
+<div class="tech-stack">CUDA, C++, PyTorch</div>
+<p>Efficient sparse attention kernel with Longformer masking and Flash Attention style online softmax, wrapped as a PyTorch extension. <a href="https://github.com/yayme/CUDA-kernel" class="project-link">GitHub</a></p>
+</div>
+
+<div class="project-item">
 <h4>Volatility Inference with SDEs & Data Assimilation</h4>
 <div class="tech-stack">Python, Stochastic Differential Equations, Data Assimilation</div>
 <ul>
@@ -138,12 +144,6 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 <a href="https://github.com/yayme/Crypto-SignalCraft" class="project-link">GitHub</a>
 </div>
 
-<div class="project-item">
-<h4>Real-time Sarcasm Detector</h4>
-<div class="tech-stack">Python, PyTorch, NLP</div>
-<p>Built a BERT-based sarcasm classifier with Hugging Face and TweetEval for real-time inference.</p>
-<a href="https://github.com/yayme/Bazinga-" class="project-link">GitHub</a>
-</div>
 
 <div class="project-item">
 <h4>AI-powered File Organizer</h4>
@@ -153,7 +153,7 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 </div>
 
 <div class="project-item">
-<h4>Statistical Decision Making - Class Project</h4>
+<h4>Statistical Decision Making </h4>
 <div class="tech-stack">Python</div>
 <p>Used Bayesian inference and classification to optimize inventory and healthcare decision models.</p>
 <a href="https://github.com/yayme/Statistical-Decision-Making" class="project-link">GitHub</a>

@@ -1,13 +1,4 @@
 
-  ---
-  layout: page
-  title: About Me
-  subtitle: Statistics • Machine Learning • Quantitative Finance
-  meta_description: "Adnan Sadik - Mathematics student and researcher at KAIST specializing in statistical learning, machine learning, quantitative finance, and biomedical mathematics. Academic portfolio and research projects."
-  keywords: "Adnan Sadik, Adnan Sadik KAIST, mathematics student, machine learning researcher, statistical learning, quantitative finance, biomedical mathematics, data science, AI research, KAIST student, Korean university, research portfolio"
-  share-title: "Adnan Sadik - Mathematics Student & Researcher at KAIST"
-  share-description: "Academic portfolio of Adnan Sadik, mathematics student at KAIST working on machine learning, statistical learning, and quantitative finance research."
-  ---
 
 
 <div class="chat-button-container">

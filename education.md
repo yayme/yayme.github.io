@@ -6,6 +6,34 @@ meta_description: "Education - Adnan Sadik | KAIST Mathematics & Computer Scienc
 keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine learning, computer science"
 ---
 
+<style>
+  html[data-theme="dark"], html[data-theme="dark"] body {
+    background: #18120f !important;
+    color: #F5E8C7 !important;
+  }
+  @media (prefers-color-scheme: dark) {
+    html:not([data-theme]) body {
+      background: #18120f !important;
+      color: #F5E8C7 !important;
+    }
+  }
+</style>
+
+<!-- Dark mode script disabled for now
+<script>
+  (function() {
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var dataTheme = document.documentElement.getAttribute('data-theme');
+    if (prefersDark || dataTheme === 'dark') {
+      document.documentElement.style.background = '#18120f';
+      document.body.style.background = '#18120f';
+      document.documentElement.style.color = '#F5E8C7';
+      document.body.style.color = '#F5E8C7';
+    }
+  })();
+</script>
+-->
+
 <div class="education-container">
 
 <div class="university-card">

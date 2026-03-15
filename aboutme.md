@@ -1,12 +1,14 @@
----
-layout: page
-title: About Me
-subtitle: Statistics • Machine Learning • Quantitative Finance
-meta_description: "Adnan Sadik - Mathematics student and researcher at KAIST specializing in statistical learning, machine learning, quantitative finance, and biomedical mathematics. Academic portfolio and research projects."
-keywords: "Adnan Sadik, Adnan Sadik KAIST, mathematics student, machine learning researcher, statistical learning, quantitative finance, biomedical mathematics, data science, AI research, KAIST student, Korean university, research portfolio"
-share-title: "Adnan Sadik - Mathematics Student & Researcher at KAIST"
-share-description: "Academic portfolio of Adnan Sadik, mathematics student at KAIST working on machine learning, statistical learning, and quantitative finance research."
----
+
+  ---
+  layout: page
+  title: About Me
+  subtitle: Statistics • Machine Learning • Quantitative Finance
+  meta_description: "Adnan Sadik - Mathematics student and researcher at KAIST specializing in statistical learning, machine learning, quantitative finance, and biomedical mathematics. Academic portfolio and research projects."
+  keywords: "Adnan Sadik, Adnan Sadik KAIST, mathematics student, machine learning researcher, statistical learning, quantitative finance, biomedical mathematics, data science, AI research, KAIST student, Korean university, research portfolio"
+  share-title: "Adnan Sadik - Mathematics Student & Researcher at KAIST"
+  share-description: "Academic portfolio of Adnan Sadik, mathematics student at KAIST working on machine learning, statistical learning, and quantitative finance research."
+  ---
+
 
 <div class="chat-button-container">
   <a href="mailto:adnansadik235@gmail.com" class="chat-button">
@@ -25,6 +27,20 @@ share-description: "Academic portfolio of Adnan Sadik, mathematics student at KA
       <ul>
         <li>Paper accepted into AACL-IJCNLP 2025 Workshop</li>
         <li>Cultural benchmark dataset for linguistic understanding of low resource languages.</li>
+<!-- Dark mode script disabled for now
+<script>
+  (function() {
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var dataTheme = document.documentElement.getAttribute('data-theme');
+    if (prefersDark || dataTheme === 'dark') {
+      document.documentElement.style.background = '#18120f';
+      document.body.style.background = '#18120f';
+      document.documentElement.style.color = '#F5E8C7';
+      document.body.style.color = '#F5E8C7';
+    }
+  })();
+</script>
+-->
       </ul>
     </div>
     
@@ -883,5 +899,18 @@ share-description: "Academic portfolio of Adnan Sadik, mathematics student at KA
     font-size: 2.5rem;
   }
 }
+</style>
+
+<style>
+  html[data-theme="dark"], html[data-theme="dark"] body {
+    background: #18120f !important;
+    color: #F5E8C7 !important;
+  }
+  @media (prefers-color-scheme: dark) {
+    html:not([data-theme]) body {
+      background: #18120f !important;
+      color: #F5E8C7 !important;
+    }
+  }
 </style>
 

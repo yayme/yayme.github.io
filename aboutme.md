@@ -542,11 +542,19 @@ share-description: "Academic portfolio of Adnan Sadik, mathematics student at KA
 .event {
   margin-bottom: 1.5rem;
   padding: 1.2rem;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid #D6C6A9;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(58, 44, 41, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #FAF3E0;
+  color: #3A2C29;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0 3px 12px rgba(58, 44, 41, 0.08);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] .event {
+  background: #2C1810;
+  color: #F5E8C7;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.18);
 }
 
 .event:hover {

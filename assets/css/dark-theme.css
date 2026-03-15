@@ -339,3 +339,11 @@
   color: var(--link-col) !important;
 }
 
+/* Fix for narrative-container in dark mode (all pages) */
+[data-theme="dark"] .narrative-container {
+  background: rgba(24, 18, 15, 0.95);
+  color: #F5E8C7;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+

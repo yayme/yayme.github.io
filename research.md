@@ -124,9 +124,38 @@ Daeen Kabir, Minhajur Rahman Chowdhury Mahim, Sheikh Shafayat, <strong>Adnan Sad
 <style>
 /* Research Page Styling */
 .research-container {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
+  background: rgba(255, 250, 242, 0.98);
+  color: #3A2C29;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(34, 22, 16, 0.18);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] .research-container {
+  background: rgba(24, 18, 15, 0.95);
+  color: #F5E8C7;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+}
+
+.interests-overview-card, .current-research-card, .research-project {
+  background: #FAF3E0;
+  color: #3A2C29;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0 3px 12px rgba(58, 44, 41, 0.08);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] .interests-overview-card,
+[data-theme="dark"] .current-research-card,
+[data-theme="dark"] .research-project {
+  background: #2C1810;
+  color: #F5E8C7;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.18);
 }
 
 .interests-overview-card {

@@ -225,13 +225,43 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 </div>
 
 <style>
-/* Resume Card Styling */
+/* Resume Page Styling */
 .resume-container {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
+  background: rgba(255, 250, 242, 0.98);
+  color: #3A2C29;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(34, 22, 16, 0.18);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+[data-theme="dark"] .resume-container {
+  background: rgba(24, 18, 15, 0.95);
+  color: #F5E8C7;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+}
+
+.interest-card, .section-card, .experience-item {
+  background: #FAF3E0;
+  color: #3A2C29;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0 3px 12px rgba(58, 44, 41, 0.08);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] .interest-card,
+[data-theme="dark"] .section-card,
+[data-theme="dark"] .experience-item {
+  background: #2C1810;
+  color: #F5E8C7;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.18);
+}
+
+/* Resume Card Styling */
 .interest-card {
   background: linear-gradient(135deg, #F5E8C7 0%, #FAF3E0 100%);
   border: 2px solid #D6C6A9;

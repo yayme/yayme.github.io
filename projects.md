@@ -147,25 +147,37 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 <style>
 /* Projects Page Styling */
 .projects-container {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
+  background: rgba(255, 250, 242, 0.98);
+  color: #3A2C29;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(34, 22, 16, 0.18);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] .projects-container {
+  background: rgba(24, 18, 15, 0.95);
+  color: #F5E8C7;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
 }
 
 .current-project-card, .completed-projects-card {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid #D6C6A9;
+  background: #FAF3E0;
+  color: #3A2C29;
   border-radius: 12px;
-  padding: 2rem;
   margin-bottom: 2rem;
+  padding: 1.5rem;
   box-shadow: 0 3px 12px rgba(58, 44, 41, 0.08);
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.current-project-card:hover, .completed-projects-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(58, 44, 41, 0.12);
-  border-color: #C4470D;
+[data-theme="dark"] .current-project-card,
+[data-theme="dark"] .completed-projects-card {
+  background: #2C1810;
+  color: #F5E8C7;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.18);
 }
 
 .current-project-card h2, .completed-projects-card h2 {

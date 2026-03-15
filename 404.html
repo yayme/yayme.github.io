@@ -4,6 +4,24 @@ title: 404 - Page not found
 permalink: /404.html
 ---
 
+/* 404 Page Styling */
+.text-center {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 250, 242, 0.98);
+  color: #3A2C29;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(34, 22, 16, 0.18);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] .text-center {
+  background: rgba(24, 18, 15, 0.95);
+  color: #F5E8C7;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+}
+
 <div class="text-center">
   <h1>Whoops, this page doesn't exist.</h1>
   <h1>Move along. (404 error)</h1>

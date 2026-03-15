@@ -138,9 +138,20 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
 <style>
 /* Education Page Styling */
 .education-container {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
+  background: rgba(255, 250, 242, 0.98);
+  color: #3A2C29;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(34, 22, 16, 0.18);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] .education-container {
+  background: rgba(24, 18, 15, 0.95);
+  color: #F5E8C7;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
 }
 
 .university-card {

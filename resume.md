@@ -151,6 +151,17 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 <a href="https://github.com/yayme/CUDA-kernel" class="project-link">GitHub</a>
 </div>
 
+<div class="project-item">
+<div class="project-header">
+<h3>Volatility Inference with SDEs & Data Assimilation</h3>
+<div class="tech-stack">
+<span class="tech-tag">SDE</span>
+<span class="tech-tag">Kalman Filter</span>
+<span class="tech-tag">Particle Filter</span>
+</div>
+</div>
+<p>Estimated instantaneous and smoothed volatility of cryptocurrency using Heston-lite and mean-reverting SDEs with Kalman/Particle Filters. Both approaches achieve ~0.9 R², significantly outperforming traditional GARCH models.</p>
+
 <div class="vol-card">
   <div class="vol-top">
     <div class="vol-top-left">
@@ -234,6 +245,7 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
   </div>
 </div>
 <a href="https://github.com/yayme/Volatility-Inference-with-SDEs-Data-Assimilation" class="project-link">GitHub</a>
+</div>
 
 <div class="project-item">
 <h4>SignalCraft: Crypto Alpha Discovery System</h4>

@@ -351,9 +351,9 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
   --cuda-muted: #8a7060;
   --cuda-accent: #D95F18;
   --cuda-border: #D6C6A9;
-  --cuda-local: #D95F18;
-  --cuda-global-c: #a07848;
-  --cuda-skip: #D6C6A9;
+  --cuda-local: #a07848;
+  --cuda-global-c: #D95F18;
+  --cuda-skip: #e8dcc8;
   
   --yut-bg: rgba(255,250,242,0.98);
   --yut-bg2: #FAF3E0;
@@ -381,9 +381,9 @@ html[data-theme="dark"] {
   --cuda-muted: #9a7d65;
   --cuda-accent: #FF8A4C;
   --cuda-border: #5A3825;
-  --cuda-local: #FF8A4C;
-  --cuda-global-c: #c4976a;
-  --cuda-skip: #5A3825;
+  --cuda-local: #c4976a;
+  --cuda-global-c: #FF8A4C;
+  --cuda-skip: #1e140f;
   
   --yut-bg: rgba(24,18,15,0.95);
   --yut-bg2: #2C1810;
@@ -402,6 +402,38 @@ html[data-theme="dark"] {
   --fo-muted: #9a7d65;
   --fo-accent: #FF8A4C;
   --fo-border: #5A3825;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    --cuda-bg: rgba(24,18,15,0.95);
+    --cuda-bg2: #2C1810;
+    --cuda-text: #F5E8C7;
+    --cuda-muted: #9a7d65;
+    --cuda-accent: #FF8A4C;
+    --cuda-border: #5A3825;
+    --cuda-local: #c4976a;
+    --cuda-global-c: #FF8A4C;
+    --cuda-skip: #1e140f;
+    
+    --yut-bg: rgba(24,18,15,0.95);
+    --yut-bg2: #2C1810;
+    --yut-text: #F5E8C7;
+    --yut-muted: #9a7d65;
+    --yut-accent: #FF8A4C;
+    --yut-border: #5A3825;
+    --yut-bar-best: #FF8A4C;
+    --yut-bar-mid: #c4976a;
+    --yut-bar-base: #7a5c40;
+    --yut-bar-poor: #5A3825;
+    
+    --fo-bg: rgba(24,18,15,0.95);
+    --fo-bg2: #2C1810;
+    --fo-text: #F5E8C7;
+    --fo-muted: #9a7d65;
+    --fo-accent: #FF8A4C;
+    --fo-border: #5A3825;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -497,17 +529,6 @@ html[data-theme="dark"] {
 }
 
 /* Resume Card Styling */
-.interest-card {
-  background: linear-gradient(135deg, #F5E8C7 0%, #FAF3E0 100%);
-  border: 2px solid #D6C6A9;
-  border-radius: 15px;
-  padding: 1.2rem;
-  margin-bottom: 0.8rem;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(58, 44, 41, 0.1);
-  transition: all 0.3s ease;
-}
-
 .interest-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(58, 44, 41, 0.15);
@@ -782,8 +803,497 @@ html[data-theme="dark"] {
   color: #F5E8C7;
 }
 
-/* Compact Card Styles for Resume */
-@media (max-width: 768px) {
+/* Project Header & Tech Stack (for resume cards) */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-item h3 {
+  color: #3A2C29;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin: 0;
+  line-height: 1.3;
+  flex: 1;
+  min-width: 250px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.tech-tag {
+  background: #D95F18;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: #C4470D;
+  transform: scale(1.05);
+}
+
+/* Dark mode for project header */
+[data-theme="dark"] .project-item h3 {
+  color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .tech-tag {
+  background: #FF8A4C;
+  color: #2C1810;
+}
+
+[data-theme="dark"] .tech-tag:hover {
+  background: #FF6B2B;
+}
+
+/* CUDA Card Styles */
+.cuda-card {
+  margin: 1.5rem 0;
+  padding: 20px 22px;
+  border: 1px solid var(--cuda-border);
+  border-radius: 8px;
+  background: var(--cuda-bg);
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--cuda-text);
+}
+
+.cuda-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.cuda-top-left {
+  flex: 1;
+}
+
+.cuda-tag {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cuda-accent);
+  margin-bottom: 6px;
+}
+
+.cuda-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--cuda-text);
+  line-height: 1.2;
+}
+
+.cuda-title span {
+  color: var(--cuda-accent);
+}
+
+.cuda-divider {
+  border: none;
+  border-top: 1px solid var(--cuda-border);
+  margin-bottom: 14px;
+}
+
+.cuda-body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.cuda-grid-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cuda-grid-label {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cuda-muted);
+}
+
+.cuda-attn-grid {
+  display: inline-grid;
+  grid-template-columns: repeat(7, 11px);
+  gap: 1.5px;
+}
+
+.cuda-cell {
+  width: 11px;
+  height: 11px;
+  border-radius: 1px;
+}
+
+.cuda-c-local {
+  background: var(--cuda-local);
+  opacity: 0.85;
+}
+
+.cuda-c-global {
+  background: var(--cuda-global-c);
+}
+
+.cuda-c-skip {
+  background: var(--cuda-skip);
+}
+
+.cuda-legend {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.cuda-leg {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 8px;
+  color: var(--cuda-muted);
+}
+
+.cuda-leg-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.cuda-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cuda-stats {
+  display: flex;
+  gap: 8px;
+}
+
+.cuda-stat {
+  flex: 1;
+  background: var(--cuda-bg2);
+  border: 1px solid var(--cuda-border);
+  border-radius: 5px;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.cuda-s-val {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--cuda-accent);
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.cuda-s-lbl {
+  font-size: 8px;
+  color: var(--cuda-muted);
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+/* YUT Card Styles */
+.yut-card {
+  margin: 1.5rem 0;
+  padding: 20px 22px;
+  border: 1px solid var(--yut-border);
+  border-radius: 8px;
+  background: var(--yut-bg);
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--yut-text);
+}
+
+.yut-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.yut-tag {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--yut-accent);
+  margin-bottom: 6px;
+}
+
+.yut-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--yut-text);
+  line-height: 1.2;
+}
+
+.yut-title span {
+  color: var(--yut-accent);
+}
+
+.yut-divider {
+  border: none;
+  border-top: 1px solid var(--yut-border);
+  margin-bottom: 14px;
+}
+
+.yut-body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.yut-chart-wrap {
+  min-width: 148px;
+}
+
+.yut-chart-label {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--yut-muted);
+  margin-bottom: 8px;
+}
+
+.yut-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 4px;
+}
+
+.yut-bar-name {
+  font-size: 8px;
+  color: var(--yut-muted);
+  width: 72px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.yut-bar-track {
+  flex: 1;
+  height: 7px;
+  background: var(--yut-bg2);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.yut-bar-fill {
+  height: 100%;
+  border-radius: 1px;
+}
+
+.yut-bar-val {
+  font-size: 8px;
+  color: var(--yut-text);
+  width: 28px;
+  flex-shrink: 0;
+}
+
+.yut-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.yut-stats {
+  display: flex;
+  gap: 8px;
+}
+
+.yut-stat {
+  flex: 1;
+  background: var(--yut-bg2);
+  border: 1px solid var(--yut-border);
+  border-radius: 5px;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.yut-s-val {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--yut-accent);
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.yut-s-lbl {
+  font-size: 8px;
+  color: var(--yut-muted);
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+/* File Organizer Card Styles */
+.fo-card {
+  margin: 1.5rem 0;
+  padding: 20px 22px;
+  border: 1px solid var(--fo-border);
+  border-radius: 8px;
+  background: var(--fo-bg);
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--fo-text);
+}
+
+.fo-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.fo-tag {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fo-accent);
+  margin-bottom: 6px;
+}
+
+.fo-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--fo-text);
+  line-height: 1.2;
+}
+
+.fo-title span {
+  color: var(--fo-accent);
+}
+
+.fo-divider {
+  border: none;
+  border-top: 1px solid var(--fo-border);
+  margin-bottom: 14px;
+}
+
+.fo-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.fo-pipeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.fo-pipeline-label {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fo-muted);
+  margin-bottom: 8px;
+}
+
+.fo-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 7px 10px;
+  background: var(--fo-bg2);
+  border: 1px solid var(--fo-border);
+  border-radius: 0;
+  border-bottom: none;
+  position: relative;
+}
+
+.fo-step:first-of-type {
+  border-radius: 5px 5px 0 0;
+}
+
+.fo-step:last-of-type {
+  border-radius: 0 0 5px 5px;
+  border-bottom: 1px solid var(--fo-border);
+}
+
+.fo-step-num {
+  font-size: 8px;
+  font-weight: 500;
+  color: var(--fo-accent);
+  min-width: 12px;
+  margin-top: 1px;
+}
+
+.fo-step-body {
+  flex: 1;
+}
+
+.fo-step-title {
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--fo-text);
+  margin-bottom: 1px;
+}
+
+.fo-step-desc {
+  font-size: 8px;
+  color: var(--fo-muted);
+  line-height: 1.4;
+}
+
+.fo-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fo-stats {
+  display: flex;
+  gap: 8px;
+}
+
+.fo-stat {
+  flex: 1;
+  background: var(--fo-bg2);
+  border: 1px solid var(--fo-border);
+  border-radius: 5px;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.fo-s-val {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--fo-accent);
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.fo-s-lbl {
+  font-size: 8px;
+  color: var(--fo-muted);
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+/* Responsive Design */
   .resume-container {
     padding: 0.5rem;
   }

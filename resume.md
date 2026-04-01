@@ -111,20 +111,44 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 <h2>Projects</h2>
 
 <div class="project-item">
-<h4>Sparse Attention CUDA Kernel</h4>
-<div class="tech-stack">CUDA, C++, PyTorch</div>
-<p>Efficient sparse attention kernel with Longformer masking and Flash Attention style online softmax, wrapped as a PyTorch extension. <a href="https://github.com/yayme/CUDA-kernel" class="project-link">GitHub</a></p>
+<div class="project-header">
+<h3>Sparse Attention CUDA Kernel</h3>
+<div class="tech-stack">
+<span class="tech-tag">CUDA</span>
+<span class="tech-tag">C++</span>
+<span class="tech-tag">PyTorch</span>
+</div>
+</div>
+<p>Efficient sparse attention kernel with Longformer masking and Flash Attention style online softmax, achieving 1.8× speedup and O(1) memory complexity.</p>
 
-<div class="cuda-card-compact">
-  <div class="cuda-grid-wrap-compact">
-    <div class="cuda-attn-grid-compact" id="cuda-grid-resume"></div>
+<div class="cuda-card">
+  <div class="cuda-top">
+    <div class="cuda-top-left">
+      <div class="cuda-tag">CUDA · GPU Kernels</div>
+      <div class="cuda-title">Sparse <span>Attention</span></div>
+    </div>
   </div>
-  <div class="cuda-stats-compact">
-    <div class="cuda-stat-compact"><div class="cuda-s-val-compact">1.8×</div><div class="cuda-s-lbl-compact">speedup v2</div></div>
-    <div class="cuda-stat-compact"><div class="cuda-s-val-compact">O(n·w)</div><div class="cuda-s-lbl-compact">complexity</div></div>
-    <div class="cuda-stat-compact"><div class="cuda-s-val-compact">O(1)</div><div class="cuda-s-lbl-compact">memory</div></div>
+  <hr class="cuda-divider">
+  <div class="cuda-body">
+    <div class="cuda-grid-wrap">
+      <div class="cuda-grid-label">sparse pattern</div>
+      <div class="cuda-attn-grid" id="cuda-grid-resume"></div>
+      <div class="cuda-legend">
+        <div class="cuda-leg"><div class="cuda-leg-dot" style="background:var(--cuda-local)"></div>local</div>
+        <div class="cuda-leg"><div class="cuda-leg-dot" style="background:var(--cuda-global-c)"></div>global</div>
+        <div class="cuda-leg"><div class="cuda-leg-dot" style="background:var(--cuda-skip);border:1px solid var(--cuda-border)"></div>skip</div>
+      </div>
+    </div>
+    <div class="cuda-right">
+      <div class="cuda-stats">
+        <div class="cuda-stat"><div class="cuda-s-val">1.8×</div><div class="cuda-s-lbl">speedup</div></div>
+        <div class="cuda-stat"><div class="cuda-s-val">O(n·w)</div><div class="cuda-s-lbl">complexity</div></div>
+        <div class="cuda-stat"><div class="cuda-s-val">O(1)</div><div class="cuda-s-lbl">memory</div></div>
+      </div>
+    </div>
   </div>
 </div>
+<a href="https://github.com/yayme/CUDA-kernel" class="project-link">GitHub</a>
 </div>
 
 <div class="project-item">
@@ -145,58 +169,107 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 </div>
 
 <div class="project-item">
-<h4>Yut AI : Korean Traditional Board Game AI</h4>
-<div class="tech-stack">Python, Game Theory, Bayesian Optimization</div>
-<p>Modeled Yutnori as a stochastic adversarial sequential game and built an AI agent using minimax lookahead with pruning, a multi factor utility function (progress, capture, tempo, risk), and Bayesian optimization over policy weights trained directly on win rate.</p>
+<div class="project-header">
+<h3>Yut AI: Korean Traditional Board Game</h3>
+<div class="tech-stack">
+<span class="tech-tag">Python</span>
+<span class="tech-tag">Game Theory</span>
+<span class="tech-tag">Bayesian Optimization</span>
+</div>
+</div>
+<p>Built a game AI agent using minimax lookahead with Bayesian optimization, achieving 56.5% win rate with 8 optimized policy weights.</p>
 
-<div class="yut-card-compact">
-  <div class="yut-chart-wrap-compact">
-    <div class="yut-bar-compact">
-      <span class="yut-bar-name-compact">Bayes-tuned</span>
-      <div class="yut-bar-track-compact"><div class="yut-bar-fill-compact" style="width:100%;background:var(--yut-bar-best)"></div></div>
-      <span class="yut-bar-val-compact">56.5%</span>
-    </div>
-    <div class="yut-bar-compact">
-      <span class="yut-bar-name-compact">baseline</span>
-      <div class="yut-bar-track-compact"><div class="yut-bar-fill-compact" style="width:50%;background:var(--yut-bar-poor)"></div></div>
-      <span class="yut-bar-val-compact">50.0%</span>
+<div class="yut-card">
+  <div class="yut-top">
+    <div>
+      <div class="yut-tag">Game AI · Bayesian Optimization</div>
+      <div class="yut-title"><span>Yut</span> AI</div>
     </div>
   </div>
-  <div class="yut-stats-compact">
-    <div class="yut-stat-compact"><div class="yut-s-val-compact">56.5%</div><div class="yut-s-lbl-compact">best win rate</div></div>
-    <div class="yut-stat-compact"><div class="yut-s-val-compact">8</div><div class="yut-s-lbl-compact">weights tuned</div></div>
+  <hr class="yut-divider">
+  <div class="yut-body">
+    <div class="yut-chart-wrap">
+      <div class="yut-chart-label">win rate</div>
+      <div class="yut-bar-row">
+        <span class="yut-bar-name">Bayes-tuned</span>
+        <div class="yut-bar-track"><div class="yut-bar-fill" style="width:100%;background:var(--yut-bar-best)"></div></div>
+        <span class="yut-bar-val">56.5%</span>
+      </div>
+      <div class="yut-bar-row">
+        <span class="yut-bar-name">baseline</span>
+        <div class="yut-bar-track"><div class="yut-bar-fill" style="width:50%;background:var(--yut-bar-poor)"></div></div>
+        <span class="yut-bar-val">50.0%</span>
+      </div>
+    </div>
+    <div class="yut-right">
+      <div class="yut-stats">
+        <div class="yut-stat"><div class="yut-s-val">56.5%</div><div class="yut-s-lbl">best win<br>rate</div></div>
+        <div class="yut-stat"><div class="yut-s-val">8</div><div class="yut-s-lbl">weights<br>tuned</div></div>
+      </div>
+    </div>
   </div>
 </div>
 <a href="https://github.com/yayme/COE-Yutnori" class="project-link">GitHub</a>
 </div>
 
 <div class="project-item">
-<h4>AI agent for automated file management</h4>
-<div class="tech-stack">Python, AI/ML</div>
-<p>Created a real time file sorter using embedding models and vector similarity to automatically sort downloaded files and increase productivity. Shared it among friends and iterated with feedback.</p>
+<div class="project-header">
+<h3>AI Agent for Automated File Management</h3>
+<div class="tech-stack">
+<span class="tech-tag">Python</span>
+<span class="tech-tag">NLP</span>
+<span class="tech-tag">Embeddings</span>
+</div>
+</div>
+<p>Real-time file sorter using semantic embeddings to automatically classify and organize files, achieving 40% efficiency gain and 60% time savings.</p>
 
-<div class="fo-card-compact">
-  <div class="fo-pipeline-compact">
-    <div class="fo-step-compact">
-      <span class="fo-step-num-compact">1</span>
-      <div class="fo-step-label-compact">event trigger</div>
-    </div>
-    <div class="fo-step-compact">
-      <span class="fo-step-num-compact">2</span>
-      <div class="fo-step-label-compact">embedding</div>
-    </div>
-    <div class="fo-step-compact">
-      <span class="fo-step-num-compact">3</span>
-      <div class="fo-step-label-compact">similarity</div>
-    </div>
-    <div class="fo-step-compact">
-      <span class="fo-step-num-compact">4</span>
-      <div class="fo-step-label-compact">dispatch</div>
+<div class="fo-card">
+  <div class="fo-top">
+    <div>
+      <div class="fo-tag">Agentic Automation · NLP</div>
+      <div class="fo-title">File <span>Organizer</span></div>
     </div>
   </div>
-  <div class="fo-stats-compact">
-    <div class="fo-stat-compact"><div class="fo-s-val-compact">40%</div><div class="fo-s-lbl-compact">efficiency<br>gain</div></div>
-    <div class="fo-stat-compact"><div class="fo-s-val-compact">60%</div><div class="fo-s-lbl-compact">time<br>saved</div></div>
+  <hr class="fo-divider">
+  <div class="fo-body">
+    <div class="fo-pipeline">
+      <div class="fo-pipeline-label">pipeline</div>
+      <div class="fo-step">
+        <span class="fo-step-num">1</span>
+        <div class="fo-step-body">
+          <div class="fo-step-title">trigger</div>
+          <div class="fo-step-desc">Watchdog monitors filesystem</div>
+        </div>
+      </div>
+      <div class="fo-step">
+        <span class="fo-step-num">2</span>
+        <div class="fo-step-body">
+          <div class="fo-step-title">embedding</div>
+          <div class="fo-step-desc">spaCy encodes content</div>
+        </div>
+      </div>
+      <div class="fo-step">
+        <span class="fo-step-num">3</span>
+        <div class="fo-step-body">
+          <div class="fo-step-title">classify</div>
+          <div class="fo-step-desc">Cosine similarity match</div>
+        </div>
+      </div>
+      <div class="fo-step">
+        <span class="fo-step-num">4</span>
+        <div class="fo-step-body">
+          <div class="fo-step-title">dispatch</div>
+          <div class="fo-step-desc">Route to folder</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fo-right">
+      <div class="fo-stats">
+        <div class="fo-stat"><div class="fo-s-val">40%</div><div class="fo-s-lbl">efficiency<br>gain</div></div>
+        <div class="fo-stat"><div class="fo-s-val">60%</div><div class="fo-s-lbl">time<br>saved</div></div>
+      </div>
+    </div>
   </div>
 </div>
 <a href="https://github.com/yayme/Desktop_file_organizer" class="project-link">GitHub</a>
@@ -365,9 +438,9 @@ html[data-theme="dark"] {
 
 /* Resume Page Styling */
 .resume-container {
-  max-width: 950px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1.2rem 1.5rem;
   background: rgba(255, 250, 242, 0.98);
   color: #3A2C29;
   border-radius: 18px;
@@ -385,8 +458,8 @@ html[data-theme="dark"] {
   background: #FAF3E0;
   color: #3A2C29;
   border-radius: 12px;
-  margin-bottom: 1.2rem;
-  padding: 1.5rem;
+  margin-bottom: 0.8rem;
+  padding: 1.2rem;
   box-shadow: 0 3px 12px rgba(58, 44, 41, 0.08);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -404,8 +477,8 @@ html[data-theme="dark"] {
   background: linear-gradient(135deg, #F5E8C7 0%, #FAF3E0 100%);
   border: 2px solid #D6C6A9;
   border-radius: 15px;
-  padding: 1.5rem;
-  margin-bottom: 1.2rem;
+  padding: 1.2rem;
+  margin-bottom: 0.8rem;
   text-align: center;
   box-shadow: 0 4px 15px rgba(58, 44, 41, 0.1);
   transition: all 0.3s ease;
@@ -433,8 +506,8 @@ html[data-theme="dark"] {
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid #D6C6A9;
   border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1.2rem;
+  padding: 1.2rem;
+  margin-bottom: 0.8rem;
   box-shadow: 0 3px 12px rgba(58, 44, 41, 0.08);
   transition: all 0.3s ease;
 }
@@ -448,8 +521,8 @@ html[data-theme="dark"] {
 .section-card h2 {
   color: #3A2C29;
   border-bottom: 3px solid #D95F18;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.8rem;
   font-weight: bold;
 }
 
@@ -457,8 +530,8 @@ html[data-theme="dark"] {
   background: rgba(245, 232, 199, 0.3);
   border: 1px solid #D6C6A9;
   border-radius: 8px;
-  padding: 1.2rem;
-  margin-bottom: 1rem;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
   transition: all 0.3s ease;
 }
 
@@ -472,7 +545,7 @@ html[data-theme="dark"] {
 .company-header {
   display: flex;
   flex-direction: column;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
 }
 
 .company-header h3 {
@@ -698,242 +771,6 @@ html[data-theme="dark"] {
 }
 
 /* Compact Card Styles for Resume */
-.cuda-card-compact, .yut-card-compact {
-  margin: 1rem 0;
-  padding: 1rem;
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  font-family: 'IBM Plex Mono', monospace;
-}
-
-[data-theme="dark"] .cuda-card-compact,
-[data-theme="dark"] .yut-card-compact {
-  background: rgba(58, 36, 24, 0.6);
-  border-color: #5A3825;
-}
-
-/* CUDA Card Compact */
-.cuda-grid-wrap-compact {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 85px;
-}
-
-.cuda-attn-grid-compact {
-  display: inline-grid;
-  grid-template-columns: repeat(6, 9px);
-  gap: 1px;
-}
-
-.cuda-cell-compact {
-  width: 9px;
-  height: 9px;
-  border-radius: 1px;
-}
-
-.cuda-stats-compact {
-  display: flex;
-  gap: 0.8rem;
-  flex: 1;
-}
-
-.cuda-stat-compact {
-  flex: 1;
-  text-align: center;
-  padding: 0.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-}
-
-[data-theme="dark"] .cuda-stat-compact {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.cuda-s-val-compact {
-  font-family: 'Syne', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--cuda-accent);
-  display: block;
-  margin-bottom: 2px;
-}
-
-.cuda-s-lbl-compact {
-  font-size: 7px;
-  color: var(--cuda-muted);
-  display: block;
-}
-
-/* YUT Card Compact */
-.yut-chart-wrap-compact {
-  min-width: 120px;
-}
-
-.yut-bar-compact {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  margin-bottom: 6px;
-}
-
-.yut-bar-name-compact {
-  font-size: 8px;
-  color: var(--yut-muted);
-  width: 60px;
-  text-align: right;
-  flex-shrink: 0;
-}
-
-.yut-bar-track-compact {
-  flex: 1;
-  height: 6px;
-  background: var(--yut-bg2);
-  border-radius: 1px;
-  overflow: hidden;
-}
-
-.yut-bar-fill-compact {
-  height: 100%;
-  border-radius: 1px;
-}
-
-.yut-bar-val-compact {
-  font-size: 8px;
-  color: var(--yut-text);
-  width: 25px;
-  text-align: right;
-  flex-shrink: 0;
-}
-
-.yut-stats-compact {
-  display: flex;
-  gap: 0.8rem;
-  flex: 1;
-}
-
-.yut-stat-compact {
-  flex: 1;
-  text-align: center;
-  padding: 0.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-}
-
-[data-theme="dark"] .yut-stat-compact {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.yut-s-val-compact {
-  font-family: 'Syne', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--yut-accent);
-  display: block;
-  margin-bottom: 2px;
-}
-
-.yut-s-lbl-compact {
-  font-size: 7px;
-  color: var(--yut-muted);
-  display: block;
-}
-
-/* File Organizer Card Compact */
-.fo-card-compact {
-  margin: 1rem 0;
-  padding: 1rem;
-  background: var(--fo-bg2);
-  border: 1px solid var(--fo-border);
-  border-radius: 8px;
-  display: flex;
-  gap: 0.8rem;
-  align-items: flex-start;
-  font-family: 'IBM Plex Mono', monospace;
-}
-
-[data-theme="dark"] .fo-card-compact {
-  background: rgba(58, 36, 24, 0.6);
-  border-color: #5A3825;
-}
-
-.fo-pipeline-compact {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 4px;
-  min-width: 100px;
-  flex-shrink: 0;
-}
-
-.fo-step-compact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3px;
-  padding: 4px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
-  text-align: center;
-}
-
-[data-theme="dark"] .fo-step-compact {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.fo-step-num-compact {
-  font-family: 'Syne', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--fo-accent);
-  display: block;
-}
-
-.fo-step-label-compact {
-  font-size: 7px;
-  color: var(--fo-muted);
-  display: block;
-  line-height: 1.2;
-}
-
-.fo-stats-compact {
-  display: flex;
-  gap: 0.6rem;
-  flex: 1;
-}
-
-.fo-stat-compact {
-  flex: 1;
-  text-align: center;
-  padding: 0.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-}
-
-[data-theme="dark"] .fo-stat-compact {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.fo-s-val-compact {
-  font-family: 'Syne', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--fo-accent);
-  display: block;
-  margin-bottom: 2px;
-}
-
-.fo-s-lbl-compact {
-  font-size: 7px;
-  color: var(--fo-muted);
-  display: block;
-  line-height: 1.2;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .resume-container {
     padding: 0.5rem;
@@ -965,4 +802,23 @@ html[data-theme="dark"] {
     }
   }
 </style>
+
+<script>
+// Generate CUDA sparse attention grid for resume
+document.addEventListener('DOMContentLoaded', function() {
+  const N = 7, W = 1, GS = 3;
+  const g = document.getElementById('cuda-grid-resume');
+  if (g) {
+    for (let i = 0; i < N; i++) {
+      for (let j = 0; j < N; j++) {
+        const c = document.createElement('div');
+        const isG = i % GS === 0 || j % GS === 0;
+        const isL = Math.abs(i - j) <= W;
+        c.className = 'cuda-cell ' + (isG ? 'cuda-c-global' : isL ? 'cuda-c-local' : 'cuda-c-skip');
+        g.appendChild(c);
+      }
+    }
+  }
+});
+</script>
 

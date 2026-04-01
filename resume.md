@@ -54,15 +54,6 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 </div>
 <div class="experience-item">
   <div class="company-header">
-    <h3>Mercor</h3>
-    <span class="role">AI Reasoning Expert & Mathematical Problem Designer</span>
-    <span class="date">Sep 2025 – Dec 2025</span>
-  </div>
-  <p>Designed mathematical reasoning problems for IMO Frontier Math project. Created challenging problem sets testing advanced mathematical concepts and logical reasoning for AI model evaluation.</p>
-</div>
-
-<div class="experience-item">
-  <div class="company-header">
     <h3>Users & Informations Lab, KAIST</h3>
     <span class="role">Undergraduate Researcher, Project: ChatGPT Voices</span>
     <span class="date">Aug 2024 -- Dec 2024</span>
@@ -89,7 +80,15 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
     <span class="date">2023 – Present</span>
   </div>
   <p>Graded advanced mathematics olympiad problems and provided detailed feedback to students participating in math competitions.</p>
-  
+</div>
+
+<div class="experience-item">
+  <div class="company-header">
+    <h3>Mercor</h3>
+    <span class="role">AI Reasoning Expert & Mathematical Problem Designer</span>
+    <span class="date">Sep 2025 – Dec 2025</span>
+  </div>
+  <p>Designed mathematical reasoning problems for IMO Frontier Math project. Created challenging problem sets testing advanced mathematical concepts and logical reasoning for AI model evaluation.</p>
 </div>
 
 </div>

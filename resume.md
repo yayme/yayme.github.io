@@ -24,14 +24,33 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 
 <div class="resume-container">
 
-<div class="interest-card" style="position:relative; overflow:hidden;">
-  <div class="ic-accent-line"></div>
-  <div class="ic-tagline" id="ic-tagline"></div>
-  <p class="ic-body">
-    Building at the intersection of <strong>statistical learning</strong>,
-    <strong>stochastic modeling</strong>, and <strong>decision theory</strong>
-    with applications spanning quantitative finance, AI systems, and
-    game-theoretic reasoning.
+<div class="interest-card" style="border-top: 3px solid #D95F18; border-radius: 10px; padding: 24px 28px 20px;">
+  <div style="display:flex; align-items:flex-start; gap:0; margin-bottom:16px;" id="ic-row">
+    <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+      <div class="ic-label">Data</div>
+      <canvas id="cv-data" style="width:100%; height:40px; display:block;"></canvas>
+    </div>
+    <div class="ic-arrow">→</div>
+    <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+      <div class="ic-label">Signal</div>
+      <canvas id="cv-signal" style="width:100%; height:40px; display:block;"></canvas>
+    </div>
+    <div class="ic-arrow">→</div>
+    <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+      <div class="ic-label">Model</div>
+      <canvas id="cv-model" style="width:100%; height:40px; display:block;"></canvas>
+    </div>
+    <div class="ic-arrow">→</div>
+    <div style="display:flex; flex-direction:column; align-items:center; flex:1;">
+      <div class="ic-label">Decision</div>
+      <canvas id="cv-decision" style="width:100%; height:40px; display:block;"></canvas>
+    </div>
+  </div>
+  <p style="font-size:11px; color:#8a7060; line-height:1.7; margin:0; border-top:1px solid #D6C6A9; padding-top:12px;">
+    Building at the intersection of <strong style="color:#D95F18; font-weight:500;">AI</strong>,
+    <strong style="color:#D95F18; font-weight:500;">statistical learning</strong>, and
+    <strong style="color:#D95F18; font-weight:500;">mathematical modeling</strong>
+    with experience spanning LLM systems, Applied AI, Data Science and NLP.
   </p>
 </div>
 
@@ -581,46 +600,20 @@ html[data-theme="dark"] {
 .interest-card {
   background: linear-gradient(135deg, #F5E8C7 0%, #FAF3E0 100%);
   border: 2px solid #D6C6A9;
-  border-radius: 15px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
   box-shadow: 0 4px 15px rgba(58, 44, 41, 0.1);
   transition: all 0.3s ease;
-  animation: ic-fadein 0.7s cubic-bezier(.4,0,.2,1) both;
 }
 
-@keyframes ic-fadein {
-  from { opacity:0; transform:translateY(12px); }
-  to   { opacity:1; transform:translateY(0); }
+.ic-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px; font-weight: 800;
+  color: #3A2C29; margin-bottom: 8px; letter-spacing: -0.01em;
 }
 
-.ic-accent-line {
-  position: absolute; top: 0; left: 0;
-  height: 3px; background: #D95F18;
-  border-radius: 10px 10px 0 0;
-  width: 0;
-  animation: ic-line 0.9s 0.3s cubic-bezier(.4,0,.2,1) forwards;
-}
-
-@keyframes ic-line { from { width:0; } to { width:100%; } }
-
-.ic-tagline {
-  font-size: 19px; font-weight: 800;
-  letter-spacing: -0.01em; margin-bottom: 12px;
-  display: flex; align-items: center; flex-wrap: wrap; gap: 0;
-  color: #3A2C29;
-}
-
-.ic-word  { opacity:0; transform:translateY(6px); display:inline-block; }
-.ic-arrow { color:#D95F18; margin:0 7px; opacity:0; display:inline-block; }
-
-.ic-body {
-  opacity:0;
-  animation: ic-fadein 0.6s 1.1s cubic-bezier(.4,0,.2,1) forwards;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #3A2C29;
+.ic-arrow {
+  display: flex; align-items: center;
+  padding-top: 12px; padding-left: 4px; padding-right: 4px;
+  color: #D95F18; font-size: 16px; flex-shrink: 0;
 }
 
 .section-card {
@@ -639,13 +632,8 @@ html[data-theme="dark"] {
   color: #F5E8C7;
 }
 
-[data-theme="dark"] .ic-tagline,
-[data-theme="dark"] .ic-body {
-  color: #F5E8C7 !important;
-}
-
-[data-theme="dark"] .ic-arrow {
-  color: #FF8A4C !important;
+[data-theme="dark"] .ic-label {
+  color: #F5E8C7;
 }
 
 [data-theme="dark"] .section-card {
@@ -1709,26 +1697,149 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   }
-
-  // Animate interest card tagline
-  const words = ['Data', 'Signal', 'Model', 'Decision'];
-  const tagline = document.getElementById('ic-tagline');
-  if (tagline) {
-    words.forEach((word, i) => {
-      if (i > 0) {
-        const arrow = document.createElement('span');
-        arrow.className = 'ic-arrow';
-        arrow.textContent = '→';
-        arrow.style.animation = `ic-fadein 0.4s ${0.32 + i * 0.18}s cubic-bezier(.4,0,.2,1) forwards`;
-        tagline.appendChild(arrow);
-      }
-      const span = document.createElement('span');
-      span.className = 'ic-word';
-      span.textContent = word;
-      span.style.animation = `ic-fadein 0.45s ${0.35 + i * 0.18}s cubic-bezier(.4,0,.2,1) forwards`;
-      tagline.appendChild(span);
-    });
-  }
 });
+
+// Canvas animations for interest card
+(function() {
+  const ACCENT = '#D95F18';
+  const MUTED  = '#D6C6A9';
+
+  function setup(id) {
+    const canvas = document.getElementById(id);
+    const w = canvas.parentElement.offsetWidth || 140;
+    const h = 40;
+    canvas.width  = w * devicePixelRatio;
+    canvas.height = h * devicePixelRatio;
+    const ctx = canvas.getContext('2d');
+    ctx.scale(devicePixelRatio, devicePixelRatio);
+    return { ctx, w, h };
+  }
+
+  let t = 0;
+
+  function drawData(ctx, w, h, t) {
+    ctx.clearRect(0, 0, w, h);
+    const cols = 12;
+    const rows = 3;
+    const cellW = w / cols;
+    const cellH = h / rows;
+    
+    for(let i = 0; i < cols; i++) {
+      for(let j = 0; j < rows; j++) {
+        const val = Math.sin(t * 3 + i * 1.8 + j * 2.4);
+        const alpha = (val + 1) / 2;
+        ctx.fillStyle = ACCENT;
+        ctx.globalAlpha = alpha * 0.7 + 0.1;
+        ctx.fillRect(i * cellW + 1, j * cellH + 1, cellW - 2, cellH - 2);
+      }
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  function drawSignal(ctx, w, h, t) {
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = MUTED;
+    for(let i = 0; i < 35; i++) {
+      const px = (i / 34) * w;
+      const noise = Math.sin(i * 11.3 + t * 4) * 8;
+      const py = h / 2 + Math.sin(px * 0.05 + t * 1.5) * 6 + noise;
+      ctx.beginPath(); 
+      ctx.arc(px, py, 1.5, 0, Math.PI * 2); 
+      ctx.fill();
+    }
+    
+    ctx.strokeStyle = ACCENT; 
+    ctx.lineWidth = 2; 
+    ctx.beginPath();
+    for(let x = 0; x <= w; x += 2) {
+      const y = h / 2 + Math.sin(x * 0.05 + t * 1.5) * 6;
+      x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+  }
+
+  function drawModel(ctx, w, h, t) {
+    ctx.clearRect(0, 0, w, h);
+    const mu = w / 2 + Math.sin(t * 1.2) * 12;
+    const sigma = 12 + Math.sin(t * 2.1) * 4;
+    
+    ctx.beginPath();
+    ctx.moveTo(0, h);
+    for(let x = 0; x <= w; x += 2) {
+      const z = (x - mu) / sigma;
+      const y = h - 2 - Math.exp(-0.5 * z * z) * (h - 6);
+      ctx.lineTo(x, y);
+    }
+    ctx.lineTo(w, h);
+    
+    ctx.fillStyle = ACCENT; 
+    ctx.globalAlpha = 0.15;
+    ctx.fill();
+    
+    ctx.globalAlpha = 1;
+    ctx.strokeStyle = ACCENT; 
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    for(let x = 0; x <= w; x += 2) {
+      const z = (x - mu) / sigma;
+      const y = h - 2 - Math.exp(-0.5 * z * z) * (h - 6);
+      x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+  }
+
+  function drawDecision(ctx, w, h, t) {
+    ctx.clearRect(0, 0, w, h);
+    
+    ctx.strokeStyle = MUTED; 
+    ctx.lineWidth = 1; 
+    ctx.setLineDash([2, 2]);
+    ctx.beginPath(); 
+    ctx.moveTo(w / 2, 0); 
+    ctx.lineTo(w / 2, h); 
+    ctx.stroke();
+    ctx.setLineDash([]);
+    
+    for(let i = 0; i < 18; i++) {
+      const px = ((i * 15 + t * 35) % w);
+      const startY = h / 2 + Math.sin(i * 4.7) * 8;
+      const targetY = startY < h / 2 ? 6 : h - 6;
+      
+      const transition = 1 / (1 + Math.exp(-(px - w / 2) * 0.4));
+      const py = startY + (targetY - startY) * transition;
+      
+      ctx.fillStyle = px > w / 2 ? (targetY === 6 ? ACCENT : MUTED) : MUTED;
+      ctx.globalAlpha = px > w / 2 && targetY === 6 ? 1 : 0.6;
+      
+      ctx.beginPath(); 
+      ctx.arc(px, py, 2, 0, Math.PI * 2); 
+      ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  let cv = {};
+  function init() {
+    cv.data     = setup('cv-data');
+    cv.signal   = setup('cv-signal');
+    cv.model    = setup('cv-model');
+    cv.decision = setup('cv-decision');
+  }
+
+  function loop() {
+    t += 0.02;
+    drawData(cv.data.ctx, cv.data.w, cv.data.h, t);
+    drawSignal(cv.signal.ctx, cv.signal.w, cv.signal.h, t);
+    drawModel(cv.model.ctx, cv.model.w, cv.model.h, t);
+    drawDecision(cv.decision.ctx, cv.decision.w, cv.decision.h, t);
+    requestAnimationFrame(loop);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() { init(); loop(); });
+  } else {
+    init(); loop();
+  }
+})();
 </script>
 

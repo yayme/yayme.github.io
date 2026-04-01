@@ -438,9 +438,9 @@ html[data-theme="dark"] {
 
 /* Resume Page Styling */
 .resume-container {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 1.2rem 1.5rem;
+  padding: 2rem;
   background: rgba(255, 250, 242, 0.98);
   color: #3A2C29;
   border-radius: 18px;
@@ -454,19 +454,43 @@ html[data-theme="dark"] {
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
 }
 
-.interest-card, .section-card, .experience-item {
+.interest-card {
+  background: linear-gradient(135deg, #F5E8C7 0%, #FAF3E0 100%);
+  border: 2px solid #D6C6A9;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(58, 44, 41, 0.1);
+  transition: all 0.3s ease;
+}
+
+.section-card {
   background: #FAF3E0;
   color: #3A2C29;
   border-radius: 12px;
-  margin-bottom: 0.8rem;
-  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
   box-shadow: 0 3px 12px rgba(58, 44, 41, 0.08);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-[data-theme="dark"] .interest-card,
-[data-theme="dark"] .section-card,
-[data-theme="dark"] .experience-item {
+[data-theme="dark"] .interest-card {
+  background: linear-gradient(135deg, #3A2418 0%, #2C1810 100%);
+  border-color: #5A3825;
+  color: #F5E8C7;
+}
+
+[data-theme="dark"] .interest-card h2,
+[data-theme="dark"] .interest-card h3 {
+  color: #F5E8C7 !important;
+}
+
+[data-theme="dark"] .interest-card h3 {
+  color: #FF8A4C !important;
+}
+
+[data-theme="dark"] .section-card {
   background: #2C1810;
   color: #F5E8C7;
   box-shadow: 0 3px 12px rgba(0,0,0,0.18);
@@ -502,37 +526,24 @@ html[data-theme="dark"] {
   font-size: 1.3rem;
 }
 
-.section-card {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid #D6C6A9;
-  border-radius: 12px;
-  padding: 1.2rem;
-  margin-bottom: 0.8rem;
-  box-shadow: 0 3px 12px rgba(58, 44, 41, 0.08);
-  transition: all 0.3s ease;
-}
-
-.section-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(58, 44, 41, 0.12);
-  border-color: #C4470D;
-}
-
 .section-card h2 {
   color: #3A2C29;
   border-bottom: 3px solid #D95F18;
-  padding-bottom: 0.3rem;
-  margin-bottom: 0.8rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   font-weight: bold;
+  font-size: 1.4rem;
 }
 
 .experience-item, .project-item, .leadership-item {
-  background: rgba(245, 232, 199, 0.3);
+  background: linear-gradient(135deg, rgba(245, 232, 199, 0.3) 0%, rgba(250, 243, 224, 0.3) 100%);
   border: 1px solid #D6C6A9;
   border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 0.8rem;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .experience-item:hover, .project-item:hover, .leadership-item:hover {
@@ -598,8 +609,8 @@ html[data-theme="dark"] {
 .award-item, .interest-item {
   background: rgba(217, 95, 24, 0.1);
   border-left: 4px solid #D95F18;
-  padding: 0.8rem 1.2rem;
-  margin-bottom: 0.8rem;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
   border-radius: 0 8px 8px 0;
   transition: all 0.3s ease;
 }
@@ -615,8 +626,9 @@ html[data-theme="dark"] {
   border: 1px solid #D6C6A9;
   border-left: 4px solid #D95F18;
   border-radius: 8px;
-  padding: 0.8rem 1.2rem;
-  margin-bottom: 0.8rem;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 

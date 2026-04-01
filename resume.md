@@ -270,9 +270,102 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 </div>
 
 <style>
+/* CSS Variables for Project Cards */
+:root {
+  --cuda-bg: rgba(255,250,242,0.98);
+  --cuda-bg2: #FAF3E0;
+  --cuda-text: #3A2C29;
+  --cuda-muted: #8a7060;
+  --cuda-accent: #D95F18;
+  --cuda-border: #D6C6A9;
+  --cuda-local: #D95F18;
+  --cuda-global-c: #a07848;
+  --cuda-skip: #D6C6A9;
+  
+  --yut-bg: rgba(255,250,242,0.98);
+  --yut-bg2: #FAF3E0;
+  --yut-text: #3A2C29;
+  --yut-muted: #8a7060;
+  --yut-accent: #D95F18;
+  --yut-border: #D6C6A9;
+  --yut-bar-best: #D95F18;
+  --yut-bar-mid: #a07848;
+  --yut-bar-base: #c8b89a;
+  --yut-bar-poor: #D6C6A9;
+  
+  --fo-bg: rgba(255,250,242,0.98);
+  --fo-bg2: #FAF3E0;
+  --fo-text: #3A2C29;
+  --fo-muted: #8a7060;
+  --fo-accent: #D95F18;
+  --fo-border: #D6C6A9;
+}
+
+html[data-theme="dark"] {
+  --cuda-bg: rgba(24,18,15,0.95);
+  --cuda-bg2: #2C1810;
+  --cuda-text: #F5E8C7;
+  --cuda-muted: #9a7d65;
+  --cuda-accent: #FF8A4C;
+  --cuda-border: #5A3825;
+  --cuda-local: #FF8A4C;
+  --cuda-global-c: #c4976a;
+  --cuda-skip: #5A3825;
+  
+  --yut-bg: rgba(24,18,15,0.95);
+  --yut-bg2: #2C1810;
+  --yut-text: #F5E8C7;
+  --yut-muted: #9a7d65;
+  --yut-accent: #FF8A4C;
+  --yut-border: #5A3825;
+  --yut-bar-best: #FF8A4C;
+  --yut-bar-mid: #c4976a;
+  --yut-bar-base: #7a5c40;
+  --yut-bar-poor: #5A3825;
+  
+  --fo-bg: rgba(24,18,15,0.95);
+  --fo-bg2: #2C1810;
+  --fo-text: #F5E8C7;
+  --fo-muted: #9a7d65;
+  --fo-accent: #FF8A4C;
+  --fo-border: #5A3825;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    --cuda-bg: rgba(24,18,15,0.95);
+    --cuda-bg2: #2C1810;
+    --cuda-text: #F5E8C7;
+    --cuda-muted: #9a7d65;
+    --cuda-accent: #FF8A4C;
+    --cuda-border: #5A3825;
+    --cuda-local: #FF8A4C;
+    --cuda-global-c: #c4976a;
+    --cuda-skip: #5A3825;
+    
+    --yut-bg: rgba(24,18,15,0.95);
+    --yut-bg2: #2C1810;
+    --yut-text: #F5E8C7;
+    --yut-muted: #9a7d65;
+    --yut-accent: #FF8A4C;
+    --yut-border: #5A3825;
+    --yut-bar-best: #FF8A4C;
+    --yut-bar-mid: #c4976a;
+    --yut-bar-base: #7a5c40;
+    --yut-bar-poor: #5A3825;
+    
+    --fo-bg: rgba(24,18,15,0.95);
+    --fo-bg2: #2C1810;
+    --fo-text: #F5E8C7;
+    --fo-muted: #9a7d65;
+    --fo-accent: #FF8A4C;
+    --fo-border: #5A3825;
+  }
+}
+
 /* Resume Page Styling */
 .resume-container {
-  max-width: 800px;
+  max-width: 950px;
   margin: 0 auto;
   padding: 1.5rem;
   background: rgba(255, 250, 242, 0.98);

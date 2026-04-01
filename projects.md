@@ -118,6 +118,90 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
   <li>Estimated instantaneous volatility of cryptocurrency by combining a Heston-lite SDE with Kalman and Particle Filter; absolute log returns used as ground truth. Kalman R² ≈ 0.9998, Particle Filter R² ≈ 0.48–0.67, GARCH R² ≈ 0.09–0.17. Both filters outperform traditional GARCH models.</li>
   <li>Estimated smoothed volatility of cryptocurrency by combining a mean-reverting SDE with Kalman and Particle Filter; 100-period rolling std used as ground truth. Kalman R² ≈ 0.996–0.997, Particle Filter R² ≈ 0.995–0.999, GARCH R² ≈ 0.33–0.63. Both methods outperform GARCH for smoothed volatility tracking.</li>
 </ul>
+
+<div class="vol-card">
+  <div class="vol-top">
+    <div class="vol-top-left">
+      <div class="vol-tag">SDEs · Bayesian Filtering · Crypto</div>
+      <div class="vol-title">Volatility Inference<br>with <span>SDEs</span></div>
+    </div>
+  </div>
+  <hr class="vol-divider">
+  <div class="vol-body">
+    <div class="vol-chart-wrap">
+      <div class="vol-chart-label">R² by method</div>
+      
+      <div class="vol-bar-group">
+        <div class="vol-bar-title">pipeline 1 · instantaneous</div>
+        <div class="vol-bar-row">
+          <span class="vol-bar-name">Kalman</span>
+          <div class="vol-bar-track"><div class="vol-bar-fill kalman" style="width:100%"></div></div>
+          <span class="vol-bar-val">0.9</span>
+        </div>
+        <div class="vol-bar-row">
+          <span class="vol-bar-name">Particle Filter</span>
+          <div class="vol-bar-track"><div class="vol-bar-fill pf" style="width:63%"></div></div>
+          <span class="vol-bar-val">~0.60</span>
+        </div>
+        <div class="vol-bar-row">
+          <span class="vol-bar-name">GARCH</span>
+          <div class="vol-bar-track"><div class="vol-bar-fill garch" style="width:13%"></div></div>
+          <span class="vol-bar-val">~0.13</span>
+        </div>
+      </div>
+      
+      <div class="vol-bar-group">
+        <div class="vol-bar-title">pipeline 2 · rolling</div>
+        <div class="vol-bar-row">
+          <span class="vol-bar-name">Kalman</span>
+          <div class="vol-bar-track"><div class="vol-bar-fill kalman" style="width:99.7%"></div></div>
+          <span class="vol-bar-val">0.9</span>
+        </div>
+        <div class="vol-bar-row">
+          <span class="vol-bar-name">Particle Filter</span>
+          <div class="vol-bar-track"><div class="vol-bar-fill pf" style="width:99.7%"></div></div>
+          <span class="vol-bar-val">0.9</span>
+        </div>
+        <div class="vol-bar-row">
+          <span class="vol-bar-name">GARCH</span>
+          <div class="vol-bar-track"><div class="vol-bar-fill garch" style="width:48%"></div></div>
+          <span class="vol-bar-val">~0.48</span>
+        </div>
+      </div>
+      
+      <div class="vol-legend">
+        <div class="vol-leg"><div class="vol-leg-dot" style="background:var(--vol-bar-kalman)"></div>Kalman</div>
+        <div class="vol-leg"><div class="vol-leg-dot" style="background:var(--vol-bar-pf)"></div>Particle Filter</div>
+        <div class="vol-leg"><div class="vol-leg-dot" style="background:var(--vol-bar-garch);border:1px solid var(--vol-border)"></div>GARCH</div>
+      </div>
+    </div>
+    
+    <div class="vol-right">
+      <div class="vol-stats">
+        <div class="vol-stat"><div class="vol-s-val">0.9</div><div class="vol-s-lbl">Kalman R²<br>pipeline 1</div></div>
+        <div class="vol-stat"><div class="vol-s-val">0.9</div><div class="vol-s-lbl">Particle Filter R²<br>pipeline 2</div></div>
+      </div>
+      <div class="vol-pipes">
+        <div class="vol-pipes-title">pipelines</div>
+        <div class="vol-pipe-row" style="flex-direction:column; align-items:flex-start; gap:2px;">
+          <div style="display:flex; justify-content:space-between; width:100%;">
+            <span class="vol-p-label">P1 · instantaneous</span>
+            <span class="vol-p-model">Heston-lite SDE</span>
+          </div>
+          <div style="font-size:8px; color:var(--vol-muted);">target: absolute log returns as proxy for instantaneous volatility</div>
+        </div>
+        <div class="vol-pipe-row" style="flex-direction:column; align-items:flex-start; gap:2px;">
+          <div style="display:flex; justify-content:space-between; width:100%;">
+            <span class="vol-p-label">P2 · rolling</span>
+            <span class="vol-p-model">OU mean-revert SDE</span>
+          </div>
+          <div style="font-size:8px; color:var(--vol-muted);">target: rolling standard deviation over 100-period window</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <a href="https://github.com/yayme/Volatility-Inference-with-SDEs-Data-Assimilation" class="project-link">
 <span class="link-icon">📂</span> View on GitHub
 </a>
@@ -705,6 +789,266 @@ html[data-theme="dark"], html[data-theme="dark"] body {
 
 .cuda-d-new {
   color: var(--cuda-accent);
+  font-weight: 500;
+}
+
+/* Volatility Infographics Styles */
+:root {
+  --vol-bg: rgba(255,250,242,0.98);
+  --vol-bg2: #FAF3E0;
+  --vol-text: #3A2C29;
+  --vol-muted: #8a7060;
+  --vol-accent: #D95F18;
+  --vol-border: #D6C6A9;
+  --vol-bar-kalman: #D95F18;
+  --vol-bar-pf: #a07848;
+  --vol-bar-garch: #D6C6A9;
+}
+
+html[data-theme="dark"] {
+  --vol-bg: rgba(24,18,15,0.95);
+  --vol-bg2: #2C1810;
+  --vol-text: #F5E8C7;
+  --vol-muted: #9a7d65;
+  --vol-accent: #FF8A4C;
+  --vol-border: #5A3825;
+  --vol-bar-kalman: #FF8A4C;
+  --vol-bar-pf: #c4976a;
+  --vol-bar-garch: #5A3825;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    --vol-bg: rgba(24,18,15,0.95);
+    --vol-bg2: #2C1810;
+    --vol-text: #F5E8C7;
+    --vol-muted: #9a7d65;
+    --vol-accent: #FF8A4C;
+    --vol-border: #5A3825;
+    --vol-bar-kalman: #FF8A4C;
+    --vol-bar-pf: #c4976a;
+    --vol-bar-garch: #5A3825;
+  }
+}
+
+.vol-card {
+  margin: 1.5rem 0;
+  padding: 20px 22px;
+  border: 1px solid var(--vol-border);
+  border-radius: 8px;
+  background: var(--vol-bg);
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--vol-text);
+}
+
+.vol-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.vol-top-left {
+  flex: 1;
+}
+
+.vol-tag {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--vol-accent);
+  margin-bottom: 6px;
+}
+
+.vol-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--vol-text);
+  line-height: 1.2;
+}
+
+.vol-title span {
+  color: var(--vol-accent);
+}
+
+.vol-divider {
+  border: none;
+  border-top: 1px solid var(--vol-border);
+  margin-bottom: 14px;
+}
+
+.vol-body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.vol-chart-wrap {
+  min-width: 130px;
+}
+
+.vol-chart-label {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--vol-muted);
+  margin-bottom: 8px;
+}
+
+.vol-bar-group {
+  margin-bottom: 9px;
+}
+
+.vol-bar-title {
+  font-size: 8px;
+  color: var(--vol-muted);
+  margin-bottom: 4px;
+}
+
+.vol-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 2px;
+}
+
+.vol-bar-name {
+  font-size: 8px;
+  color: var(--vol-muted);
+  width: 62px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.vol-bar-track {
+  flex: 1;
+  height: 7px;
+  background: var(--vol-bg2);
+  border-radius: 1px;
+  overflow: hidden;
+  position: relative;
+}
+
+.vol-bar-fill {
+  height: 100%;
+  border-radius: 1px;
+}
+
+.vol-bar-val {
+  font-size: 8px;
+  color: var(--vol-text);
+  width: 30px;
+  flex-shrink: 0;
+}
+
+.vol-bar-fill.kalman {
+  background: var(--vol-bar-kalman);
+}
+
+.vol-bar-fill.pf {
+  background: var(--vol-bar-pf);
+}
+
+.vol-bar-fill.garch {
+  background: var(--vol-bar-garch);
+}
+
+.vol-legend {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.vol-leg {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 8px;
+  color: var(--vol-muted);
+}
+
+.vol-leg-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.vol-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vol-stats {
+  display: flex;
+  gap: 8px;
+}
+
+.vol-stat {
+  flex: 1;
+  background: var(--vol-bg2);
+  border: 1px solid var(--vol-border);
+  border-radius: 5px;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.vol-s-val {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--vol-accent);
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.vol-s-lbl {
+  font-size: 8px;
+  color: var(--vol-muted);
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+.vol-pipes {
+  background: var(--vol-bg2);
+  border: 1px solid var(--vol-border);
+  border-radius: 5px;
+  padding: 9px 11px;
+}
+
+.vol-pipes-title {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--vol-muted);
+  margin-bottom: 6px;
+}
+
+.vol-pipe-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 9px;
+  padding: 3px 0;
+  border-bottom: 1px solid var(--vol-border);
+  gap: 6px;
+}
+
+.vol-pipe-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.vol-p-label {
+  color: var(--vol-muted);
+}
+
+.vol-p-model {
+  color: var(--vol-text);
   font-weight: 500;
 }
 

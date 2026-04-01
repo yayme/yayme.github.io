@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: rgba(255,250,242,0.98);
+  --bg2: #FAF3E0;
+  --text: #3A2C29;
+  --muted: #8a7060;
+  --accent: #D95F18;
+  --border: #D6C6A9;
+  --bar-kalman: #D95F18;
+  --bar-pf: #a07848;
+  --bar-garch: #D6C6A9;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: rgba(24,18,15,0.95);
+    --bg2: #2C1810;
+    --text: #F5E8C7;
+    --muted: #9a7d65;
+    --accent: #FF8A4C;
+    --border: #5A3825;
+    --bar-kalman: #FF8A4C;
+    --bar-pf: #c4976a;
+    --bar-garch: #5A3825;
+  }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); font-family: 'IBM Plex Mono', monospace; color: var(--text); }
+
+.card {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 20px 22px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+}
+
+.top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.tag { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.title { font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 700; color: var(--text); line-height: 1.2; }
+.title span { color: var(--accent); }
+
+.links { display: flex; flex-direction: column; gap: 5px; align-items: flex-end; }
+.gh-link {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 9px; color: var(--muted); text-decoration: none;
+  border: 1px solid var(--border); border-radius: 4px; padding: 4px 9px;
+  white-space: nowrap; transition: border-color 0.15s, color 0.15s;
+}
+.gh-link:hover { border-color: var(--accent); color: var(--accent); }
+.gh-link svg { width: 11px; height: 11px; fill: currentColor; }
+
+hr { border: none; border-top: 1px solid var(--border); margin-bottom: 14px; }
+
+.body { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; }
+
+/* bar chart */
+.chart-wrap { min-width: 130px; }
+.chart-label { font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.bar-group { margin-bottom: 9px; }
+.bar-title { font-size: 8px; color: var(--muted); margin-bottom: 4px; }
+.bar-row { display: flex; align-items: center; gap: 5px; margin-bottom: 2px; }
+.bar-name { font-size: 8px; color: var(--muted); width: 62px; flex-shrink: 0; text-align: right; }
+.bar-track { flex: 1; height: 7px; background: var(--bg2); border-radius: 1px; overflow: hidden; position: relative; }
+.bar-fill { height: 100%; border-radius: 1px; }
+.bar-val { font-size: 8px; color: var(--text); width: 30px; flex-shrink: 0; }
+
+.bar-fill.kalman { background: var(--bar-kalman); }
+.bar-fill.pf     { background: var(--bar-pf); }
+.bar-fill.garch  { background: var(--bar-garch); }
+
+.legend { display: flex; gap: 8px; margin-top: 6px; }
+.leg { display: flex; align-items: center; gap: 3px; font-size: 8px; color: var(--muted); }
+.leg-dot { width: 7px; height: 7px; border-radius: 1px; flex-shrink: 0; }
+
+/* right side */
+.right { display: flex; flex-direction: column; gap: 10px; }
+
+.stats { display: flex; gap: 8px; }
+.stat { flex: 1; background: var(--bg2); border: 1px solid var(--border); border-radius: 5px; padding: 8px 10px; text-align: center; }
+.s-val { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 3px; }
+.s-lbl { font-size: 8px; color: var(--muted); letter-spacing: 0.05em; line-height: 1.3; }
+
+.pipes { background: var(--bg2); border: 1px solid var(--border); border-radius: 5px; padding: 9px 11px; }
+.pipes-title { font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.pipe-row { display: flex; justify-content: space-between; align-items: baseline; font-size: 9px; padding: 3px 0; border-bottom: 1px solid var(--border); gap: 6px; }
+.pipe-row:last-child { border-bottom: none; padding-bottom: 0; }
+.p-label { color: var(--muted); }
+.p-model { color: var(--text); font-weight: 500; }
+.p-gt { color: var(--accent); font-size: 8px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="top">
+    <div>
+      <div class="tag">SDEs · Bayesian Filtering · Crypto</div>
+      <div class="title">Volatility Inference<br>with <span>SDEs</span></div>
+    </div>
+    <div class="links">
+      <a class="gh-link" href="https://github.com/yayme/Volatility-Inference-with-SDEs-Data-Assimilation" target="_blank">
+        <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub
+      </a>
+      <a class="gh-link" href="https://drive.google.com/file/d/1zqIqxCBXAAsep4-_TvGf_RJfOWSF8ySd/view?usp=sharing" target="_blank">
+        <svg viewBox="0 0 16 16"><path d="M14 4.5V14a2 2 0 01-2 2H4a2 2 0 01-2-2V2a2 2 0 012-2h5.5L14 4.5zm-3 0A1.5 1.5 0 019.5 3V1H4a1 1 0 00-1 1v12a1 1 0 001 1h8a1 1 0 001-1V4.5h-2z"/></svg>
+        Report
+      </a>
+    </div>
+  </div>
+  <hr>
+  <div class="body">
+    <!-- R² bar chart -->
+    <div class="chart-wrap">
+      <div class="chart-label">R² by method</div>
+
+      <div class="bar-group">
+        <div class="bar-title">pipeline 1 · instantaneous</div>
+        <div class="bar-row">
+          <span class="bar-name">Kalman</span>
+          <div class="bar-track"><div class="bar-fill kalman" style="width:100%"></div></div>
+          <span class="bar-val">0.9</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-name">Particle Filter</span>
+          <div class="bar-track"><div class="bar-fill pf" style="width:63%"></div></div>
+          <span class="bar-val">~0.60</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-name">GARCH</span>
+          <div class="bar-track"><div class="bar-fill garch" style="width:13%"></div></div>
+          <span class="bar-val">~0.13</span>
+        </div>
+      </div>
+
+      <div class="bar-group">
+        <div class="bar-title">pipeline 2 · rolling</div>
+        <div class="bar-row">
+          <span class="bar-name">Kalman</span>
+          <div class="bar-track"><div class="bar-fill kalman" style="width:99.7%"></div></div>
+          <span class="bar-val">0.9</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-name">Particle Filter</span>
+          <div class="bar-track"><div class="bar-fill pf" style="width:99.7%"></div></div>
+          <span class="bar-val">0.9</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-name">GARCH</span>
+          <div class="bar-track"><div class="bar-fill garch" style="width:48%"></div></div>
+          <span class="bar-val">~0.48</span>
+        </div>
+      </div>
+
+      <div class="legend">
+        <div class="leg"><div class="leg-dot" style="background:var(--bar-kalman)"></div>Kalman</div>
+        <div class="leg"><div class="leg-dot" style="background:var(--bar-pf)"></div>Particle Filter</div>
+        <div class="leg"><div class="leg-dot" style="background:var(--bar-garch);border:1px solid var(--border)"></div>GARCH</div>
+      </div>
+    </div>
+
+    <!-- right -->
+    <div class="right">
+      <div class="stats">
+        <div class="stat"><div class="s-val">0.9</div><div class="s-lbl">Kalman R²<br>pipeline 1</div></div>
+        <div class="stat"><div class="s-val">0.9</div><div class="s-lbl">Particle Filter R²<br>pipeline 2</div></div>
+      </div>
+      <div class="pipes">
+        <div class="pipes-title">pipelines</div>
+        <div class="pipe-row" style="flex-direction:column; align-items:flex-start; gap:2px;">
+          <div style="display:flex; justify-content:space-between; width:100%;">
+            <span class="p-label">P1 · instantaneous</span>
+            <span class="p-model">Heston-lite SDE</span>
+          </div>
+          <div style="font-size:8px; color:var(--muted);">target: absolute log returns as proxy for instantaneous volatility</div>
+        </div>
+        <div class="pipe-row" style="flex-direction:column; align-items:flex-start; gap:2px;">
+          <div style="display:flex; justify-content:space-between; width:100%;">
+            <span class="p-label">P2 · rolling</span>
+            <span class="p-model">OU mean-revert SDE</span>
+          </div>
+          <div style="font-size:8px; color:var(--muted);">target: rolling standard deviation over 100-period window</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

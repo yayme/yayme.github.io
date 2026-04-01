@@ -40,6 +40,7 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
     <span class="date">Dec 2025 – Mar 2026</span>
   </div>
   <p>Worked at Huawei Theory Lab on Algorithms and AI Systems, focusing on LLM inference algorithms and optimal cache management using C++ and CUDA.</p>
+  <p> <strong>Core Problem</strong>: How can memory and caching be managed in hybrid architectures that integrate attention and Mamba layers to optimize latency and throughput? </p>
 </div>
 
 
@@ -50,7 +51,9 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
     <span class="role">Machine Learning Research Intern</span>
     <span class="date">Dec 2024 – June 2025</span>
   </div>
-  <p>Developed ML pipelines for classifying sleep disorders and contributing to two research projects.</p>
+  <p>Developed Deep learning pipelines for classifying sleep disorders and contributing to two research projects.</p>
+    <p> <strong>Core problem:</strong> How can we design architectures with appropriate inductive biases for quasi periodic, multimodal physiological time series to achieve optimal sleep disorder classification under limited data?
+  </p>
 </div>
 <div class="experience-item">
   <div class="company-header">
@@ -59,6 +62,7 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
     <span class="date">Aug 2024 -- Dec 2024</span>
   </div>
   <p>Built a cultural benchmark dataset for low resource language and evaluated LLMs on language and reasoning tasks. Coauthored research paper accepted into AACL-IJCNLP 2025 Workshop.</p>
+  <p><strong>Core Problem:</strong> How does chain of thought and chain of reasoning for LLMs break when dealing with language specific contexts? </p>
 </div>
 
 <div class="experience-item">
@@ -68,6 +72,7 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
     <span class="date">Apr 2024 – May 2024</span>
   </div>
   <p>Studied fairness in AI; reviewed and researched bias mitigation techniques.</p>
+  <p><strong>Core Problem:</strong> What pre training, in training and post training methods can we deploy in order to prevent AI from permeating biases? </p>
 </div>
 
 <!-- New section for Other Experience -->

@@ -210,7 +210,7 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 </a>
 </div>
 
-<div class="project-item">
+<!-- <div class="project-item">
 <div class="project-header">
 <h3>SignalCraft: Crypto Alpha Discovery System</h3>
 <div class="tech-stack">
@@ -223,7 +223,7 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 <a href="https://github.com/yayme/Crypto-SignalCraft" class="project-link">
 <span class="link-icon">📂</span> View on GitHub
 </a>
-</div>
+</div> -->
 
 
 <div class="project-item">
@@ -236,6 +236,73 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 </div>
 </div>
 <p>Developed strategy bots for Yut, a traditional Korean board game competition. Tested minimax tree search and heuristic-based strategies. Final approach used heuristic evaluation with Bayesian optimization (Gaussian Process + UCB) for weight tuning. Consistently outperforms baseline strategy with 54-56% win rate.</p>
+
+<div class="yut-card">
+  <div class="yut-top">
+    <div>
+      <div class="yut-tag">Stochastic Adversarial Game · MDP</div>
+      <div class="yut-title"><span>Yut</span> AI</div>
+      <div style="font-size:9px;color:var(--yut-muted);margin-top:3px;">stochastic adversarial game · Markov Decision Process variant</div>
+    </div>
+  </div>
+  <hr class="yut-divider">
+  <div class="yut-body">
+    <div class="yut-chart-wrap">
+      <div class="yut-chart-label">win rate vs baseline</div>
+      <div class="yut-bar-row">
+        <span class="yut-bar-name">Bayes-tuned</span>
+        <div class="yut-bar-track"><div class="yut-bar-fill" style="width:100%;background:var(--yut-bar-best)"></div></div>
+        <span class="yut-bar-val">56.5%</span>
+      </div>
+      <div class="yut-bar-row">
+        <span class="yut-bar-name">shortcut-aware</span>
+        <div class="yut-bar-track"><div class="yut-bar-fill" style="width:88%;background:var(--yut-bar-mid)"></div></div>
+        <span class="yut-bar-val">50.0%</span>
+      </div>
+      <div class="yut-baseline-marker">
+        <div class="yut-baseline-line"></div>
+        <div class="yut-baseline-label">baseline (50%)</div>
+      </div>
+      <div class="yut-bar-row">
+        <span class="yut-bar-name">minimax α-β</span>
+        <div class="yut-bar-track"><div class="yut-bar-fill" style="width:40%;background:var(--yut-bar-base)"></div></div>
+        <span class="yut-bar-val">22.5%</span>
+      </div>
+      <div class="yut-bar-row">
+        <span class="yut-bar-name">tree search</span>
+        <div class="yut-bar-track"><div class="yut-bar-fill" style="width:18%;background:var(--yut-bar-poor)"></div></div>
+        <span class="yut-bar-val">10.0%</span>
+      </div>
+    </div>
+
+    <div class="yut-right">
+      <div class="yut-stats">
+        <div class="yut-stat"><div class="yut-s-val">56.5%</div><div class="yut-s-lbl">best win<br>rate</div></div>
+        <div class="yut-stat"><div class="yut-s-val">8</div><div class="yut-s-lbl">heuristic<br>weights tuned</div></div>
+      </div>
+      <div class="yut-detail">
+        <div class="yut-detail-title">agent design</div>
+        <div class="yut-d-row">
+          <span class="yut-d-label">search</span>
+          <span class="yut-d-val">minimax + pruning + state cache</span>
+        </div>
+        <div class="yut-d-row">
+          <span class="yut-d-label">utility fn</span>
+          <span class="yut-d-val">progress, capture, tempo, risk</span>
+        </div>
+        <div class="yut-d-row">
+          <span class="yut-d-label">weight tuning</span>
+          <span class="yut-d-val">Bayesian opt (GP + EI)</span>
+        </div>
+        <div class="yut-d-row">
+          <span class="yut-d-label">chance model</span>
+          <span class="yut-d-val">full yut outcome distribution</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <a href="https://github.com/yayme/COE-Yutnori" class="project-link">
 <span class="link-icon">📂</span> View on GitHub
 </a>
@@ -1049,6 +1116,242 @@ html[data-theme="dark"] {
 
 .vol-p-model {
   color: var(--vol-text);
+  font-weight: 500;
+}
+
+/* Yut AI Infographics Styles */
+:root {
+  --yut-bg: rgba(255,250,242,0.98);
+  --yut-bg2: #FAF3E0;
+  --yut-text: #3A2C29;
+  --yut-muted: #8a7060;
+  --yut-accent: #D95F18;
+  --yut-border: #D6C6A9;
+  --yut-bar-best: #D95F18;
+  --yut-bar-mid: #a07848;
+  --yut-bar-base: #c8b89a;
+  --yut-bar-poor: #D6C6A9;
+}
+
+html[data-theme="dark"] {
+  --yut-bg: rgba(24,18,15,0.95);
+  --yut-bg2: #2C1810;
+  --yut-text: #F5E8C7;
+  --yut-muted: #9a7d65;
+  --yut-accent: #FF8A4C;
+  --yut-border: #5A3825;
+  --yut-bar-best: #FF8A4C;
+  --yut-bar-mid: #c4976a;
+  --yut-bar-base: #7a5c40;
+  --yut-bar-poor: #5A3825;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    --yut-bg: rgba(24,18,15,0.95);
+    --yut-bg2: #2C1810;
+    --yut-text: #F5E8C7;
+    --yut-muted: #9a7d65;
+    --yut-accent: #FF8A4C;
+    --yut-border: #5A3825;
+    --yut-bar-best: #FF8A4C;
+    --yut-bar-mid: #c4976a;
+    --yut-bar-base: #7a5c40;
+    --yut-bar-poor: #5A3825;
+  }
+}
+
+.yut-card {
+  margin: 1.5rem 0;
+  padding: 20px 22px;
+  border: 1px solid var(--yut-border);
+  border-radius: 8px;
+  background: var(--yut-bg);
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--yut-text);
+}
+
+.yut-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.yut-tag {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--yut-accent);
+  margin-bottom: 6px;
+}
+
+.yut-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--yut-text);
+  line-height: 1.2;
+}
+
+.yut-title span {
+  color: var(--yut-accent);
+}
+
+.yut-divider {
+  border: none;
+  border-top: 1px solid var(--yut-border);
+  margin-bottom: 14px;
+}
+
+.yut-body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.yut-chart-wrap {
+  min-width: 148px;
+}
+
+.yut-chart-label {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--yut-muted);
+  margin-bottom: 8px;
+}
+
+.yut-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 4px;
+}
+
+.yut-bar-name {
+  font-size: 8px;
+  color: var(--yut-muted);
+  width: 72px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.yut-bar-track {
+  flex: 1;
+  height: 7px;
+  background: var(--yut-bg2);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.yut-bar-fill {
+  height: 100%;
+  border-radius: 1px;
+}
+
+.yut-bar-val {
+  font-size: 8px;
+  color: var(--yut-text);
+  width: 28px;
+  flex-shrink: 0;
+}
+
+.yut-baseline-marker {
+  position: relative;
+  margin: 2px 0 6px;
+  padding-left: calc(72px + 5px);
+}
+
+.yut-baseline-line {
+  position: relative;
+  height: 1px;
+  background: none;
+  border-top: 1px dashed var(--yut-border);
+  width: 100%;
+}
+
+.yut-baseline-label {
+  font-size: 7px;
+  color: var(--yut-muted);
+  margin-top: 2px;
+  text-align: left;
+}
+
+.yut-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.yut-stats {
+  display: flex;
+  gap: 8px;
+}
+
+.yut-stat {
+  flex: 1;
+  background: var(--yut-bg2);
+  border: 1px solid var(--yut-border);
+  border-radius: 5px;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.yut-s-val {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--yut-accent);
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.yut-s-lbl {
+  font-size: 8px;
+  color: var(--yut-muted);
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+.yut-detail {
+  background: var(--yut-bg2);
+  border: 1px solid var(--yut-border);
+  border-radius: 5px;
+  padding: 9px 11px;
+}
+
+.yut-detail-title {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--yut-muted);
+  margin-bottom: 6px;
+}
+
+.yut-d-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 9px;
+  padding: 3px 0;
+  border-bottom: 1px solid var(--yut-border);
+  gap: 6px;
+}
+
+.yut-d-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.yut-d-label {
+  color: var(--yut-muted);
+}
+
+.yut-d-val {
+  color: var(--yut-text);
   font-weight: 500;
 }
 

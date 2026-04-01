@@ -24,10 +24,15 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 
 <div class="resume-container">
 
-<div class="interest-card">
-<h2>Interest</h2>
-<h3>Data → Signal → Model → Decision</h3>
-<p><em>Statistics, Machine Learning, AI, Quantitative Finance, Game Theory, Social/Economic Modeling</em></p>
+<div class="interest-card" style="position:relative; overflow:hidden;">
+  <div class="ic-accent-line"></div>
+  <div class="ic-tagline" id="ic-tagline"></div>
+  <p class="ic-body">
+    Building at the intersection of <strong>statistical learning</strong>,
+    <strong>stochastic modeling</strong>, and <strong>decision theory</strong>
+    with applications spanning quantitative finance, AI systems, and
+    game-theoretic reasoning.
+  </p>
 </div>
 
 <div class="section-card">
@@ -582,6 +587,40 @@ html[data-theme="dark"] {
   text-align: center;
   box-shadow: 0 4px 15px rgba(58, 44, 41, 0.1);
   transition: all 0.3s ease;
+  animation: ic-fadein 0.7s cubic-bezier(.4,0,.2,1) both;
+}
+
+@keyframes ic-fadein {
+  from { opacity:0; transform:translateY(12px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+.ic-accent-line {
+  position: absolute; top: 0; left: 0;
+  height: 3px; background: #D95F18;
+  border-radius: 10px 10px 0 0;
+  width: 0;
+  animation: ic-line 0.9s 0.3s cubic-bezier(.4,0,.2,1) forwards;
+}
+
+@keyframes ic-line { from { width:0; } to { width:100%; } }
+
+.ic-tagline {
+  font-size: 19px; font-weight: 800;
+  letter-spacing: -0.01em; margin-bottom: 12px;
+  display: flex; align-items: center; flex-wrap: wrap; gap: 0;
+  color: #3A2C29;
+}
+
+.ic-word  { opacity:0; transform:translateY(6px); display:inline-block; }
+.ic-arrow { color:#D95F18; margin:0 7px; opacity:0; display:inline-block; }
+
+.ic-body {
+  opacity:0;
+  animation: ic-fadein 0.6s 1.1s cubic-bezier(.4,0,.2,1) forwards;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #3A2C29;
 }
 
 .section-card {
@@ -600,12 +639,12 @@ html[data-theme="dark"] {
   color: #F5E8C7;
 }
 
-[data-theme="dark"] .interest-card h2,
-[data-theme="dark"] .interest-card h3 {
+[data-theme="dark"] .ic-tagline,
+[data-theme="dark"] .ic-body {
   color: #F5E8C7 !important;
 }
 
-[data-theme="dark"] .interest-card h3 {
+[data-theme="dark"] .ic-arrow {
   color: #FF8A4C !important;
 }
 
@@ -623,15 +662,11 @@ html[data-theme="dark"] {
 }
 
 .interest-card h2 {
-  color: #3A2C29;
-  margin-bottom: 1rem;
-  font-weight: bold;
+  display: none;
 }
 
 .interest-card h3 {
-  color: #D95F18;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
+  display: none;
 }
 
 .section-card h2 {
@@ -1673,6 +1708,26 @@ document.addEventListener('DOMContentLoaded', function() {
         g.appendChild(c);
       }
     }
+  }
+
+  // Animate interest card tagline
+  const words = ['Data', 'Signal', 'Model', 'Decision'];
+  const tagline = document.getElementById('ic-tagline');
+  if (tagline) {
+    words.forEach((word, i) => {
+      if (i > 0) {
+        const arrow = document.createElement('span');
+        arrow.className = 'ic-arrow';
+        arrow.textContent = '→';
+        arrow.style.animation = `ic-fadein 0.4s ${0.32 + i * 0.18}s cubic-bezier(.4,0,.2,1) forwards`;
+        tagline.appendChild(arrow);
+      }
+      const span = document.createElement('span');
+      span.className = 'ic-word';
+      span.textContent = word;
+      span.style.animation = `ic-fadein 0.45s ${0.35 + i * 0.18}s cubic-bezier(.4,0,.2,1) forwards`;
+      tagline.appendChild(span);
+    });
   }
 });
 </script>

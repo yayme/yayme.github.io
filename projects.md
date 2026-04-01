@@ -324,6 +324,76 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
   <li>Calculated document similarity using two approaches: TF-IDF vectorization with cosine similarity, and semantic embeddings from spaCy’s en_core_web_md model.</li>
   <li>Integrated real-time file monitoring with Watchdog to automatically organize files into user-defined folders, reducing manual sorting time by 60%.</li>
 </ul>
+
+<div class="fo-card">
+  <div class="fo-top">
+    <div>
+      <div class="fo-tag">Agentic Automation · NLP · Embeddings</div>
+      <div class="fo-title">AI <span>File Organizer</span></div>
+    </div>
+  </div>
+  <hr class="fo-divider">
+  <div class="fo-body">
+    <div class="fo-pipeline">
+      <div class="fo-pipeline-label">agent pipeline</div>
+      <div class="fo-step">
+        <span class="fo-step-num">1</span>
+        <div class="fo-step-body">
+          <div class="fo-step-title">real-time event trigger</div>
+          <div class="fo-step-desc">Watchdog monitors filesystem; new files emit classification tasks</div>
+        </div>
+      </div>
+      <div class="fo-step">
+        <span class="fo-step-num">2</span>
+        <div class="fo-step-body">
+          <div class="fo-step-title">semantic embedding</div>
+          <div class="fo-step-desc">spaCy en_core_web_md encodes document content into dense vectors</div>
+        </div>
+      </div>
+      <div class="fo-step">
+        <span class="fo-step-num">3</span>
+        <div class="fo-step-body">
+          <div class="fo-step-title">similarity classification</div>
+          <div class="fo-step-desc">Cosine similarity over embeddings; TF-IDF cosine as fallback</div>
+        </div>
+      </div>
+      <div class="fo-step">
+        <span class="fo-step-num">4</span>
+        <div class="fo-step-body">
+          <div class="fo-step-title">autonomous dispatch</div>
+          <div class="fo-step-desc">Agent routes file to closest matching folder without user input</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fo-right">
+      <div class="fo-stats">
+        <div class="fo-stat"><div class="fo-s-val">40%</div><div class="fo-s-lbl">management<br>efficiency gain</div></div>
+        <div class="fo-stat"><div class="fo-s-val">60%</div><div class="fo-s-lbl">manual sorting<br>time saved</div></div>
+      </div>
+      <div class="fo-detail">
+        <div class="fo-detail-title">technical design</div>
+        <div class="fo-d-row">
+          <span class="fo-d-label">classification</span>
+          <span class="fo-d-val">content-based, not extension</span>
+        </div>
+        <div class="fo-d-row">
+          <span class="fo-d-label">embedding model</span>
+          <span class="fo-d-val">spaCy en_core_web_md</span>
+        </div>
+        <div class="fo-d-row">
+          <span class="fo-d-label">fallback</span>
+          <span class="fo-d-val">TF-IDF + cosine similarity</span>
+        </div>
+        <div class="fo-d-row">
+          <span class="fo-d-label">deployment</span>
+          <span class="fo-d-val">standalone .exe via PyInstaller</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <a href="https://github.com/yayme/Desktop_file_organizer" class="project-link">
 <span class="link-icon">📂</span> View on GitHub
 </a>
@@ -1352,6 +1422,222 @@ html[data-theme="dark"] {
 
 .yut-d-val {
   color: var(--yut-text);
+  font-weight: 500;
+}
+
+/* File Organizer Infographics Styles */
+:root {
+  --fo-bg: rgba(255,250,242,0.98);
+  --fo-bg2: #FAF3E0;
+  --fo-text: #3A2C29;
+  --fo-muted: #8a7060;
+  --fo-accent: #D95F18;
+  --fo-border: #D6C6A9;
+}
+
+html[data-theme="dark"] {
+  --fo-bg: rgba(24,18,15,0.95);
+  --fo-bg2: #2C1810;
+  --fo-text: #F5E8C7;
+  --fo-muted: #9a7d65;
+  --fo-accent: #FF8A4C;
+  --fo-border: #5A3825;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    --fo-bg: rgba(24,18,15,0.95);
+    --fo-bg2: #2C1810;
+    --fo-text: #F5E8C7;
+    --fo-muted: #9a7d65;
+    --fo-accent: #FF8A4C;
+    --fo-border: #5A3825;
+  }
+}
+
+.fo-card {
+  margin: 1.5rem 0;
+  padding: 20px 22px;
+  border: 1px solid var(--fo-border);
+  border-radius: 8px;
+  background: var(--fo-bg);
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--fo-text);
+}
+
+.fo-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.fo-tag {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fo-accent);
+  margin-bottom: 6px;
+}
+
+.fo-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--fo-text);
+  line-height: 1.2;
+}
+
+.fo-title span {
+  color: var(--fo-accent);
+}
+
+.fo-divider {
+  border: none;
+  border-top: 1px solid var(--fo-border);
+  margin-bottom: 14px;
+}
+
+.fo-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.fo-pipeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.fo-pipeline-label {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fo-muted);
+  margin-bottom: 8px;
+}
+
+.fo-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 7px 10px;
+  background: var(--fo-bg2);
+  border: 1px solid var(--fo-border);
+  border-radius: 0;
+  border-bottom: none;
+  position: relative;
+}
+
+.fo-step:first-of-type {
+  border-radius: 5px 5px 0 0;
+}
+
+.fo-step:last-of-type {
+  border-radius: 0 0 5px 5px;
+  border-bottom: 1px solid var(--fo-border);
+}
+
+.fo-step-num {
+  font-size: 8px;
+  font-weight: 500;
+  color: var(--fo-accent);
+  min-width: 12px;
+  margin-top: 1px;
+}
+
+.fo-step-body {
+  flex: 1;
+}
+
+.fo-step-title {
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--fo-text);
+  margin-bottom: 1px;
+}
+
+.fo-step-desc {
+  font-size: 8px;
+  color: var(--fo-muted);
+  line-height: 1.4;
+}
+
+.fo-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fo-stats {
+  display: flex;
+  gap: 8px;
+}
+
+.fo-stat {
+  flex: 1;
+  background: var(--fo-bg2);
+  border: 1px solid var(--fo-border);
+  border-radius: 5px;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.fo-s-val {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--fo-accent);
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.fo-s-lbl {
+  font-size: 8px;
+  color: var(--fo-muted);
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+.fo-detail {
+  background: var(--fo-bg2);
+  border: 1px solid var(--fo-border);
+  border-radius: 5px;
+  padding: 9px 11px;
+}
+
+.fo-detail-title {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fo-muted);
+  margin-bottom: 6px;
+}
+
+.fo-d-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 9px;
+  padding: 3px 0;
+  border-bottom: 1px solid var(--fo-border);
+  gap: 6px;
+}
+
+.fo-d-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.fo-d-label {
+  color: var(--fo-muted);
+}
+
+.fo-d-val {
+  color: var(--fo-text);
   font-weight: 500;
 }
 

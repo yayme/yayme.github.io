@@ -40,7 +40,7 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 <div class="projects-section">
 
 <div class="completed-projects-card">
-<h2>✅ Completed Projects</h2>
+<h2> Completed Projects</h2>
 
 <div class="project-item">
 <div class="project-header">
@@ -56,6 +56,50 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
   <li>Initial version stored a full score array per thread scaled with sequence length which spilled to global memory at longer sequences; rewrote with Flash Attention style online softmax, dropping per-thread memory to $O(1)$ and achieving $1.4$--$1.8\times$ speedup.</li>
   <li>Wrapped kernels as a PyTorch extension via pybind11 and benchmarked against PyTorch dense attention on a T4 GPU across sequence lengths $64$ to $512$.</li>
 </ul>
+
+<div class="cuda-card">
+  <div class="cuda-top">
+    <div class="cuda-top-left">
+      <div class="cuda-tag">CUDA · GPU Kernels</div>
+      <div class="cuda-title">Sparse <span>Attention</span> Kernel</div>
+    </div>
+  </div>
+  <hr class="cuda-divider">
+  <div class="cuda-body">
+    <div class="cuda-grid-wrap">
+      <div class="cuda-grid-label">sparse pattern</div>
+      <div class="cuda-attn-grid" id="cuda-grid"></div>
+      <div class="cuda-legend">
+        <div class="cuda-leg"><div class="cuda-leg-dot" style="background:var(--cuda-local)"></div>local</div>
+        <div class="cuda-leg"><div class="cuda-leg-dot" style="background:var(--cuda-global-c)"></div>global</div>
+        <div class="cuda-leg"><div class="cuda-leg-dot" style="background:var(--cuda-skip);border:1px solid var(--cuda-border)"></div>skip</div>
+      </div>
+    </div>
+    <div class="cuda-right">
+      <div class="cuda-stats">
+        <div class="cuda-stat"><div class="cuda-s-val">1.8×</div><div class="cuda-s-lbl">v2 speedup<br>over v1</div></div>
+        <div class="cuda-stat"><div class="cuda-s-val">O(n·w)</div><div class="cuda-s-lbl">sparse<br>complexity</div></div>
+        <div class="cuda-stat"><div class="cuda-s-val">O(1)</div><div class="cuda-s-lbl">per-thread<br>memory</div></div>
+      </div>
+      <div class="cuda-diff">
+        <div class="cuda-diff-title">v1 → v2 key changes</div>
+        <div class="cuda-diff-row">
+          <span class="cuda-d-label">score storage</span>
+          <span><span class="cuda-d-old">full array</span> → <span class="cuda-d-new">streaming</span></span>
+        </div>
+        <div class="cuda-diff-row">
+          <span class="cuda-d-label">softmax</span>
+          <span><span class="cuda-d-old">materialized</span> → <span class="cuda-d-new">online</span></span>
+        </div>
+        <div class="cuda-diff-row">
+          <span class="cuda-d-label">register spill</span>
+          <span><span class="cuda-d-old">yes</span> → <span class="cuda-d-new">eliminated</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <a href="https://github.com/yayme/CUDA-kernel" class="project-link">
 <span class="link-icon">📂</span> View on GitHub
 </a>
@@ -430,6 +474,240 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
   box-shadow: 0 4px 12px rgba(255, 138, 76, 0.3);
 }
 
+/* CUDA Infographics Styles */
+:root {
+  --cuda-bg: rgba(255,250,242,0.98);
+  --cuda-bg2: #FAF3E0;
+  --cuda-text: #3A2C29;
+  --cuda-muted: #8a7060;
+  --cuda-accent: #D95F18;
+  --cuda-border: #D6C6A9;
+  --cuda-local: #a07848;
+  --cuda-global-c: #D95F18;
+  --cuda-skip: #e8dcc8;
+}
+
+html[data-theme="dark"], html[data-theme="dark"] body {
+  --cuda-bg: rgba(24,18,15,0.95);
+  --cuda-bg2: #2C1810;
+  --cuda-text: #F5E8C7;
+  --cuda-muted: #9a7d65;
+  --cuda-accent: #FF8A4C;
+  --cuda-border: #5A3825;
+  --cuda-local: #c4976a;
+  --cuda-global-c: #FF8A4C;
+  --cuda-skip: #1e140f;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) body {
+    --cuda-bg: rgba(24,18,15,0.95);
+    --cuda-bg2: #2C1810;
+    --cuda-text: #F5E8C7;
+    --cuda-muted: #9a7d65;
+    --cuda-accent: #FF8A4C;
+    --cuda-border: #5A3825;
+    --cuda-local: #c4976a;
+    --cuda-global-c: #FF8A4C;
+    --cuda-skip: #1e140f;
+  }
+}
+
+.cuda-card {
+  margin: 1.5rem 0;
+  padding: 20px 22px;
+  border: 1px solid var(--cuda-border);
+  border-radius: 8px;
+  background: var(--cuda-bg);
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--cuda-text);
+}
+
+.cuda-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.cuda-top-left {
+  flex: 1;
+}
+
+.cuda-tag {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cuda-accent);
+  margin-bottom: 6px;
+}
+
+.cuda-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--cuda-text);
+  line-height: 1.2;
+}
+
+.cuda-title span {
+  color: var(--cuda-accent);
+}
+
+.cuda-divider {
+  border: none;
+  border-top: 1px solid var(--cuda-border);
+  margin-bottom: 14px;
+}
+
+.cuda-body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.cuda-grid-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cuda-grid-label {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cuda-muted);
+}
+
+.cuda-attn-grid {
+  display: inline-grid;
+  grid-template-columns: repeat(7, 11px);
+  gap: 1.5px;
+}
+
+.cuda-cell {
+  width: 11px;
+  height: 11px;
+  border-radius: 1px;
+}
+
+.cuda-c-local {
+  background: var(--cuda-local);
+  opacity: 0.85;
+}
+
+.cuda-c-global {
+  background: var(--cuda-global-c);
+}
+
+.cuda-c-skip {
+  background: var(--cuda-skip);
+}
+
+.cuda-legend {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.cuda-leg {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 8px;
+  color: var(--cuda-muted);
+}
+
+.cuda-leg-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.cuda-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cuda-stats {
+  display: flex;
+  gap: 8px;
+}
+
+.cuda-stat {
+  flex: 1;
+  background: var(--cuda-bg2);
+  border: 1px solid var(--cuda-border);
+  border-radius: 5px;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.cuda-s-val {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--cuda-accent);
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.cuda-s-lbl {
+  font-size: 8px;
+  color: var(--cuda-muted);
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+.cuda-diff {
+  background: var(--cuda-bg2);
+  border: 1px solid var(--cuda-border);
+  border-radius: 5px;
+  padding: 9px 11px;
+}
+
+.cuda-diff-title {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cuda-muted);
+  margin-bottom: 6px;
+}
+
+.cuda-diff-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 9px;
+  padding: 3px 0;
+  border-bottom: 1px solid var(--cuda-border);
+  gap: 6px;
+}
+
+.cuda-diff-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.cuda-d-label {
+  color: var(--cuda-muted);
+}
+
+.cuda-d-old {
+  text-decoration: line-through;
+  color: var(--cuda-muted);
+  opacity: 0.6;
+}
+
+.cuda-d-new {
+  color: var(--cuda-accent);
+  font-weight: 500;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .projects-container {
@@ -465,3 +743,22 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
   }
 }
 </style>
+
+<script>
+// Generate CUDA sparse attention grid
+document.addEventListener('DOMContentLoaded', function() {
+  const N = 7, W = 1, GS = 3;
+  const g = document.getElementById('cuda-grid');
+  if (g) {
+    for (let i = 0; i < N; i++) {
+      for (let j = 0; j < N; j++) {
+        const c = document.createElement('div');
+        const isG = i % GS === 0 || j % GS === 0;
+        const isL = Math.abs(i - j) <= W;
+        c.className = 'cuda-cell ' + (isG ? 'cuda-c-global' : isL ? 'cuda-c-local' : 'cuda-c-skip');
+        g.appendChild(c);
+      }
+    }
+  }
+});
+</script>

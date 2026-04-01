@@ -75,27 +75,6 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
   <p><strong>Core Problem:</strong> What pre training, in training and post training methods can we deploy in order to prevent AI from permeating biases? </p>
 </div>
 
-<!-- New section for Other Experience -->
-<h3 style="margin-top:2rem; color:#D95F18;">Other Experience</h3>
-
-<div class="experience-item">
-  <div class="company-header">
-    <h3>Art of Problem Solving (AoPS)</h3>
-    <span class="role">Olympiad Math Grader</span>
-    <span class="date">2023 – Present</span>
-  </div>
-  <p>Graded advanced mathematics olympiad problems and provided detailed feedback to students participating in math competitions.</p>
-</div>
-
-<div class="experience-item">
-  <div class="company-header">
-    <h3>Mercor</h3>
-    <span class="role">AI Reasoning Expert & Mathematical Problem Designer</span>
-    <span class="date">Sep 2025 – Dec 2025</span>
-  </div>
-  <p>Designed mathematical reasoning problems for IMO Frontier Math project. Created challenging problem sets testing advanced mathematical concepts and logical reasoning for AI model evaluation.</p>
-</div>
-
 </div>
 
 <div class="section-card">
@@ -395,17 +374,6 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 </div>
 
 <div class="section-card">
-<h2>Certifications</h2>
-
-<div class="certification-item">
-<h4>Bloomberg Market Concepts (BMC)</h4>
-<p>Comprehensive financial markets education covering Economics, Currencies, Fixed Income, and Equities.</p>
-<a href="https://portal.bloombergforeducation.com/certificates/5gjUKVbqNyprfVUKpEvhMjSj" class="certification-link" target="_blank">🏆 View Certificate</a>
-</div>
-
-</div>
-
-<div class="section-card">
 <h2>Leadership and Volunteer Experience</h2>
 
 <div class="leadership-item">
@@ -416,6 +384,35 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 <div class="leadership-item">
 <h4>Country Representative</h4>
 <p>Handled student finances and onboarding; facilitated communication with faculty and student body.</p>
+</div>
+
+<div class="experience-item">
+  <div class="company-header">
+    <h3>Art of Problem Solving (AoPS)</h3>
+    <span class="role">Olympiad Math Grader</span>
+    <span class="date">2023 – Present</span>
+  </div>
+  <p>Graded advanced mathematics olympiad problems and provided detailed feedback to students participating in math competitions.</p>
+</div>
+
+<div class="experience-item">
+  <div class="company-header">
+    <h3>Mercor</h3>
+    <span class="role">AI Reasoning Expert & Mathematical Problem Designer</span>
+    <span class="date">Sep 2025 – Dec 2025</span>
+  </div>
+  <p>Designed mathematical reasoning problems for IMO Frontier Math project. Created challenging problem sets testing advanced mathematical concepts and logical reasoning for AI model evaluation.</p>
+</div>
+
+</div>
+
+<div class="section-card">
+<h2>Certifications</h2>
+
+<div class="certification-item">
+<h4>Bloomberg Market Concepts (BMC)</h4>
+<p>Comprehensive financial markets education covering Economics, Currencies, Fixed Income, and Equities.</p>
+<a href="https://portal.bloombergforeducation.com/certificates/5gjUKVbqNyprfVUKpEvhMjSj" class="certification-link" target="_blank">🏆 View Certificate</a>
 </div>
 
 </div>

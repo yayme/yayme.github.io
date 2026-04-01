@@ -401,7 +401,7 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 
 <div class="project-item">
 <div class="project-header">
-<h3>Statistical Decision Making - Class Project</h3>
+<h3>Statistical Decision Making </h3>
 <div class="tech-stack">
 <span class="tech-tag">Python</span>
 <span class="tech-tag">Bayesian Inference</span>
@@ -414,6 +414,67 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
   <li>Developed and deployed multiple classification models, including KNN, Logistic Regression, and Single feature models, to predict healthcare readmissions, achieving AUCs of 0.68, 0.80, and 0.78, respectively.</li>
   <li>Achieved up to 7.8% cost savings through predictive model optimization, improving decision-making in healthcare resource allocation.</li>
 </ul>
+
+<div class="sdm-card">
+  <div class="sdm-top">
+    <div>
+      <div class="sdm-tag">Bayesian · Optimization · Reinforcement Learning</div>
+      <div class="sdm-title">Statistical <span>Decision Making</span></div>
+    </div>
+  </div>
+  <hr class="sdm-divider">
+  <div class="sdm-body">
+    <div>
+      <div class="sdm-prob-label">problems</div>
+      <div class="sdm-prob">
+        <div class="sdm-prob-name">Newsvendor / inventory optimization</div>
+        <div class="sdm-prob-sub">censored demand, weather covariate integration</div>
+        <div class="sdm-prob-kpi">49% loss reduction vs heuristic</div>
+      </div>
+      <div class="sdm-prob">
+        <div class="sdm-prob-name">Healthcare readmission prediction</div>
+        <div class="sdm-prob-sub">threshold-optimized misclassification cost</div>
+        <div class="sdm-prob-kpi">AUC 0.80 · 7.8% cost savings</div>
+      </div>
+      <div class="sdm-prob">
+        <div class="sdm-prob-name">Bayesian parameter estimation</div>
+        <div class="sdm-prob-sub">Beta-Binomial conjugate, MLE / MAP / posterior mean</div>
+      </div>
+      <div class="sdm-prob">
+        <div class="sdm-prob-name">Multiple Secretary Problem</div>
+        <div class="sdm-prob-sub">optimal stopping, unknown distribution</div>
+        <div class="sdm-prob-kpi">tabular Q-learning + ε-greedy</div>
+      </div>
+    </div>
+
+    <div class="sdm-right">
+      <div class="sdm-stats">
+        <div class="sdm-stat"><div class="sdm-s-val">49%</div><div class="sdm-s-lbl">inventory loss<br>reduction</div></div>
+        <div class="sdm-stat"><div class="sdm-s-val">0.80</div><div class="sdm-s-lbl">best AUC<br>readmission</div></div>
+      </div>
+      <div class="sdm-detail">
+        <div class="sdm-detail-title">models</div>
+        <div class="sdm-d-row">
+          <span class="sdm-d-label">classification</span>
+          <span class="sdm-d-val">LR · KNN · single-feature</span>
+        </div>
+        <div class="sdm-d-row">
+          <span class="sdm-d-label">Bayesian</span>
+          <span class="sdm-d-val">conjugate Beta-Binomial</span>
+        </div>
+        <div class="sdm-d-row">
+          <span class="sdm-d-label">inventory</span>
+          <span class="sdm-d-val">newsvendor + demand censoring</span>
+        </div>
+        <div class="sdm-d-row">
+          <span class="sdm-d-label">stopping</span>
+          <span class="sdm-d-val">Q-learning, ε-greedy exploration</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <a href="https://github.com/yayme/Statistical-Decision-Making" class="project-link">
 <span class="link-icon">📂</span> View on GitHub
 </a>
@@ -1638,6 +1699,206 @@ html[data-theme="dark"] {
 
 .fo-d-val {
   color: var(--fo-text);
+  font-weight: 500;
+}
+
+/* Statistical Decision Making Infographics Styles */
+:root {
+  --sdm-bg: rgba(255,250,242,0.98);
+  --sdm-bg2: #FAF3E0;
+  --sdm-text: #3A2C29;
+  --sdm-muted: #8a7060;
+  --sdm-accent: #D95F18;
+  --sdm-border: #D6C6A9;
+}
+
+html[data-theme="dark"] {
+  --sdm-bg: rgba(24,18,15,0.95);
+  --sdm-bg2: #2C1810;
+  --sdm-text: #F5E8C7;
+  --sdm-muted: #9a7d65;
+  --sdm-accent: #FF8A4C;
+  --sdm-border: #5A3825;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    --sdm-bg: rgba(24,18,15,0.95);
+    --sdm-bg2: #2C1810;
+    --sdm-text: #F5E8C7;
+    --sdm-muted: #9a7d65;
+    --sdm-accent: #FF8A4C;
+    --sdm-border: #5A3825;
+  }
+}
+
+.sdm-card {
+  margin: 1.5rem 0;
+  padding: 20px 22px;
+  border: 1px solid var(--sdm-border);
+  border-radius: 8px;
+  background: var(--sdm-bg);
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--sdm-text);
+}
+
+.sdm-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.sdm-tag {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sdm-accent);
+  margin-bottom: 6px;
+}
+
+.sdm-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--sdm-text);
+  line-height: 1.2;
+}
+
+.sdm-title span {
+  color: var(--sdm-accent);
+}
+
+.sdm-divider {
+  border: none;
+  border-top: 1px solid var(--sdm-border);
+  margin-bottom: 14px;
+}
+
+.sdm-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.sdm-prob-label {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sdm-muted);
+  margin-bottom: 8px;
+}
+
+.sdm-prob {
+  padding: 7px 10px;
+  background: var(--sdm-bg2);
+  border: 1px solid var(--sdm-border);
+  border-bottom: none;
+}
+
+.sdm-prob:first-of-type {
+  border-radius: 5px 5px 0 0;
+}
+
+.sdm-prob:last-of-type {
+  border-radius: 0 0 5px 5px;
+  border-bottom: 1px solid var(--sdm-border);
+}
+
+.sdm-prob-name {
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--sdm-text);
+  margin-bottom: 2px;
+}
+
+.sdm-prob-sub {
+  font-size: 8px;
+  color: var(--sdm-muted);
+  line-height: 1.4;
+}
+
+.sdm-prob-kpi {
+  font-size: 8px;
+  color: var(--sdm-accent);
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+.sdm-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sdm-stats {
+  display: flex;
+  gap: 8px;
+}
+
+.sdm-stat {
+  flex: 1;
+  background: var(--sdm-bg2);
+  border: 1px solid var(--sdm-border);
+  border-radius: 5px;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.sdm-s-val {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--sdm-accent);
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.sdm-s-lbl {
+  font-size: 8px;
+  color: var(--sdm-muted);
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+.sdm-detail {
+  background: var(--sdm-bg2);
+  border: 1px solid var(--sdm-border);
+  border-radius: 5px;
+  padding: 9px 11px;
+}
+
+.sdm-detail-title {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sdm-muted);
+  margin-bottom: 6px;
+}
+
+.sdm-d-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 9px;
+  padding: 3px 0;
+  border-bottom: 1px solid var(--sdm-border);
+  gap: 6px;
+}
+
+.sdm-d-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.sdm-d-label {
+  color: var(--sdm-muted);
+}
+
+.sdm-d-val {
+  color: var(--sdm-text);
   font-weight: 500;
 }
 

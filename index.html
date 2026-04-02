@@ -12,7 +12,7 @@ redirect_from:
   - /normalsite/home
 ---
 
-<canvas id="voronoi-bg" aria-hidden="true"></canvas>
+<canvas id="network-bg" aria-hidden="true"></canvas>
 
 <div class="narrative-container">
   <div class="headline-section">
@@ -37,13 +37,12 @@ redirect_from:
   <div class="contact-section">
     <p>If you'd like to discuss opportunities or learn more about my experience and skills, feel free to <a href="mailto:adnansadik235@gmail.com" class="contact-link">reach out</a>.</p>
     <p><a href="/resume" class="contact-link">Check out my minimalistic resume for reference</a>.</p>
-    <p class="voronoi-reference">Background animation reference: <a href="https://en.wikipedia.org/wiki/Voronoi_diagram" target="_blank" rel="noopener noreferrer">Voronoi diagram</a>.</p>
   </div>
 </div>
 
 <style>
-/* Voronoi Background */
-#voronoi-bg {
+/* Network Background */
+#network-bg {
   position: fixed;
   top: 0;
   left: 0;
@@ -51,7 +50,7 @@ redirect_from:
   height: 100%;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.9;
+  opacity: 0.6;
 }
 
 .narrative-container {
@@ -222,9 +221,7 @@ redirect_from:
   color: #F5E8C7;
 }
 
-[data-theme="dark"] .contact-section .voronoi-reference {
-  color: #D9C3A4;
-}
+
 
 [data-theme="dark"] .contact-link {
   color: #FF8A4C;
@@ -323,17 +320,22 @@ redirect_from:
 </script>
 -->
 
-<script src="https://cdn.jsdelivr.net/npm/d3-delaunay@6"></script>
 <script>
 (() => {
-  const canvas = document.getElementById("voronoi-bg");
-  if (!canvas || !window.d3 || !d3.Delaunay) return;
+  const canvas = document.getElementById("network-bg");
+  if (!canvas) return;
 
   const ctx = canvas.getContext("2d", { alpha: true });
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const totalPoints = 200;
-  const points = Array.from({ length: totalPoints }, () => [Math.random(), Math.random()]);
+  const nodeCount = 40;
+  const nodes = Array.from({ length: nodeCount }, () => ({
+    x: Math.random(),
+    y: Math.random(),
+    vx: (Math.random() - 0.5) * 0.0001,
+    vy: (Math.random() - 0.5) * 0.0001,
+    appeared: false
+  }));
 
   let width = 0;
   let height = 0;
@@ -350,50 +352,76 @@ redirect_from:
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   };
 
-  const drawFrame = (count) => {
+  const isDarkMode = () => {
+    return document.documentElement.getAttribute('data-theme') === 'dark' ||
+           (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  };
+
+  const drawFrame = (visibleCount, time) => {
     ctx.clearRect(0, 0, width, height);
 
-    const used = points.slice(0, count).map(([x, y]) => [x * width, y * height]);
-    const remaining = points.slice(count).map(([x, y]) => [x * width, y * height]);
+    // Update node positions (very subtle movement)
+    nodes.forEach((node, i) => {
+      if (node.appeared) {
+        node.x += node.vx;
+        node.y += node.vy;
+        // Wrap around edges
+        if (node.x < 0) node.x += 1;
+        if (node.x > 1) node.x -= 1;
+        if (node.y < 0) node.y += 1;
+        if (node.y > 1) node.y -= 1;
+      }
+    });
 
-    if (used.length >= 4) {
-      const delaunay = d3.Delaunay.from(used);
-      const voronoi = delaunay.voronoi([0, 0, width, height]);
+    const visibleNodes = nodes.slice(0, visibleCount).filter(n => n.appeared);
+    const dark = isDarkMode();
+    const nodeColor = dark ? "rgba(255, 200, 150, 0.4)" : "rgba(217, 95, 24, 0.3)";
+    const edgeColor = dark ? "rgba(255, 138, 76, 0.1)" : "rgba(217, 95, 24, 0.08)";
+    const connectionDistance = 0.25;
 
-      for (let i = 0; i < used.length; i += 1) {
-        ctx.beginPath();
-        voronoi.renderCell(i, ctx);
-        const hue = (i / used.length) * 260 + 30;
-        ctx.fillStyle = `hsla(${hue}, 70%, 65%, 0.18)`;
-        ctx.fill();
-        ctx.strokeStyle = "rgba(0, 0, 0, 0.05)";
-        ctx.lineWidth = 1;
-        ctx.stroke();
+    // Draw edges
+    for (let i = 0; i < visibleNodes.length; i++) {
+      for (let j = i + 1; j < visibleNodes.length; j++) {
+        const n1 = visibleNodes[i];
+        const n2 = visibleNodes[j];
+        const dx = n2.x - n1.x;
+        const dy = n2.y - n1.y;
+        const distSq = dx * dx + dy * dy;
+
+        if (distSq < connectionDistance * connectionDistance) {
+          const opacity = (1 - Math.sqrt(distSq) / connectionDistance) * 0.6;
+          ctx.strokeStyle = edgeColor.replace("0.1", opacity.toFixed(2));
+          ctx.lineWidth = 0.5;
+          ctx.beginPath();
+          ctx.moveTo(n1.x * width, n1.y * height);
+          ctx.lineTo(n2.x * width, n2.y * height);
+          ctx.stroke();
+        }
       }
     }
 
-    if (remaining.length) {
-      ctx.fillStyle = "rgba(90, 90, 90, 0.18)";
-      ctx.strokeStyle = "rgba(0, 0, 0, 0.2)";
-      for (let i = 0; i < remaining.length; i += 1) {
-        const [x, y] = remaining[i];
-        ctx.beginPath();
-        ctx.arc(x, y, 1.5, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    }
+    // Draw nodes with subtle pulse
+    visibleNodes.forEach((node, i) => {
+      const pulse = Math.sin(time * 0.002 + i) * 0.3 + 0.7;
+      const radius = 1.5 * pulse;
+      ctx.fillStyle = nodeColor;
+      ctx.beginPath();
+      ctx.arc(node.x * width, node.y * height, radius, 0, Math.PI * 2);
+      ctx.fill();
+    });
   };
 
   resize();
   window.addEventListener("resize", resize, { passive: true });
 
   if (prefersReducedMotion) {
-    drawFrame(80);
+    nodes.forEach(n => n.appeared = true);
+    drawFrame(nodeCount, 0);
     return;
   }
 
-  const minFrame = 4;
-  const durationMs = 15000;
+  const durationMs = 25000;
+  const nodeAppearInterval = durationMs / nodeCount;
   let start = performance.now();
   let lastRender = 0;
 
@@ -405,16 +433,29 @@ redirect_from:
 
     lastRender = timestamp;
     const elapsed = Math.max(0, timestamp - start);
-    const progress = Math.min(1, elapsed / durationMs);
-    const count = Math.max(minFrame, Math.floor(progress * totalPoints));
+    const nodeCount_visible = Math.floor(elapsed / nodeAppearInterval);
 
-    drawFrame(count);
+    // Mark nodes as appeared
+    for (let i = 0; i <= nodeCount_visible && i < nodes.length; i++) {
+      nodes[i].appeared = true;
+    }
 
-    if (count < totalPoints) {
+    drawFrame(Math.min(nodeCount_visible + 1, nodeCount), elapsed);
+
+    if (nodeCount_visible < nodeCount) {
       requestAnimationFrame(animate);
     } else {
-      // Draw final frame when animation completes
-      drawFrame(totalPoints);
+      // Continue animating the subtle movement
+      const continueAnimate = (ts) => {
+        if (ts - lastRender < 33) {
+          requestAnimationFrame(continueAnimate);
+          return;
+        }
+        lastRender = ts;
+        drawFrame(nodeCount, ts - start);
+        requestAnimationFrame(continueAnimate);
+      };
+      requestAnimationFrame(continueAnimate);
     }
   };
 

@@ -111,7 +111,7 @@ Daeen Kabir, Minhajur Rahman Chowdhury Mahim, Sheikh Shafayat, <strong>Adnan Sad
 </div>
 <div class="pub-venue">
 <em>AACL-IJCNLP 2025 Workshop published</em>
-<a href="https://arxiv.org/abs/2505.21092" class="arxiv-link" target="_blank">arXiv:2505.21092</a>
+<a href="https://aclanthology.org/2025.banglalp-1.14/" class="arxiv-link" target="_blank">ACL Anthology</a>
 </div>
 </div>
 </div>

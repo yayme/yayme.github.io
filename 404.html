@@ -4,28 +4,318 @@ title: 404 - Page not found
 permalink: /404.html
 ---
 
-/* 404 Page Styling */
-.text-center {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  background: rgba(255, 250, 242, 0.98);
-  color: #3A2C29;
-  border-radius: 18px;
-  box-shadow: 0 18px 45px rgba(34, 22, 16, 0.18);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+<style>
+  /* 404 Page Styling */
+  .not-found-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 250, 242, 0.98);
+    color: #3A2C29;
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(34, 22, 16, 0.18);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
 
-[data-theme="dark"] .text-center {
-  background: rgba(24, 18, 15, 0.95);
-  color: #F5E8C7;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
-}
+  [data-theme="dark"] .not-found-container {
+    background: rgba(24, 18, 15, 0.95);
+    color: #F5E8C7;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+  }
 
-<div class="text-center">
-  <h1>Whoops, this page doesn't exist.</h1>
-  <h1>Move along. (404 error)</h1>
-  <br/>
+  .not-found-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 
-  <img src="{{ 'assets/img/404-southpark.jpg' | relative_url }}" alt="Not found" />
+  .not-found-header h1 {
+    margin: 0.5rem 0;
+    font-size: 2.5rem;
+    color: #D95F18;
+  }
+
+  [data-theme="dark"] .not-found-header h1 {
+    color: #FF8A4C;
+  }
+
+  .not-found-header p {
+    font-size: 1.1rem;
+    color: #8a7060;
+    margin-top: 0.5rem;
+  }
+
+  [data-theme="dark"] .not-found-header p {
+    color: #D6C6A9;
+  }
+
+  #graph-canvas {
+    display: block;
+    width: 100%;
+    height: 400px;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #F5E8C7 0%, #FAF3E0 100%);
+    border: 1px solid #D6C6A9;
+  }
+
+  [data-theme="dark"] #graph-canvas {
+    background: linear-gradient(135deg, #3A2418 0%, #2C1810 100%);
+    border-color: #5A3825;
+  }
+
+  .not-found-footer {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #D6C6A9;
+    margin-top: 1.5rem;
+  }
+
+  [data-theme="dark"] .not-found-footer {
+    border-top-color: #5A3825;
+  }
+
+  .not-found-footer a {
+    color: #D95F18;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .not-found-footer a:hover {
+    color: #C4470D;
+    text-decoration: underline;
+  }
+
+  [data-theme="dark"] .not-found-footer a {
+    color: #FF8A4C;
+  }
+
+  [data-theme="dark"] .not-found-footer a:hover {
+    color: #FF6B2B;
+  }
+
+  .loading-text {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #8a7060;
+    margin-top: 1rem;
+  }
+
+  [data-theme="dark"] .loading-text {
+    color: #D6C6A9;
+  }
+</style>
+
+<div class="not-found-container">
+  <div class="not-found-header">
+    <h1>404 Error</h1>
+    <h2>Page Not Found</h2>
+    <p>This page seems to have vanished into the graph. Let me visualize it as nodes drifting through space...</p>
+  </div>
+
+  <canvas id="graph-canvas"></canvas>
+
+  <div class="loading-text">
+    Watch the nodes drift, edges emerge and fade—much like lost pages in the digital void.
+  </div>
+
+  <div class="not-found-footer">
+    <p>
+      <a href="{{ '/' | relative_url }}">← Back to Home</a> | 
+      <a href="{{ '/portfolio.html' | relative_url }}">Explore Portfolio</a> |
+      <a href="{{ '/blog.html' | relative_url }}">Read Blog</a>
+    </p>
+  </div>
 </div>
+
+<script>
+(function() {
+  'use strict';
+
+  const canvas = document.getElementById('graph-canvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let animationId = null;
+
+  function resizeCanvas() {
+    const rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width * devicePixelRatio;
+    canvas.height = rect.height * devicePixelRatio;
+    ctx.scale(devicePixelRatio, devicePixelRatio);
+  }
+
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  // Color scheme
+  function getColors() {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark' ||
+                   (!document.documentElement.getAttribute('data-theme') && 
+                    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    
+    return {
+      nodeColor: isDark ? '#FF8A4C' : '#D95F18',
+      edgeColor: isDark ? 'rgba(255, 138, 76, 0.3)' : 'rgba(217, 95, 24, 0.3)',
+      edgeColorActive: isDark ? 'rgba(255, 138, 76, 0.6)' : 'rgba(217, 95, 24, 0.6)',
+      nodeGlow: isDark ? 'rgba(255, 138, 76, 0.5)' : 'rgba(217, 95, 24, 0.2)',
+      bg: isDark ? 'rgba(24, 18, 15, 0.95)' : 'rgba(255, 250, 242, 0.98)'
+    };
+  }
+
+  // Graph Node class
+  class Node {
+    constructor(x, y, index) {
+      this.x = x;
+      this.y = y;
+      this.vx = 0;
+      this.vy = 0;
+      this.index = index;
+      
+      // Circular orbits with different speeds
+      this.angle = Math.random() * Math.PI * 2;
+      this.radius = 40 + Math.random() * 80;
+      this.angularVelocity = (Math.random() - 0.5) * 0.02;
+      this.orbitCenterX = canvas.width * (0.3 + Math.random() * 0.4);
+      this.orbitCenterY = canvas.height * (0.3 + Math.random() * 0.4);
+      
+      this.radius_base = this.radius;
+      this.radiusVariation = Math.sin(Math.random() * 100) * 10;
+    }
+
+    update(time) {
+      // Orbital motion
+      this.angle += this.angularVelocity;
+      this.radius = this.radius_base + Math.sin(time * 0.001 + this.index) * 15;
+      
+      this.x = this.orbitCenterX + Math.cos(this.angle) * this.radius;
+      this.y = this.orbitCenterY + Math.sin(this.angle) * this.radius;
+    }
+
+    draw(colors) {
+      const size = 6;
+      const glow = 12;
+      
+      // Glow
+      const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, glow);
+      gradient.addColorStop(0, colors.nodeGlow);
+      gradient.addColorStop(1, 'transparent');
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, glow, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // Node circle
+      ctx.fillStyle = colors.nodeColor;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  // Edge class
+  class Edge {
+    constructor(from, to) {
+      this.from = from;
+      this.to = to;
+      this.active = false;
+    }
+
+    update() {
+      const dx = this.to.x - this.from.x;
+      const dy = this.to.y - this.from.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      
+      // Edge appears when nodes are close
+      const threshold = 120;
+      const fadeThreshold = 160;
+      
+      if (distance < threshold) {
+        this.active = 1;
+      } else if (distance < fadeThreshold) {
+        this.active = Math.max(0, (fadeThreshold - distance) / (fadeThreshold - threshold));
+      } else {
+        this.active = 0;
+      }
+    }
+
+    draw(colors) {
+      if (this.active < 0.01) return;
+      
+      ctx.strokeStyle = this.active > 0.5 ? colors.edgeColorActive : colors.edgeColor;
+      ctx.globalAlpha = this.active;
+      ctx.lineWidth = 1 + this.active;
+      ctx.beginPath();
+      ctx.moveTo(this.from.x, this.from.y);
+      ctx.lineTo(this.to.x, this.to.y);
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    }
+  }
+
+  // Initialize graph
+  const nodeCount = 12;
+  const nodes = [];
+  const edges = [];
+
+  for (let i = 0; i < nodeCount; i++) {
+    nodes.push(new Node(
+      canvas.width / 2 + (Math.random() - 0.5) * 100,
+      canvas.height / 2 + (Math.random() - 0.5) * 100,
+      i
+    ));
+  }
+
+  // Create edges (dense connectivity for visual interest)
+  for (let i = 0; i < nodeCount; i++) {
+    for (let j = i + 1; j < nodeCount; j++) {
+      if (Math.random() > 0.3) { // 70% chance of edge
+        edges.push(new Edge(nodes[i], nodes[j]));
+      }
+    }
+  }
+
+  let startTime = Date.now();
+
+  function animate() {
+    const now = Date.now();
+    const elapsed = now - startTime;
+
+    // Get current colors
+    const colors = getColors();
+
+    // Clear canvas
+    ctx.fillStyle = colors.bg;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Update and draw
+    nodes.forEach(node => node.update(elapsed));
+    edges.forEach(edge => {
+      edge.update();
+      edge.draw(colors);
+    });
+    nodes.forEach(node => node.draw(colors));
+
+    animationId = requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  // Handle theme changes
+  const observer = new MutationObserver(() => {
+    // Colors will be re-evaluated on next frame
+  });
+
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-theme']
+  });
+
+  // Cleanup on page unload
+  window.addEventListener('beforeunload', () => {
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+    }
+  });
+})();
+</script>

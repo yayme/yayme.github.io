@@ -137,28 +137,6 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
     </div>
   </div>
 
-  <div class="focus-card">
-    <h3>🎯 Current Focus Areas</h3>
-    <div class="focus-grid">
-      <div class="focus-item">
-        <div class="focus-icon">📊</div>
-        <h4>Applied Statistics & Machine Learning</h4>
-      </div>
-      <div class="focus-item">
-        <div class="focus-icon">🤖</div>
-        <h4>Artificial Intelligence</h4>
-      </div>
-      <div class="focus-item">
-        <div class="focus-icon">💹</div>
-        <h4>Mathematical Finance & Modeling</h4>
-      </div>
-      <div class="focus-item">
-        <div class="focus-icon">🔢</div>
-        <h4>Data Science</h4>
-      </div>
-    </div>
-  </div>
-
 </div>
 
 </div>
@@ -229,7 +207,7 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
   gap: 2rem;
 }
 
-.coursework-card, .study-card, .workshop-card, .achievements-card, .focus-card {
+.coursework-card, .study-card, .workshop-card, .achievements-card {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid #D6C6A9;
   border-radius: 12px;
@@ -240,14 +218,14 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
 }
 
 .coursework-card:hover, .study-card:hover, .workshop-card:hover, 
-.achievements-card:hover, .focus-card:hover {
+.achievements-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(58, 44, 41, 0.12);
   border-color: #C4470D;
 }
 
 .coursework-card h3, .study-card h3, .workshop-card h3, 
-.achievements-card h3, .focus-card h3 {
+.achievements-card h3 {
   color: #3A2C29;
   border-bottom: 3px solid #D95F18;
   padding-bottom: 0.5rem;
@@ -392,14 +370,14 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
   transform: translateX(5px);
 }
 
-/* Achievement and Focus Grid Styling */
-.achievement-grid, .focus-grid {
+/* Achievement Grid Styling */
+.achievement-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
-.achievement-item, .focus-item {
+.achievement-item {
   background: rgba(245, 232, 199, 0.4);
   border: 1px solid #D6C6A9;
   border-radius: 10px;
@@ -410,20 +388,20 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
   overflow: hidden;
 }
 
-.achievement-item:hover, .focus-item:hover {
+.achievement-item:hover {
   transform: translateY(-5px);
   border-color: #D95F18;
   background: rgba(245, 232, 199, 0.6);
   box-shadow: 0 6px 20px rgba(58, 44, 41, 0.12);
 }
 
-.achievement-icon, .focus-icon {
+.achievement-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
   display: block;
 }
 
-.achievement-item h4, .focus-item h4 {
+.achievement-item h4 {
   color: #3A2C29;
   margin-bottom: 0.5rem;
   font-weight: 600;
@@ -457,8 +435,7 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
 [data-theme="dark"] .coursework-card,
 [data-theme="dark"] .study-card,
 [data-theme="dark"] .workshop-card,
-[data-theme="dark"] .achievements-card,
-[data-theme="dark"] .focus-card {
+[data-theme="dark"] .achievements-card {
   background: rgba(58, 36, 24, 0.8);
   border-color: #5A3825;
   color: #F5E8C7;
@@ -467,8 +444,7 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
 [data-theme="dark"] .coursework-card h3,
 [data-theme="dark"] .study-card h3,
 [data-theme="dark"] .workshop-card h3,
-[data-theme="dark"] .achievements-card h3,
-[data-theme="dark"] .focus-card h3 {
+[data-theme="dark"] .achievements-card h3 {
   color: #F5E8C7;
   border-bottom-color: #FF8A4C;
 }
@@ -540,21 +516,18 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
   border-color: #FF8A4C;
 }
 
-[data-theme="dark"] .achievement-item,
-[data-theme="dark"] .focus-item {
+[data-theme="dark"] .achievement-item {
   background: rgba(58, 36, 24, 0.6);
   border-color: #5A3825;
   color: #F5E8C7;
 }
 
-[data-theme="dark"] .achievement-item:hover,
-[data-theme="dark"] .focus-item:hover {
+[data-theme="dark"] .achievement-item:hover {
   background: rgba(58, 36, 24, 0.8);
   border-color: #FF8A4C;
 }
 
-[data-theme="dark"] .achievement-item h4,
-[data-theme="dark"] .focus-item h4 {
+[data-theme="dark"] .achievement-item h4 {
   color: #F5E8C7;
 }
 
@@ -573,11 +546,11 @@ keywords: "Adnan Sadik education, KAIST, mathematics, data scientist, machine le
   }
   
   .coursework-card, .study-card, .workshop-card, 
-  .achievements-card, .focus-card {
+  .achievements-card {
     padding: 1.5rem;
   }
   
-  .achievement-grid, .focus-grid {
+  .achievement-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }

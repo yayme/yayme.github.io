@@ -76,7 +76,7 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
     <span class="date">Dec 2024 – June 2025</span>
   </div>
   <p>Developed Deep learning pipelines for classifying sleep disorders and contributing to two research projects.</p>
-    <p> <strong>Core problem:</strong> How can we design architectures with appropriate inductive biases for quasi periodic, multimodal physiological time series to achieve optimal sleep disorder classification under limited data?
+    <p> <strong>Core problem:</strong> How do we build architectures that exploit the quasi-periodic, multimodal structure of physiological signals and the underlying sleep stage dynamics and circadian rhythms for robust sleep disorder classification when labeled data is scarce?
   </p>
 </div>
 <div class="experience-item">

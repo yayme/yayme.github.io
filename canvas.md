@@ -26,95 +26,21 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
     <!-- Sidebar Navigation -->
     <aside class="canvas-sidebar">
       <div class="sidebar-header">
-        <h3>Gallery</h3>
+        <h3>Entries</h3>
       </div>
       <nav class="sidebar-nav">
-        <ul class="entries-list">
-          <li><a href="#entry-1" class="entry-link active">Entry 1</a></li>
-          <li><a href="#entry-2" class="entry-link">Entry 2</a></li>
-          <li><a href="#entry-3" class="entry-link">Entry 3</a></li>
-          <li><a href="#entry-4" class="entry-link">Entry 4</a></li>
-          <li><a href="#entry-5" class="entry-link">Entry 5</a></li>
+        <ul class="entries-list" id="entries-sidebar">
+          <!-- Entry links will be populated here -->
         </ul>
       </nav>
       <div class="sidebar-footer">
-        <p class="sidebar-note">A collection of visual explorations</p>
+        <p class="sidebar-note">A collection of visual explorations and ideas</p>
       </div>
     </aside>
 
     <!-- Main Content Area -->
-    <main class="canvas-main">
-      
-      <!-- Entry 1 -->
-      <article class="canvas-entry" id="entry-1">
-        <div class="entry-header">
-          <h2 class="entry-title">Entry 1</h2>
-          <span class="entry-date">Coming Soon</span>
-        </div>
-        <div class="entry-content">
-          <div class="entry-placeholder">
-            <div class="placeholder-icon">🎨</div>
-            <p>Add images, visualizations, or mathematical content here</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- Entry 2 -->
-      <article class="canvas-entry" id="entry-2">
-        <div class="entry-header">
-          <h2 class="entry-title">Entry 2</h2>
-          <span class="entry-date">Coming Soon</span>
-        </div>
-        <div class="entry-content">
-          <div class="entry-placeholder">
-            <div class="placeholder-icon">📊</div>
-            <p>Interactive plots and animations welcome</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- Entry 3 -->
-      <article class="canvas-entry" id="entry-3">
-        <div class="entry-header">
-          <h2 class="entry-title">Entry 3</h2>
-          <span class="entry-date">Coming Soon</span>
-        </div>
-        <div class="entry-content">
-          <div class="entry-placeholder">
-            <div class="placeholder-icon">🧮</div>
-            <p>Mathematical sketches and LaTeX formulas fit perfectly here</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- Entry 4 -->
-      <article class="canvas-entry" id="entry-4">
-        <div class="entry-header">
-          <h2 class="entry-title">Entry 4</h2>
-          <span class="entry-date">Coming Soon</span>
-        </div>
-        <div class="entry-content">
-          <div class="entry-placeholder">
-            <div class="placeholder-icon">🌐</div>
-            <p>Web-based visualizations and experiments</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- Entry 5 -->
-      <article class="canvas-entry" id="entry-5">
-        <div class="entry-header">
-          <h2 class="entry-title">Entry 5</h2>
-          <span class="entry-date">Coming Soon</span>
-        </div>
-        <div class="entry-content">
-          <div class="entry-placeholder">
-            <div class="placeholder-icon">✨</div>
-            <p>Creative explorations and ideas in progress</p>
-          </div>
-        </div>
-      </article>
-
+    <main class="canvas-main" id="canvas-main">
+      <!-- Canvas entries will be added here -->
     </main>
   </div>
 </div>
@@ -122,28 +48,29 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
 <style>
 /* Canvas Page Layout */
 .canvas-wrapper {
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 
 .canvas-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 250px 1fr;
-  gap: 2rem;
-  padding: 0 2rem;
+  grid-template-columns: 180px 1fr;
+  gap: 1.5rem;
+  padding: 0;
 }
 
 /* Sidebar Styling */
 .canvas-sidebar {
   background: rgba(255, 250, 242, 0.98);
   border: 1px solid #D6C6A9;
-  border-radius: 12px;
-  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  padding: 1.5rem 1rem;
   height: fit-content;
   position: sticky;
-  top: 20px;
+  top: 100px;
   box-shadow: 0 3px 12px rgba(58, 44, 41, 0.08);
+  margin-left: 0.5rem;
 }
 
 [data-theme="dark"] .canvas-sidebar {
@@ -154,11 +81,11 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
 
 .sidebar-header h3 {
   color: #3A2C29;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1rem 0;
   border-bottom: 2px solid #D95F18;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
 }
 
 [data-theme="dark"] .sidebar-header h3 {
@@ -178,13 +105,13 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
 
 .entry-link {
   display: block;
-  padding: 0.75rem 1rem;
+  padding: 0.6rem 0.8rem;
   color: #3A2C29;
   text-decoration: none;
   border-left: 3px solid #D6C6A9;
-  border-radius: 4px;
+  border-radius: 3px;
   transition: all 0.3s ease;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
@@ -231,9 +158,9 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
 
 .sidebar-note {
   color: #8a7060;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.3;
   font-style: italic;
 }
 
@@ -402,16 +329,29 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
   border-color: #5A3825;
 }
 
+code {
+  background: rgba(217, 95, 24, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+[data-theme="dark"] code {
+  background: rgba(255, 138, 76, 0.1);
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .canvas-container {
-    grid-template-columns: 200px 1fr;
-    gap: 1.5rem;
-    padding: 0 1rem;
+    grid-template-columns: 150px 1fr;
+    gap: 1rem;
+    padding: 0;
   }
 
   .canvas-sidebar {
-    padding: 1.5rem 1rem;
+    padding: 1rem 0.8rem;
+    margin-left: 0.25rem;
   }
 
   .canvas-entry {
@@ -508,35 +448,73 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
 </style>
 
 <script>
-// Sidebar navigation script
+// Canvas page script for managing entries
 (function() {
-  const links = document.querySelectorAll('.entry-link');
-  const entries = document.querySelectorAll('.canvas-entry');
+  const sidebar = document.getElementById('entries-sidebar');
+  const mainArea = document.getElementById('canvas-main');
 
-  links.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      // Remove active class from all links
-      links.forEach(l => l.classList.remove('active'));
-      
-      // Add active class to clicked link
-      this.classList.add('active');
-      
-      // Get target entry
-      const targetId = this.getAttribute('href');
-      const targetEntry = document.querySelector(targetId);
-      
-      if (targetEntry) {
-        // Smooth scroll to entry
-        targetEntry.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Helper function to add an entry
+  window.addCanvasEntry = function(entryId, title, date, content) {
+    // Add to sidebar
+    if (sidebar) {
+      const li = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = '#' + entryId;
+      link.className = 'entry-link';
+      if (sidebar.children.length === 0) {
+        link.classList.add('active');
       }
-    });
-  });
+      link.textContent = title;
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelectorAll('.entry-link').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        const target = document.getElementById(entryId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+      li.appendChild(link);
+      sidebar.appendChild(li);
+    }
 
-  // Set initial active link
-  if (links.length > 0) {
-    links[0].classList.add('active');
+    // Add to main area
+    if (mainArea) {
+      const article = document.createElement('article');
+      article.className = 'canvas-entry';
+      article.id = entryId;
+      article.innerHTML = `
+        <div class="entry-header">
+          <h2 class="entry-title">${title}</h2>
+          <span class="entry-date">${date}</span>
+        </div>
+        <div class="entry-content">
+          ${content}
+        </div>
+      `;
+      mainArea.appendChild(article);
+    }
+  };
+
+  // Show empty state message if no entries
+  if (sidebar.children.length === 0) {
+    const emptyMsg = document.createElement('li');
+    emptyMsg.style.color = '#8a7060';
+    emptyMsg.style.fontSize = '0.9rem';
+    emptyMsg.style.padding = '1rem';
+    emptyMsg.style.textAlign = 'center';
+    emptyMsg.textContent = 'No entries yet';
+    sidebar.appendChild(emptyMsg);
+
+    const emptyPlaceholder = document.createElement('div');
+    emptyPlaceholder.className = 'entry-placeholder';
+    emptyPlaceholder.style.minHeight = '400px';
+    emptyPlaceholder.innerHTML = `
+      <div class="placeholder-icon" style="font-size: 4rem;">✨</div>
+      <h3 style="color: #3A2C29; margin-top: 1rem;">Canvas is Empty</h3>
+      <p style="color: #8a7060; margin-top: 1rem;">Use <code>addCanvasEntry()</code> to populate this gallery</p>
+    `;
+    mainArea.appendChild(emptyPlaceholder);
   }
 })();
 </script>

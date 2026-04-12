@@ -549,14 +549,14 @@ const initDivergenceFieldEntry = function() {
     uniform float u_time;
 
     vec2 vector_field(vec2 p) {
-      p += u_time * 0.5;
-      float x = sin(p.y * 2.0 + u_time) * 0.5 + cos(p.x * 3.0) * 0.3;
-      float y = cos(p.x * 2.0 - u_time) * 0.5 + sin(p.y * 3.0) * 0.3;
+      vec2 offset_p = p + u_time * 0.3;
+      float x = sin(offset_p.y * 1.5 + u_time * 0.7) * 0.8 + cos(offset_p.x * 2.0) * 0.6 + sin(u_time * 0.5) * 0.4;
+      float y = cos(offset_p.x * 1.5 - u_time * 0.7) * 0.8 + sin(offset_p.y * 2.0) * 0.6 + cos(u_time * 0.5) * 0.4;
       return vec2(x, y);
     }
 
     float divergence(vec2 p) {
-      float eps = 0.01;
+      float eps = 0.02;
       vec2 v_center = vector_field(p);
       vec2 v_px = vector_field(p + vec2(eps, 0.0));
       vec2 v_py = vector_field(p + vec2(0.0, eps));
@@ -573,14 +573,15 @@ const initDivergenceFieldEntry = function() {
 
     void main() {
       vec2 uv = (gl_FragCoord.xy - 0.5 * u_resolution.xy) / min(u_resolution.y, u_resolution.x);
-      uv *= 3.0;
+      uv *= 2.5;
       
+      vec2 vel = vector_field(uv);
       float div = divergence(uv);
-      float magnitude = length(vector_field(uv));
+      float magnitude = length(vel);
       
-      float hue = atan(vector_field(uv).y, vector_field(uv).x) / 6.28318530718 + 0.5;
-      float saturation = magnitude / (magnitude + 1.0);
-      float value = 0.5 + 0.5 * tanh(div * 2.0);
+      float hue = atan(vel.y, vel.x) / 6.28318530718 + 0.5 + u_time * 0.1;
+      float saturation = 0.7 + 0.3 * sin(magnitude * 3.0);
+      float value = 0.4 + 0.6 * sin(div * 1.5 + u_time);
       
       gl_FragColor = vec4(hsv2rgb(vec3(hue, saturation, value)), 1.0);
     }
@@ -604,16 +605,16 @@ const initDivergenceFieldEntry = function() {
     const canvas = document.getElementById('divergence-canvas');
     if (!canvas) return;
 
+    // Set canvas size BEFORE creating WebGL context
+    const rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width * devicePixelRatio;
+    canvas.height = rect.height * devicePixelRatio;
+
     const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
     if (!gl) {
       console.error('WebGL not supported');
       return;
     }
-
-    // Set canvas size
-    const rect = canvas.getBoundingClientRect();
-    canvas.width = rect.width * devicePixelRatio;
-    canvas.height = rect.height * devicePixelRatio;
 
     // Create shader program
     const createShader = (type, source) => {

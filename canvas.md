@@ -448,13 +448,19 @@ code {
 </style>
 
 <script>
-// Canvas page script for managing entries
+// Canvas page entry management system
 (function() {
   const sidebar = document.getElementById('entries-sidebar');
   const mainArea = document.getElementById('canvas-main');
 
   // Helper function to add an entry
   window.addCanvasEntry = function(entryId, title, date, content) {
+    // Remove empty state if first entry
+    const emptyMsg = document.getElementById('empty-msg');
+    const emptyPlaceholder = document.getElementById('empty-placeholder');
+    if (emptyMsg) emptyMsg.remove();
+    if (emptyPlaceholder) emptyPlaceholder.remove();
+
     // Add to sidebar
     if (sidebar) {
       const li = document.createElement('li');
@@ -496,25 +502,171 @@ code {
     }
   };
 
-  // Show empty state message if no entries
-  if (sidebar.children.length === 0) {
-    const emptyMsg = document.createElement('li');
-    emptyMsg.style.color = '#8a7060';
-    emptyMsg.style.fontSize = '0.9rem';
-    emptyMsg.style.padding = '1rem';
-    emptyMsg.style.textAlign = 'center';
-    emptyMsg.textContent = 'No entries yet';
-    sidebar.appendChild(emptyMsg);
+  // Show empty state initially
+  const emptyMsg = document.createElement('li');
+  emptyMsg.style.color = '#8a7060';
+  emptyMsg.style.fontSize = '0.9rem';
+  emptyMsg.style.padding = '1rem';
+  emptyMsg.style.textAlign = 'center';
+  emptyMsg.id = 'empty-msg';
+  emptyMsg.textContent = 'No entries yet';
+  sidebar.appendChild(emptyMsg);
 
-    const emptyPlaceholder = document.createElement('div');
-    emptyPlaceholder.className = 'entry-placeholder';
-    emptyPlaceholder.style.minHeight = '400px';
-    emptyPlaceholder.innerHTML = `
-      <div class="placeholder-icon" style="font-size: 4rem;">✨</div>
-      <h3 style="color: #3A2C29; margin-top: 1rem;">Canvas is Empty</h3>
-      <p style="color: #8a7060; margin-top: 1rem;">Use <code>addCanvasEntry()</code> to populate this gallery</p>
-    `;
-    mainArea.appendChild(emptyPlaceholder);
-  }
+  const emptyPlaceholder = document.createElement('div');
+  emptyPlaceholder.className = 'entry-placeholder';
+  emptyPlaceholder.style.minHeight = '400px';
+  emptyPlaceholder.id = 'empty-placeholder';
+  emptyPlaceholder.innerHTML = `
+    <div class="placeholder-icon" style="font-size: 4rem;">✨</div>
+    <h3 style="color: #3A2C29; margin-top: 1rem;">Canvas is Empty</h3>
+  `;
+  mainArea.appendChild(emptyPlaceholder);
 })();
+</script>
+
+<script>
+// WebGL Julia Set Shader - First Entry
+const initJuliaSetEntry = function() {
+  const vertexShader = `
+    attribute vec2 position;
+    void main() {
+      gl_Position = vec4(position, 0.0, 1.0);
+    }
+  `;
+
+  const fragmentShader = `
+    precision highp float;
+    uniform vec2 u_resolution;
+    uniform float u_time;
+
+    vec2 complex_mul(vec2 a, vec2 b) {
+        return vec2(a.x*b.x - a.y*b.y, a.x*b.y + a.y*b.x);
+    }
+
+    vec3 hsv2rgb(vec3 c) {
+        vec4 K = vec4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
+        vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
+        return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
+    }
+
+    void main() {
+        vec2 uv = (gl_FragCoord.xy - 0.5 * u_resolution.xy) / min(u_resolution.y, u_resolution.x);
+        vec2 z = uv * 4.0;
+        
+        vec2 c = vec2(cos(u_time), sin(u_time));
+        vec2 fz = complex_mul(z, z) - c;
+        
+        float r = length(fz);
+        float arg = atan(fz.y, fz.x);
+        
+        float hue = arg / 6.28318530718 + 0.5;
+        float val = r / (1.0 + r);
+        
+        gl_FragColor = vec4(hsv2rgb(vec3(hue, 1.0, val)), 1.0);
+    }
+  `;
+
+  const containerHTML = `
+    <div style="width: 100%; height: 500px; border-radius: 8px; overflow: hidden; background: #000;">
+      <canvas id="julia-canvas" style="width: 100%; height: 100%; display: block;"></canvas>
+    </div>
+  `;
+
+  window.addCanvasEntry(
+    'julia-set',
+    'Animated Julia Set',
+    'April 2026',
+    containerHTML
+  );
+
+  // Initialize WebGL after entry is added
+  setTimeout(() => {
+    const canvas = document.getElementById('julia-canvas');
+    if (!canvas) return;
+
+    const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if (!gl) {
+      console.error('WebGL not supported');
+      return;
+    }
+
+    // Set canvas size
+    const rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width * devicePixelRatio;
+    canvas.height = rect.height * devicePixelRatio;
+
+    // Create shader program
+    const createShader = (type, source) => {
+      const shader = gl.createShader(type);
+      gl.shaderSource(shader, source);
+      gl.compileShader(shader);
+      if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+        console.error(gl.getShaderInfoLog(shader));
+        return null;
+      }
+      return shader;
+    };
+
+    const vShader = createShader(gl.VERTEX_SHADER, vertexShader);
+    const fShader = createShader(gl.FRAGMENT_SHADER, fragmentShader);
+
+    const program = gl.createProgram();
+    gl.attachShader(program, vShader);
+    gl.attachShader(program, fShader);
+    gl.linkProgram(program);
+
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+      console.error(gl.getProgramInfoLog(program));
+      return;
+    }
+
+    gl.useProgram(program);
+
+    // Create buffer
+    const positionBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+    gl.bufferData(
+      gl.ARRAY_BUFFER,
+      new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]),
+      gl.STATIC_DRAW
+    );
+
+    const positionLocation = gl.getAttribLocation(program, 'position');
+    gl.enableVertexAttribArray(positionLocation);
+    gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
+
+    // Get uniform locations
+    const resolutionLocation = gl.getUniformLocation(program, 'u_resolution');
+    const timeLocation = gl.getUniformLocation(program, 'u_time');
+
+    // Animation loop
+    let startTime = Date.now();
+    const animate = () => {
+      const elapsed = (Date.now() - startTime) / 1000;
+
+      gl.viewport(0, 0, canvas.width, canvas.height);
+      gl.uniform2f(resolutionLocation, canvas.width, canvas.height);
+      gl.uniform1f(timeLocation, elapsed);
+
+      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+      requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    // Handle resizing
+    window.addEventListener('resize', () => {
+      const newRect = canvas.getBoundingClientRect();
+      canvas.width = newRect.width * devicePixelRatio;
+      canvas.height = newRect.height * devicePixelRatio;
+    });
+  }, 100);
+};
+
+// Initialize Julia Set entry when page loads
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initJuliaSetEntry);
+} else {
+  initJuliaSetEntry();
+}
 </script>

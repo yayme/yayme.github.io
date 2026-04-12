@@ -55,8 +55,8 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 1.5rem;
+  grid-template-columns: 70px 1fr;
+  gap: 1rem;
   padding: 0;
 }
 
@@ -65,12 +65,12 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
   background: rgba(255, 250, 242, 0.98);
   border: 1px solid #D6C6A9;
   border-radius: 8px;
-  padding: 1.5rem 1rem;
+  padding: 1rem 0.6rem;
   height: fit-content;
   position: sticky;
   top: 100px;
   box-shadow: 0 3px 12px rgba(58, 44, 41, 0.08);
-  margin-left: 0.5rem;
+  margin-left: 0.25rem;
 }
 
 [data-theme="dark"] .canvas-sidebar {
@@ -81,11 +81,13 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
 
 .sidebar-header h3 {
   color: #3A2C29;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.8rem 0;
   border-bottom: 2px solid #D95F18;
-  padding-bottom: 0.4rem;
+  padding-bottom: 0.3rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
 
 [data-theme="dark"] .sidebar-header h3 {
@@ -97,22 +99,27 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
 .entries-list li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 .entry-link {
   display: block;
-  padding: 0.6rem 0.8rem;
+  padding: 0.4rem 0.4rem;
   color: #3A2C29;
   text-decoration: none;
   border-left: 3px solid #D6C6A9;
-  border-radius: 3px;
+  border-radius: 2px;
   transition: all 0.3s ease;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-weight: 500;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
 
 .entry-link:hover {
@@ -147,9 +154,10 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
 }
 
 .sidebar-footer {
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
   border-top: 1px solid #D6C6A9;
+  display: none;
 }
 
 [data-theme="dark"] .sidebar-footer {
@@ -158,10 +166,11 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
 
 .sidebar-note {
   color: #8a7060;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.2;
   font-style: italic;
+  display: none;
 }
 
 [data-theme="dark"] .sidebar-note {
@@ -344,14 +353,14 @@ code {
 /* Responsive Design */
 @media (max-width: 1024px) {
   .canvas-container {
-    grid-template-columns: 150px 1fr;
-    gap: 1rem;
+    grid-template-columns: 60px 1fr;
+    gap: 0.8rem;
     padding: 0;
   }
 
   .canvas-sidebar {
-    padding: 1rem 0.8rem;
-    margin-left: 0.25rem;
+    padding: 0.8rem 0.5rem;
+    margin-left: 0.1rem;
   }
 
   .canvas-entry {
@@ -525,8 +534,8 @@ code {
 </script>
 
 <script>
-// WebGL Julia Set Shader - First Entry
-const initJuliaSetEntry = function() {
+// WebGL Divergence Field Animation - First Entry
+const initDivergenceFieldEntry = function() {
   const vertexShader = `
     attribute vec2 position;
     void main() {
@@ -539,49 +548,60 @@ const initJuliaSetEntry = function() {
     uniform vec2 u_resolution;
     uniform float u_time;
 
-    vec2 complex_mul(vec2 a, vec2 b) {
-        return vec2(a.x*b.x - a.y*b.y, a.x*b.y + a.y*b.x);
+    vec2 vector_field(vec2 p) {
+      p += u_time * 0.5;
+      float x = sin(p.y * 2.0 + u_time) * 0.5 + cos(p.x * 3.0) * 0.3;
+      float y = cos(p.x * 2.0 - u_time) * 0.5 + sin(p.y * 3.0) * 0.3;
+      return vec2(x, y);
+    }
+
+    float divergence(vec2 p) {
+      float eps = 0.01;
+      vec2 v_center = vector_field(p);
+      vec2 v_px = vector_field(p + vec2(eps, 0.0));
+      vec2 v_py = vector_field(p + vec2(0.0, eps));
+      
+      float div = ((v_px.x - v_center.x) / eps) + ((v_py.y - v_center.y) / eps);
+      return div;
     }
 
     vec3 hsv2rgb(vec3 c) {
-        vec4 K = vec4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
-        vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
-        return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
+      vec4 K = vec4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
+      vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
+      return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
     }
 
     void main() {
-        vec2 uv = (gl_FragCoord.xy - 0.5 * u_resolution.xy) / min(u_resolution.y, u_resolution.x);
-        vec2 z = uv * 4.0;
-        
-        vec2 c = vec2(cos(u_time), sin(u_time));
-        vec2 fz = complex_mul(z, z) - c;
-        
-        float r = length(fz);
-        float arg = atan(fz.y, fz.x);
-        
-        float hue = arg / 6.28318530718 + 0.5;
-        float val = r / (1.0 + r);
-        
-        gl_FragColor = vec4(hsv2rgb(vec3(hue, 1.0, val)), 1.0);
+      vec2 uv = (gl_FragCoord.xy - 0.5 * u_resolution.xy) / min(u_resolution.y, u_resolution.x);
+      uv *= 3.0;
+      
+      float div = divergence(uv);
+      float magnitude = length(vector_field(uv));
+      
+      float hue = atan(vector_field(uv).y, vector_field(uv).x) / 6.28318530718 + 0.5;
+      float saturation = magnitude / (magnitude + 1.0);
+      float value = 0.5 + 0.5 * tanh(div * 2.0);
+      
+      gl_FragColor = vec4(hsv2rgb(vec3(hue, saturation, value)), 1.0);
     }
   `;
 
   const containerHTML = `
-    <div style="width: 100%; height: 500px; border-radius: 8px; overflow: hidden; background: #000;">
-      <canvas id="julia-canvas" style="width: 100%; height: 100%; display: block;"></canvas>
+    <div style="width: 100%; height: 600px; border-radius: 8px; overflow: hidden; background: #000;">
+      <canvas id="divergence-canvas" style="width: 100%; height: 100%; display: block;"></canvas>
     </div>
   `;
 
   window.addCanvasEntry(
-    'julia-set',
-    'Animated Julia Set',
+    'divergence-field',
+    'Divergence Field Flow',
     'April 2026',
     containerHTML
   );
 
   // Initialize WebGL after entry is added
   setTimeout(() => {
-    const canvas = document.getElementById('julia-canvas');
+    const canvas = document.getElementById('divergence-canvas');
     if (!canvas) return;
 
     const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
@@ -663,10 +683,10 @@ const initJuliaSetEntry = function() {
   }, 100);
 };
 
-// Initialize Julia Set entry when page loads
+// Initialize Divergence Field entry when page loads
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initJuliaSetEntry);
+  document.addEventListener('DOMContentLoaded', initDivergenceFieldEntry);
 } else {
-  initJuliaSetEntry();
+  initDivergenceFieldEntry();
 }
 </script>

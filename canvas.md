@@ -55,7 +55,7 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 70px 1fr;
+  grid-template-columns: 40px 1fr;
   gap: 1rem;
   padding: 0;
 }
@@ -65,12 +65,12 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
   background: rgba(255, 250, 242, 0.98);
   border: 1px solid #D6C6A9;
   border-radius: 8px;
-  padding: 1rem 0.6rem;
+  padding: 0.8rem 0.3rem;
   height: fit-content;
   position: sticky;
   top: 100px;
   box-shadow: 0 3px 12px rgba(58, 44, 41, 0.08);
-  margin-left: 0.25rem;
+  margin-left: 0;
 }
 
 [data-theme="dark"] .canvas-sidebar {
@@ -81,13 +81,11 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
 
 .sidebar-header h3 {
   color: #3A2C29;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  margin: 0 0 0.8rem 0;
+  margin: 0 0 0.5rem 0;
   border-bottom: 2px solid #D95F18;
-  padding-bottom: 0.3rem;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
+  padding-bottom: 0.2rem;
 }
 
 [data-theme="dark"] .sidebar-header h3 {
@@ -101,7 +99,7 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.2rem;
 }
 
 .entries-list li {
@@ -110,16 +108,17 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
 
 .entry-link {
   display: block;
-  padding: 0.4rem 0.4rem;
+  padding: 0.3rem 0.3rem;
   color: #3A2C29;
   text-decoration: none;
-  border-left: 3px solid #D6C6A9;
+  border-left: 2px solid #D6C6A9;
   border-radius: 2px;
   transition: all 0.3s ease;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   font-weight: 500;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .entry-link:hover {
@@ -353,14 +352,14 @@ code {
 /* Responsive Design */
 @media (max-width: 1024px) {
   .canvas-container {
-    grid-template-columns: 60px 1fr;
+    grid-template-columns: 35px 1fr;
     gap: 0.8rem;
     padding: 0;
   }
 
   .canvas-sidebar {
-    padding: 0.8rem 0.5rem;
-    margin-left: 0.1rem;
+    padding: 0.6rem 0.2rem;
+    margin-left: 0;
   }
 
   .canvas-entry {

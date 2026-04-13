@@ -356,7 +356,7 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
     if (!canvas) return;
 
     /* ── sizing ── */
-    const ASPECT = 9 / 16;
+    const ASPECT = 0.75;  // 4:3 aspect ratio for better fill
     const resize = () => {
       const w = canvas.parentElement.clientWidth;
       canvas.width  = w;

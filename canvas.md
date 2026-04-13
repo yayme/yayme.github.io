@@ -5,6 +5,7 @@ subtitle: A Gallery of Ideas, Sketches, and Experiments
 author: Adnan Sadik
 meta_description: "Canvas - Adnan Sadik | Gallery of visual experiments, mathematical sketches, and interactive visualizations"
 keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
+full-width: true
 ---
 
 <style>
@@ -47,8 +48,8 @@ keywords: "canvas, gallery, visualizations, sketches, experiments, mathematics"
 
 .canvas-container {
   display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 2.5rem;
+  grid-template-columns: 160px 1fr;
+  gap: 1.8rem;
   align-items: start;
   /* No max-width: fill the available viewport */
 }

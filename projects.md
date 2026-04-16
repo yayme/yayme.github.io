@@ -109,94 +109,58 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 <div class="project-header">
 <h3>Volatility Inference with SDEs & Data Assimilation</h3>
 <div class="tech-stack">
-<span class="tech-tag">Python</span>
-<span class="tech-tag">Stochastic Differential Equations</span>
-<span class="tech-tag">Data Assimilation</span>
+<span class="tech-tag">SDE</span>
+<span class="tech-tag">Kalman Filter</span>
+<span class="tech-tag">Particle Filter</span>
 </div>
 </div>
-<ul class="project-highlights">
-  <li>Estimated instantaneous volatility of cryptocurrency by combining a Heston-lite SDE with Kalman and Particle Filter; absolute log returns used as ground truth. Kalman R² ≈ 0.9998, Particle Filter R² ≈ 0.48–0.67, GARCH R² ≈ 0.09–0.17. Both filters outperform traditional GARCH models.</li>
-  <li>Estimated smoothed volatility of cryptocurrency by combining a mean-reverting SDE with Kalman and Particle Filter; 100-period rolling std used as ground truth. Kalman R² ≈ 0.996–0.997, Particle Filter R² ≈ 0.995–0.999, GARCH R² ≈ 0.33–0.63. Both methods outperform GARCH for smoothed volatility tracking.</li>
-</ul>
+
+<p>
+  Estimated cryptocurrency rolling volatility using a mean-reverting stochastic differential equation with online Bayesian filtering.
+  Results were benchmarked against GARCH(1,1) and GARCH(2,2) models under a strict out-of-sample evaluation setup.
+</p>
 
 <div class="vol-card">
   <div class="vol-top">
     <div class="vol-top-left">
       <div class="vol-tag">SDEs · Bayesian Filtering · Crypto</div>
-      <div class="vol-title">Volatility Inference<br>with <span>SDEs</span></div>
+      <div class="vol-title">Rolling Volatility Inference<br><span>with Data Assimilation</span></div>
     </div>
   </div>
+
   <hr class="vol-divider">
+
   <div class="vol-body">
     <div class="vol-chart-wrap">
-      <div class="vol-chart-label">R² by method</div>
-      
-      <div class="vol-bar-group">
-        <div class="vol-bar-title">pipeline 1 · instantaneous</div>
-        <div class="vol-bar-row">
-          <span class="vol-bar-name">Kalman</span>
-          <div class="vol-bar-track"><div class="vol-bar-fill kalman" style="width:100%"></div></div>
-          <span class="vol-bar-val">0.9</span>
-        </div>
-        <div class="vol-bar-row">
-          <span class="vol-bar-name">Particle Filter</span>
-          <div class="vol-bar-track"><div class="vol-bar-fill pf" style="width:63%"></div></div>
-          <span class="vol-bar-val">~0.60</span>
-        </div>
-        <div class="vol-bar-row">
-          <span class="vol-bar-name">GARCH</span>
-          <div class="vol-bar-track"><div class="vol-bar-fill garch" style="width:13%"></div></div>
-          <span class="vol-bar-val">~0.13</span>
-        </div>
+      <div class="vol-chart-label">Method Comparison</div>
+      <div class="vol-bar-row">
+        <span class="vol-bar-name">Kalman Filter</span>
+        <div class="vol-bar-track"><div class="vol-bar-fill kalman" style="width:100%"></div></div>
+        <span class="vol-bar-val">DA</span>
       </div>
-      
-      <div class="vol-bar-group">
-        <div class="vol-bar-title">pipeline 2 · rolling</div>
-        <div class="vol-bar-row">
-          <span class="vol-bar-name">Kalman</span>
-          <div class="vol-bar-track"><div class="vol-bar-fill kalman" style="width:99.7%"></div></div>
-          <span class="vol-bar-val">0.9</span>
-        </div>
-        <div class="vol-bar-row">
-          <span class="vol-bar-name">Particle Filter</span>
-          <div class="vol-bar-track"><div class="vol-bar-fill pf" style="width:99.7%"></div></div>
-          <span class="vol-bar-val">0.9</span>
-        </div>
-        <div class="vol-bar-row">
-          <span class="vol-bar-name">GARCH</span>
-          <div class="vol-bar-track"><div class="vol-bar-fill garch" style="width:48%"></div></div>
-          <span class="vol-bar-val">~0.48</span>
-        </div>
+      <div class="vol-bar-row">
+        <span class="vol-bar-name">Particle Filter</span>
+        <div class="vol-bar-track"><div class="vol-bar-fill pf" style="width:100%"></div></div>
+        <span class="vol-bar-val">DA</span>
       </div>
-      
-      <div class="vol-legend">
-        <div class="vol-leg"><div class="vol-leg-dot" style="background:var(--vol-bar-kalman)"></div>Kalman</div>
-        <div class="vol-leg"><div class="vol-leg-dot" style="background:var(--vol-bar-pf)"></div>Particle Filter</div>
-        <div class="vol-leg"><div class="vol-leg-dot" style="background:var(--vol-bar-garch);border:1px solid var(--vol-border)"></div>GARCH</div>
+      <div class="vol-bar-row">
+        <span class="vol-bar-name">GARCH(1,1)</span>
+        <div class="vol-bar-track"><div class="vol-bar-fill garch" style="width:100%"></div></div>
+        <span class="vol-bar-val">Benchmark</span>
+      </div>
+      <div class="vol-bar-row">
+        <span class="vol-bar-name">GARCH(2,2)</span>
+        <div class="vol-bar-track"><div class="vol-bar-fill garch" style="width:100%"></div></div>
+        <span class="vol-bar-val">Benchmark</span>
       </div>
     </div>
-    
+
     <div class="vol-right">
-      <div class="vol-stats">
-        <div class="vol-stat"><div class="vol-s-val">0.9</div><div class="vol-s-lbl">Kalman R²<br>pipeline 1</div></div>
-        <div class="vol-stat"><div class="vol-s-val">0.9</div><div class="vol-s-lbl">Particle Filter R²<br>pipeline 2</div></div>
-      </div>
-      <div class="vol-pipes">
-        <div class="vol-pipes-title">pipelines</div>
-        <div class="vol-pipe-row" style="flex-direction:column; align-items:flex-start; gap:2px;">
-          <div style="display:flex; justify-content:space-between; width:100%;">
-            <span class="vol-p-label">P1 · instantaneous</span>
-            <span class="vol-p-model">Heston-lite SDE</span>
-          </div>
-          <div style="font-size:8px; color:var(--vol-muted);">target: absolute log returns as proxy for instantaneous volatility</div>
-        </div>
-        <div class="vol-pipe-row" style="flex-direction:column; align-items:flex-start; gap:2px;">
-          <div style="display:flex; justify-content:space-between; width:100%;">
-            <span class="vol-p-label">P2 · rolling</span>
-            <span class="vol-p-model">OU mean-revert SDE</span>
-          </div>
-          <div style="font-size:8px; color:var(--vol-muted);">target: rolling standard deviation over 100-period window</div>
-        </div>
+      <div class="vol-pipes-title">Methodology Summary</div>
+      <div style="font-size:12px; line-height:1.5; color:var(--vol-muted);">
+        1) Model latent volatility as a mean-reverting stochastic state.<br>
+        2) Estimate the state online using Kalman and Particle Filter updates.<br>
+        3) Benchmark final estimates against standard GARCH baselines.
       </div>
     </div>
   </div>
@@ -204,9 +168,6 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 
 <a href="https://github.com/yayme/Volatility-Inference-with-SDEs-Data-Assimilation" class="project-link">
 <span class="link-icon">📂</span> View on GitHub
-</a>
-<a href="https://drive.google.com/file/d/1zqIqxCBXAAsep4-_TvGf_RJfOWSF8ySd/view?usp=sharing" class="project-link">
-<span class="link-icon">📄</span> Full Report
 </a>
 </div>
 

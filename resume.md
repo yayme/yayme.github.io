@@ -57,7 +57,7 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 <div class="section-card">
 <h2 id="work-experience">Work Experience</h2>
 
-<div class="experience-item">
+<!-- <div class="experience-item">
   <div class="company-header">
     <h3>Samsung Lifenology Lab, South Korea</h3>
     <span class="role">Student Entrepreneur & Lead AI/ML Architect</span>
@@ -65,7 +65,7 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
   </div>
   <p>Building Samsung Health × Insurance AI system under the Samsung Lifenology Lab entrepreneurial program with direct funding and mentorship. Architecting multi-agent AI pipeline that ingests wearable signals, scores longitudinal health risk, surfaces personalized interventions, and dynamically adjusts insurance coverage.</p>
   <p><strong>Core Problem:</strong> How can continuous wearable health signals be transformed into actionable, personalized interventions that align insurance products with real health trajectories, incentivizing preventive behaviors through dynamic coverage and premium reductions?</p>
-</div>
+</div> -->
 
 <div class="experience-item">
   <div class="company-header">
@@ -127,7 +127,7 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 
 <div class="project-item">
 <div class="project-header">
-<h3>Samsung Health × Insurance AI</h3>
+<h3>Samsung Lifenology Lab Project</h3>
 <div class="tech-stack">
 <span class="tech-tag">LangGraph</span>
 <span class="tech-tag">Claude API</span>
@@ -135,7 +135,7 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 <span class="tech-tag">Next.js</span>
 </div>
 </div>
-<p>Multi-agent AI pipeline transforming insurance from static contracts to active health partnerships. Ingests Samsung Health wearable signals, scores longitudinal risk, and dynamically aligns coverage with real health trajectories.</p>
+<p>Funded and mentored by Samsung Lifenology Lab. Multi agent AI system transforming insurance from static contracts to active health partnerships. Ingests Samsung Health wearable signals, scores longitudinal risk, and dynamically aligns coverage with real health trajectories.</p>
 </div>
 
 <div class="project-item">

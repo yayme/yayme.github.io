@@ -79,6 +79,16 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 
 <div class="experience-item">
   <div class="company-header">
+    <h3>HayanMind</h3>
+    <span class="role">Machine Learning Engineer Intern</span>
+    <span class="date">Jun 2026 – Aug 2026</span>
+  </div>
+  <p>Built and evaluated dynamic pricing models using Transformer-based sequential architectures for user behavior prediction and decision-making.</p>
+  <p>Worked on temporal event modeling and rare-event modeling for purchase prediction, applying Hawkes processes and other time-aware ML techniques to improve forecasting under sparse, high-impact outcomes.</p>
+</div>
+
+<div class="experience-item">
+  <div class="company-header">
     <h3>IBS Biomedical Mathematics Group, South Korea</h3>
     <span class="role">Machine Learning Research Intern</span>
     <span class="date">Dec 2024 – June 2025</span>

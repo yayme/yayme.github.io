@@ -63,8 +63,8 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
     <span class="role">Student Entrepreneur & Lead AI/ML Architect</span>
     <span class="date">Nov 2025 – Present</span>
   </div>
-  <p>Building Samsung Health × Insurance AI system under the Samsung Lifenology Lab entrepreneurial program with direct funding and mentorship. Architecting multi-agent AI pipeline that ingests wearable signals, scores longitudinal health risk, surfaces personalized interventions, and dynamically adjusts insurance coverage.</p>
-  <p><strong>Core Problem:</strong> How can continuous wearable health signals be transformed into actionable, personalized interventions that align insurance products with real health trajectories, incentivizing preventive behaviors through dynamic coverage and premium reductions?</p>
+  <p>Building Samsung Health × Wellness AI system under the Samsung Lifenology Lab entrepreneurial program with direct funding and mentorship. Architecting multi-agent AI pipeline that ingests wearable signals, learns individual patterns, surfaces personalized interventions, and projects how current habits shape the thirty-day trajectory.</p>
+  <p><strong>Core Problem:</strong> How can continuous wearable health signals be transformed into actionable, personalized interventions that improve wellness outcomes by focusing on changes people are most likely to sustain?</p>
 </div> -->
 
 <div class="experience-item">
@@ -139,13 +139,13 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 <div class="project-header">
 <h3>Samsung Lifenology Lab Project</h3>
 <div class="tech-stack">
-<span class="tech-tag">LangGraph</span>
+<span class="tech-tag">State Graph</span>
 <span class="tech-tag">Claude API</span>
 <span class="tech-tag">FastAPI</span>
 <span class="tech-tag">Next.js</span>
 </div>
 </div>
-<p>Funded and mentored by Samsung Lifenology Lab. Multi agent AI system transforming insurance from static contracts to active health partnerships. Ingests Samsung Health wearable signals, scores longitudinal risk, and dynamically aligns coverage with real health trajectories.</p>
+<p>Funded and mentored by Samsung Lifenology Lab. Multi agent AI system transforming wellness guidance from static advice into active personal partnerships. Ingests Samsung Health wearable signals, learns individual patterns, and surfaces interventions that members are most likely to complete and sustain.</p>
 </div>
 
 <div class="project-item">

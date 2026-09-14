@@ -5,6 +5,7 @@ subtitle: Selected Projects
 author: Adnan Sadik
 meta_description: "Projects - Adnan Sadik | Machine Learning, Data Science, and Quantitative Finance projects including cryptocurrency trading systems and AI-powered tools"
 keywords: "Adnan Sadik projects, machine learning projects, data science portfolio, crypto trading, AI file organizer, Bayesian filtering, statistical decision making"
+mathjax: true
 ---
 
 <style>
@@ -99,9 +100,9 @@ keywords: "Adnan Sadik projects, machine learning projects, data science portfol
 </div>
 </div>
 <ul class="project-highlights">
-  <li>Wrote a sparse attention kernel in CUDA with Longformer style masking (local window + global stride tokens); tiles with no active pairs are skipped entirely, bringing complexity from $O(n^2)$ down to $O(n \cdot w)$.</li>
-  <li>Initial version stored a full score array per thread scaled with sequence length which spilled to global memory at longer sequences; rewrote with Flash Attention style online softmax, dropping per-thread memory to $O(1)$ and achieving $1.4$--$1.8\times$ speedup.</li>
-  <li>Wrapped kernels as a PyTorch extension via pybind11 and benchmarked against PyTorch dense attention on a T4 GPU across sequence lengths $64$ to $512$.</li>
+  <li>Wrote a sparse attention kernel in CUDA with Longformer style masking (local window + global stride tokens); tiles with no active pairs are skipped entirely, bringing complexity from \(O(n^2)\) down to \(O(n \cdot w)\).</li>
+  <li>Initial version stored a full score array per thread scaled with sequence length which spilled to global memory at longer sequences; rewrote with Flash Attention style online softmax, dropping per-thread memory to \(O(1)\) and achieving \(1.4\)--\(1.8\times\) speedup.</li>
+  <li>Wrapped kernels as a PyTorch extension via pybind11 and benchmarked against PyTorch dense attention on a T4 GPU across sequence lengths \(64\) to \(512\).</li>
 </ul>
 
 <div class="cuda-card">

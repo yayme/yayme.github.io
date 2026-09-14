@@ -189,7 +189,7 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 <a href="https://github.com/yayme/CUDA-kernel" class="project-link">GitHub</a>
 </div>
 
-'<div class="project-item">
+<div class="project-item">
   <div class="project-header">
     <h3>Volatility Inference with SDEs & Data Assimilation</h3>
     <div class="tech-stack">
@@ -251,7 +251,7 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
   </div>
 
   <a href="https://github.com/yayme/Volatility-Inference-with-SDEs-Data-Assimilation" class="project-link">GitHub</a>
-</div>'
+</div>
 
 <div class="project-item">
 <h4>SignalCraft: Crypto Alpha Discovery System</h4>

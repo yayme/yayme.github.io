@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "jekyll",
+      "runtimeExecutable": "/private/tmp/claude-501/-Users-adnansadik-yayme-github-io/f9e42c04-74fe-4c40-a9cf-fe36c559d141/scratchpad/jekyll/jekyll.sh",
+      "runtimeArgs": [
+        "serve",
+        "--source", "/Users/adnansadik/yayme.github.io",
+        "--destination", "/private/tmp/claude-501/-Users-adnansadik-yayme-github-io/f9e42c04-74fe-4c40-a9cf-fe36c559d141/scratchpad/site-serve",
+        "--config", "/Users/adnansadik/yayme.github.io/_config.yml,/private/tmp/claude-501/-Users-adnansadik-yayme-github-io/f9e42c04-74fe-4c40-a9cf-fe36c559d141/scratchpad/jekyll/_config_local.yml",
+        "--port", "4000"
+      ],
+      "port": 4000
+    }
+  ]
+}

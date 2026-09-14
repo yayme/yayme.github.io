@@ -364,13 +364,24 @@ full-width: true
       canvas.height = Math.round(w * ASPECT);
     };
     resize();
-    window.addEventListener('resize', () => { resize(); initParticles(); });
+    // Only rebuild when the width actually changes: mobile browsers fire
+    // 'resize' when the URL bar hides/shows, which would wipe the sketch.
+    // Setting canvas.width clears the canvas, so repaint the paper too.
+    let lastWidth = canvas.width;
+    window.addEventListener('resize', () => {
+      if (canvas.parentElement.clientWidth === lastWidth) return;
+      resize();
+      lastWidth = canvas.width;
+      drawBackground();
+      initParticles();
+    });
 
     const ctx = canvas.getContext('2d');
 
     /* ── vector field ── */
     // F(x,y) = (sin(y) + 0.4*cos(2x),  cos(x) - 0.4*sin(2y))
-    // Nice saddle/swirl topology, divergence-free near origin
+    // Saddle/swirl topology. Not divergence-free: div F = -0.8(sin 2x + cos 2y),
+    // which is -0.8 at the origin; curl F = -(sin x + cos y).
     const fieldX = (x, y) => Math.sin(y) + 0.4 * Math.cos(2 * x);
     const fieldY = (x, y) => Math.cos(x) - 0.4 * Math.sin(2 * y);
 

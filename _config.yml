@@ -41,7 +41,7 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/avatar-icon.png"
+avatar: "/assets/img/avatar-icon.jpg"   # 400x600, 44 KB (the 2.4 MB avatar-icon.png is kept for old links)
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
@@ -111,7 +111,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "https://yayme.github.io/"
+url-pretty: "https://adnansadik.dev/"
 
 # Add the website title to the title of every page
 title-on-all-pages: true
@@ -142,8 +142,8 @@ keywords: "Adnan Sadik, Adnan Sadik KAIST, data scientist, machine learning, AI 
 # SEO Description for the site
 description: "Personal academic website of Adnan Sadik, mathematics student and research assistant at KAIST specializing in statistical learning, machine learning, quantitative finance, and biomedical mathematics."
 
-# Canonical URL for SEO
-url: "https://yayme.github.io"
+# Canonical URL for SEO (must match the custom domain in CNAME)
+url: "https://adnansadik.dev"
 baseurl: ""
 
 # Language setting for SEO
@@ -325,6 +325,17 @@ exclude:
   - README.md
   - screenshot.png
   - docs/
+  # Kept in the repo but not published: work log, old drafts, prototypes
+  - log.md
+  - education_clean.md
+  - portfolio.md
+  - www-redirect.html
+  - cuda_project.html
+  - yut_project.html
+  - file_organizer_project.html
+  - volatility_project.html
+  - statistical_decision_making_project.html
+  - assets/timeslot_sync_view.py
 
 plugins:
   - jekyll-paginate

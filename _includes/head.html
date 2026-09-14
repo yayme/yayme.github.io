@@ -61,8 +61,6 @@
   <meta name="author" content="{{ author }}">
   {% endif %}
 
-  <meta name="description" content="{{ description }}">
-  
   <!-- Enhanced Meta Tags for Name Recognition -->
   {% if page.meta_description %}
   <meta name="description" content="{{ page.meta_description }}">
@@ -95,10 +93,6 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32x32.png' | relative_url }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/img/favicon-16x16.png' | relative_url }}">
-  <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
@@ -107,11 +101,12 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": ["Person", "Student", "Researcher"],
+    "@type": "Person",
     "name": "Adnan Sadik",
     "givenName": "Adnan",
     "familyName": "Sadik",
     "url": "{{ site.url }}{{ site.baseurl }}",
+    "image": "{{ site.avatar | absolute_url }}",
     "mainEntityOfPage": "{{ site.url }}{{ site.baseurl }}",
     "sameAs": [
       "https://linkedin.com/in/adnan-sadik",
@@ -195,10 +190,6 @@
 
   {% if site.mobile-theme-col %}
   <meta name="theme-color" content="{{ site.mobile-theme-col }}">
-  {% endif %}
-
-  {% if site.keywords %}
-  <meta name="keywords" content="{{ site.keywords }}">
   {% endif %}
 
   {% if site.rss-description %}
@@ -296,15 +287,11 @@
   <!-- Enhanced Open Graph Meta Tags -->
   <meta property="og:title" content="{{ title }}">
   <meta property="og:description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ description }}{% endif %}">
-  <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:locale" content="en_US">
-  
+
   {% if img != "" %}
   <meta property="og:image" content="{{ img | absolute_url }}">
   <meta property="og:image:alt" content="Adnan Sadik - Mathematics Student and Researcher">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
   {% endif %}
 
   {% if page.id %}
@@ -337,11 +324,6 @@
   {% if img != "" %}
   <meta name="twitter:image" content="{{ img | absolute_url }}">
   <meta name="twitter:image:alt" content="Adnan Sadik - Mathematics Student and Researcher">
-  {% endif %}  <meta property="twitter:title" content="{{ title }}">
-  <meta property="twitter:description" content="{{ description }}">
-
-  {% if img != "" %}
-  <meta name="twitter:image" content="{{ img | absolute_url }}">
   {% endif %}
 
   {% include matomo.html %}
@@ -350,46 +332,11 @@
   <link rel="stylesheet" href="{{ "/assets/css/staticman.css" | relative_url }}">
   {% endif %}
 
-  {% assign favicon_exists = site.static_files | where: "path", "/favicon.ico" | size %}
-  {% if favicon_exists == 1 %}
-  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" />
-  {% endif %}
-
   {% if page.head-extra %}
     {% for file in page.head-extra %}
       {% include {{ file }} %}
     {% endfor %}
   {% endif %}
-
-  <!-- LinkedIn Profile Badge Script -->
-  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-
-  <!-- Structured Data (JSON-LD) for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Adnan Sadik",
-    "url": "https://yayme.github.io",
-    "image": "https://yayme.github.io/assets/img/avatar-icon.png",
-    "jobTitle": "Mathematics Student & Research Assistant",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "KAIST (Korea Advanced Institute of Science and Technology)"
-    },
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "KAIST"
-    },
-    "knowsAbout": ["Machine Learning", "Statistical Learning", "Quantitative Finance", "Biomedical Mathematics", "Artificial Intelligence", "Data Science"],
-    "sameAs": [
-      "https://www.linkedin.com/in/adnan-sadik",
-      "https://github.com/yayme",
-      "https://scholar.google.com/citations?user=fAIOqccAAAAJ&hl=en"
-    ],
-    "email": "adnansadik235@kaist.ac.kr"
-  }
-  </script>
 
   {% if page.layout == "post" %}
   <script type="application/ld+json">

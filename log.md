@@ -4,6 +4,63 @@ Running record of changes to this repo, newest first. This file is listed under 
 
 ---
 
+## 2026-10-11 — Home page makeover (markdown-file aesthetic)
+
+Three candidates were built and previewed locally (raw-source, rendered-README, plain-document);
+Adnan picked the raw-source look. `index.html` rewritten around it, preview files removed.
+
+- **Look:** monospace "editor window" card with an `adnan-sadik.md` title bar and faded markdown
+  syntax (`#`, `##`, `-`, `**`). Role lines stay monospace; descriptions use the site body font
+  (Open Sans) and supervisors use Lora italic, so the three levels no longer share one font.
+- **Header:** page title/subtitle front matter dropped, so no "Home" heading and no
+  "AI systems | Applied mathematics..." line. Tagline is now "Mathematics & Computer Science
+  (Double Major) · KAIST".
+- **Experience split** into Industry (HayanMind, Huawei, Samsung Lifenology Lab) and Research
+  (KAIST Users & Information Lab — Professor Alice Oh; IBS Biomedical Mathematics Lab —
+  Professor Jae Kyoung Kim).
+- **Content edits:** HayanMind adds "Tested domain adaptive deployment strategies"; Huawei adds
+  token compression with the OpenZL framework; IBS split into two sub-projects (deep learning
+  models for sleep classification; stochastic modeling for gene expression) with the Samsung
+  collaboration, IoT, and domain adaptation references removed.
+- **Expertise** regrouped into mathematics & statistics / machine learning / engineering.
+- **Competitions moved last**, above the contact line (email · resume · github).
+- **Follow-up pass:** Huawei split into two sub-projects (hybrid attention–Mamba inference;
+  OpenZL token compression); research entries dropped their role titles and now read
+  "Lab — Supervisor: Professor X"; MLOps added to machine learning and systems optimization to
+  engineering; IMO and APMO bolded.
+- **"Currently looking for"** now reads "Roles in AI/ML and performance engineering, quant
+  development, and applied AI."
+- **Typeface:** swapped the default system monospace for IBM Plex Mono (structure) and IBM Plex
+  Sans (prose), loaded per-page via `ext-css` front matter. Lora italic still marks supervisors.
+
+---
+
+## 2026-10-11 — Home page expertise
+
+Removed "CUDA" from the Expertise line in `index.html`; it now ends "Python, C++." No other page touched.
+
+Interests line replaced with "Applied AI, deep learning, mathematical modeling." (was "Geometric and statistical understanding of data, time series AI, quantitative finance, online and offline learning, deep learning.")
+
+---
+
+## 2026-09-16 — Home page headline
+
+`index.html` subtitle changed from "Applied Mathematics | Quantitative Finance | AI systems | C++" to "AI systems | Applied mathematics & Modeling | Quant finance and statistics" (Adnan's own wording, applied verbatim).
+
+---
+
+## 2026-09-16 — Lifenology Lab project link
+
+Added https://lifenologylab.co.kr/project/project3_Connection_9.php everywhere the Samsung Lifenology Lab multi-agent project appears:
+
+- `index.html` — the "Samsung Health × Wellness AI" project name in the Experience paragraph is now a link.
+- `projects.md` — "🔗 View on Lifenology Lab" button at the end of the Current Project card, styled like the existing "View on GitHub" buttons.
+- `resume.md` — "Lifenology Lab" link on the Samsung Lifenology Lab Project item, matching the sibling GitHub links.
+
+Notes: the lab page lists the project as **Aria** (participants Adnan Sadik, Tajrian Samad, Mamnoon Siam; advisor 김현우 교수), while the site calls it "Samsung Health × Wellness AI". The resume's commented-out Samsung work-experience block (`resume.md:60`) was left untouched, so it has no link if re-enabled.
+
+---
+
 ## 2026-09-14 — Home page: light edits to the original text
 
 **Scope:** `index.html` text only. Two earlier, larger rewrites were discarded; the file was restored to the committed original (header, subtitle, front matter, layout, CSS all unchanged) and only these wording edits were made:

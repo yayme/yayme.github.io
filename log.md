@@ -32,6 +32,7 @@ Adnan picked the raw-source look. `index.html` rewritten around it, preview file
   development, and applied AI."
 - **Typeface:** swapped the default system monospace for IBM Plex Mono (structure) and IBM Plex
   Sans (prose), loaded per-page via `ext-css` front matter. Lora italic still marks supervisors.
+- **Research order:** IBS Biomedical Mathematics Lab now listed before KAIST Users & Information Lab.
 
 ---
 

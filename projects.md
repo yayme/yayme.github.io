@@ -83,6 +83,9 @@ mathjax: true
     </div>
   </div>
 </div>
+<a href="https://lifenologylab.co.kr/project/project3_Connection_9.php" class="project-link">
+<span class="link-icon">🔗</span> View on Lifenology Lab
+</a>
 </div>
 
 </div>

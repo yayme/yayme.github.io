@@ -4,6 +4,32 @@ Running record of changes to this repo, newest first. This file is listed under 
 
 ---
 
+## 2026-10-11 — Home page expertise
+
+Removed "CUDA" from the Expertise line in `index.html`; it now ends "Python, C++." No other page touched.
+
+Interests line replaced with "Applied AI, deep learning, mathematical modeling." (was "Geometric and statistical understanding of data, time series AI, quantitative finance, online and offline learning, deep learning.")
+
+---
+
+## 2026-09-16 — Home page headline
+
+`index.html` subtitle changed from "Applied Mathematics | Quantitative Finance | AI systems | C++" to "AI systems | Applied mathematics & Modeling | Quant finance and statistics" (Adnan's own wording, applied verbatim).
+
+---
+
+## 2026-09-16 — Lifenology Lab project link
+
+Added https://lifenologylab.co.kr/project/project3_Connection_9.php everywhere the Samsung Lifenology Lab multi-agent project appears:
+
+- `index.html` — the "Samsung Health × Wellness AI" project name in the Experience paragraph is now a link.
+- `projects.md` — "🔗 View on Lifenology Lab" button at the end of the Current Project card, styled like the existing "View on GitHub" buttons.
+- `resume.md` — "Lifenology Lab" link on the Samsung Lifenology Lab Project item, matching the sibling GitHub links.
+
+Notes: the lab page lists the project as **Aria** (participants Adnan Sadik, Tajrian Samad, Mamnoon Siam; advisor 김현우 교수), while the site calls it "Samsung Health × Wellness AI". The resume's commented-out Samsung work-experience block (`resume.md:60`) was left untouched, so it has no link if re-enabled.
+
+---
+
 ## 2026-09-14 — Home page: light edits to the original text
 
 **Scope:** `index.html` text only. Two earlier, larger rewrites were discarded; the file was restored to the committed original (header, subtitle, front matter, layout, CSS all unchanged) and only these wording edits were made:

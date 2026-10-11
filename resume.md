@@ -146,6 +146,7 @@ keywords: "Adnan Sadik resume, data scientist, machine learning experience, AI r
 </div>
 </div>
 <p>Funded and mentored by Samsung Lifenology Lab. Multi agent AI system transforming wellness guidance from static advice into active personal partnerships. Ingests Samsung Health wearable signals, learns individual patterns, and surfaces interventions that members are most likely to complete and sustain.</p>
+<a href="https://lifenologylab.co.kr/project/project3_Connection_9.php" class="project-link">Lifenology Lab</a>
 </div>
 
 <div class="project-item">

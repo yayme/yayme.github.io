@@ -4,6 +4,37 @@ Running record of changes to this repo, newest first. This file is listed under 
 
 ---
 
+## 2026-10-11 — Home page makeover (markdown-file aesthetic)
+
+Three candidates were built and previewed locally (raw-source, rendered-README, plain-document);
+Adnan picked the raw-source look. `index.html` rewritten around it, preview files removed.
+
+- **Look:** monospace "editor window" card with an `adnan-sadik.md` title bar and faded markdown
+  syntax (`#`, `##`, `-`, `**`). Role lines stay monospace; descriptions use the site body font
+  (Open Sans) and supervisors use Lora italic, so the three levels no longer share one font.
+- **Header:** page title/subtitle front matter dropped, so no "Home" heading and no
+  "AI systems | Applied mathematics..." line. Tagline is now "Mathematics & Computer Science
+  (Double Major) · KAIST".
+- **Experience split** into Industry (HayanMind, Huawei, Samsung Lifenology Lab) and Research
+  (KAIST Users & Information Lab — Professor Alice Oh; IBS Biomedical Mathematics Lab —
+  Professor Jae Kyoung Kim).
+- **Content edits:** HayanMind adds "Tested domain adaptive deployment strategies"; Huawei adds
+  token compression with the OpenZL framework; IBS split into two sub-projects (deep learning
+  models for sleep classification; stochastic modeling for gene expression) with the Samsung
+  collaboration, IoT, and domain adaptation references removed.
+- **Expertise** regrouped into mathematics & statistics / machine learning / engineering.
+- **Competitions moved last**, above the contact line (email · resume · github).
+- **Follow-up pass:** Huawei split into two sub-projects (hybrid attention–Mamba inference;
+  OpenZL token compression); research entries dropped their role titles and now read
+  "Lab — Supervisor: Professor X"; MLOps added to machine learning and systems optimization to
+  engineering; IMO and APMO bolded.
+- **"Currently looking for"** now reads "Roles in AI/ML and performance engineering, quant
+  development, and applied AI."
+- **Typeface:** swapped the default system monospace for IBM Plex Mono (structure) and IBM Plex
+  Sans (prose), loaded per-page via `ext-css` front matter. Lora italic still marks supervisors.
+
+---
+
 ## 2026-10-11 — Home page expertise
 
 Removed "CUDA" from the Expertise line in `index.html`; it now ends "Python, C++." No other page touched.

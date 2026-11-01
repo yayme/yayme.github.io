@@ -4,6 +4,102 @@ Running record of changes to this repo, newest first. This file is listed under 
 
 ---
 
+## 2026-11-01 — Research page: final shape
+
+- Sections: research interests, education, research experience, industry experience. Projects,
+  publications-as-a-section, skills, honors, leadership and other interests are not on this page.
+- Each role carries a one or two line description, no bullets. IBS keeps two separate threads.
+- Wording per Adnan: sleep thread is "self-supervised pre-training for sleep disease classification
+  under limited labels"; "Bengali" dropped from the benchmark description (the BLUCK citation and
+  ACL link stay); HayanMind is framed as open questions about measuring and correcting temporal
+  distribution shift in marked temporal point processes, replacing the protocol detail.
+- Education trimmed to the degree line and coursework — CGPA, Dean's List and scholarships removed.
+- Research interests are comma-separated: applied AI, mathematical modeling, deep learning, marked
+  temporal point processes, online event processing. All four supervisor names are bold.
+
+---
+
+## 2026-11-01 — Research page: three sections, prose style (superseded)
+
+Supersedes the three entries below, all from the same day.
+
+- Sections kept: Education, Research Experience, Industry Experience. Projects, skills, honors,
+  leadership and other interests dropped — they live on the resume page.
+- Publications no longer has its own section; the BLUCK paper is named inside the Users &
+  Information Lab entry with its venue and ACL Anthology link, so it is not lost.
+- Resume bullet stacks rewritten as short prose paragraphs for web reading. The IBS entry keeps
+  its two threads, now introduced by italic lead-ins ("Sleep disease prediction.", "Stochastic
+  modeling in cell dynamics.") rather than sub-headings with bullets. The U&I entry opens with the
+  question the work answers.
+- Layout unchanged from the plain version: no cards or borders, 740px column, uppercase section
+  labels over a hairline rule, dates right-aligned, muted meta line for lab and supervisor.
+- `research.md` is now 132 lines, down from 637 at the start of the day.
+
+---
+
+## 2026-11-01 — Research page: full resume, plain layout (superseded)
+
+Replaces both earlier entries today. `research.md` rewritten (637 → 232 lines).
+
+- Every section of the research-intern resume is now on the page, in resume order: education,
+  research experience (IBS, Users & Information Lab), industry research (HayanMind, Huawei),
+  projects (Samsung Life / LIFENOLOGY), publications, skills, honors, leadership, other interests.
+  Industry entries are presented as research, per Adnan.
+- All boxes removed: no cards, borders, shadows, hover effects, emoji tiles or status badges. Plain
+  760px column, uppercase letter-spaced section labels over a hairline rule, entry heading with the
+  date right-aligned, muted meta line (lab · supervisor), tight bullets.
+- Conventions checked against researcher homepages (karpathy.ai and lilianweng.github.io loaded;
+  Stanford and ethanperez.net refused the connection): date-led entries newest first, advisor named
+  inline, interests as one line rather than tiles, plain text over cards.
+- Page subtitle removed — it repeated the research-interests line directly beneath it.
+
+---
+
+## 2026-11-01 — Research page rebuilt from the research-intern resume PDF (superseded)
+
+Source: `~/Downloads/Adnan_Sadik_Resume_Research_Intern.pdf`. Replaces the same-day edit below.
+
+- Emoji "Research Interests" grid (four icon tiles) removed, along with its CSS; replaced by one
+  line: "Applied AI for mathematical modeling · Deep learning · Marked temporal point processes
+  and online event processing".
+- IBS entry recreated from the resume: Institute for Basic Science / Biomedical Mathematics Group,
+  Research Intern, Dec 2024 – Dec 2025, Professor Jae Kyoung Kim, split under two sub-project
+  headings — multimodal deep learning for sleep disease prediction (CNN/LSTM/ResNet on heart rate
+  and oxygen saturation, self-supervised and hybrid architectures, AUROC 0.60 → 0.80) and
+  stochastic modeling in cell dynamics (non-Markovian delays in birth–death processes, likelihood
+  methods, physics-informed neural networks).
+- Users & Information Lab entry recreated with the resume's wording; publication reference kept.
+- **Data Strategy Lab entry dropped** — it is not in this resume. Flagged for Adnan.
+- New CSS: `.interests-line`, `.subproject-title` (plus dark-mode rules).
+
+Not on the page: HayanMind's marked temporal point process work (the resume files it under
+Industry, though it matches the new research interests) and anything from the private `ar_model`.
+
+---
+
+## 2026-11-01 — Research page updated from the resume repo (superseded by the entry above)
+
+Context pulled from `yayme/yayme`'s README (his current resume) and `yayme/ar_model`'s CLAUDE.md
+(a working agreement, not research content). `research.md` only:
+
+- Subtitle was "Current research in IoT machine Learning and Markovian dynamics" — inaccurate on
+  three counts (no IoT any more, the delays studied are non-Markovian, and none of it is current).
+  Now "Machine learning for physiological time series, stochastic modeling, and LLM evaluation."
+- Section heading "Current Research" → "Research Experience"; the IBS "Ongoing" badge removed.
+- IBS: dates corrected to Dec 2024 – Dec 2025, and the two projects stated properly — sleep
+  disorder classification from multimodal physiological time series with inductive bias design
+  under limited labels, and non-Markovian delays in birth–death processes via likelihood methods
+  and physics-informed neural networks.
+- Users & Information Lab: typo "Informations" fixed, Prof. Alice Oh added as supervisor,
+  chain-of-thought breakdown finding added.
+- Data Strategy Lab: pre/in/post-training bias mitigation in foundation models.
+
+Not added, pending Adnan's call: WorldQuant BRAIN (quant research consultant, current), and
+whether the IBS group should be named "Center for Mathematical and Computational Sciences" as the
+resume has it. `ar_model` work is private and was deliberately left off the public site.
+
+---
+
 ## 2026-10-11 — Home page makeover (markdown-file aesthetic)
 
 Three candidates were built and previewed locally (raw-source, rendered-README, plain-document);

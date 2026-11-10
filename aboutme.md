@@ -14,6 +14,30 @@ layout: page
   
   <div class="events-container">
     <div class="event">
+      <h3>September 2026</h3>
+      <p><strong>Samsung Lifenology Demo Day</strong></p>
+      <ul>
+        <li>Presented the multi-agent wellness system at the Samsung Financial Campus, Seocho, Seoul</li>
+      </ul>
+    </div>
+
+    <div class="event">
+      <h3>June 2026</h3>
+      <p><strong>Started internship at HayanMind</strong></p>
+      <ul>
+        <li>Machine Learning and Forward Deployed Engineer Intern, R&amp;D team</li>
+      </ul>
+    </div>
+
+    <div class="event">
+      <h3>January 2026</h3>
+      <p><strong>Started internship at Huawei</strong></p>
+      <ul>
+        <li>Research and Development Intern, Systems Lab, Hong Kong SAR</li>
+      </ul>
+    </div>
+
+    <div class="event">
       <h3>November 2025</h3>
       <p><strong>BLUCK Paper Accepted</strong></p>
       <ul>

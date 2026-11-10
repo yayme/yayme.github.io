@@ -4,6 +4,24 @@ Running record of changes to this repo, newest first. This file is listed under 
 
 ---
 
+## 2026-11-11 — Education page unpublished, recent events updated
+
+- **Education removed from the website, kept in the repo.** Dropped from `navbar-links` and from
+  `sitemap.xml`, and `education.md` added to `exclude:` in `_config.yml`, so it is no longer built
+  (`/education/` 404s). The file is untouched; re-publishing is a two-line revert.
+- **Recent events** on the About page gained three entries, newest first: September 2026 Samsung
+  Lifenology Demo Day at the Samsung Financial Campus in Seocho, June 2026 HayanMind internship,
+  January 2026 Huawei internship.
+
+**Navbar overlap, still open.** The avatar is absolutely centred while the nav links are right
+aligned, so the links pass underneath it; with seven items they only clear it above ~1285px (fine
+at 1440, "About Me" still ~80px under the avatar at 1250). A fix that moved the avatar into the
+empty brand slot on the left at desktop widths was tried and rejected, and the stylesheet was
+restored byte-for-byte. Remaining options if it comes up again: shrink the avatar, collapse the
+menu into the hamburger below ~1300px, or drop another nav item.
+
+---
+
 ## 2026-11-11 — New blog post: A Loop That Runs on a Person
 
 Adapted `~/samsung_life/blog/loop-on-a-person.html` into `_posts/2026-11-11-loop-on-a-person.md`.

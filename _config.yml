@@ -27,7 +27,6 @@ navbar-links:
   Resume: "resume"
   Canvas: "canvas"
   Projects: "projects"
-  Education: "education"
   Research: "research"
   Blog: "blog"
   # Resources:
@@ -327,6 +326,7 @@ exclude:
   - docs/
   # Kept in the repo but not published: work log, old drafts, prototypes
   - log.md
+  - education.md
   - education_clean.md
   - portfolio.md
   - www-redirect.html

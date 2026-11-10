@@ -4,6 +4,31 @@ Running record of changes to this repo, newest first. This file is listed under 
 
 ---
 
+## 2026-11-11 — New blog post: A Loop That Runs on a Person
+
+Adapted `~/samsung_life/blog/loop-on-a-person.html` into `_posts/2026-11-11-loop-on-a-person.md`.
+The source file was left untouched.
+
+- Standalone page furniture dropped: the kicker, `<h1>`, byline and the three Google font imports
+  (IBM Plex Mono/Sans, Source Serif 4). Title, subtitle, author and date now come from front
+  matter, so the post uses the site's own typography.
+- Body text is verbatim. The custom element styling was kept but recoloured to the site palette
+  and scoped under `.bn`: citation chips, the callout box, blockquote attributions, the mapping
+  table, and a footer note. The unused `.box.principle` / `.box.warn` / `code` rules were dropped.
+- Photo saved as `assets/img/kaist-blossoms.jpg` (415 KB, 1125×844). It is the post thumbnail and
+  sits inline after the opening paragraph with a caption. It was briefly `cover-img`, but the
+  theme renders cover titles in dark text, which was unreadable over this light photo.
+- The opening paragraph sits outside the raw-HTML block so Jekyll can build an excerpt — a post
+  whose content starts with a `<div>` gets an empty one, leaving a blank blog card.
+- Per Adnan after first render: title is "An Agentic Research Loop for Wellness Maxxing", tags are
+  agents/llm/samsung, "at KAIST" dropped from the subtitle, and the footer credit plus book
+  citation replaced by a single "Project page" link (the book is still credited inline).
+- Cut five self-regarding passages: "the part I would defend hardest", the IOI silver medalist
+  name-drop, "which was not guaranteed at all" and the "five best schools in Korea" ranking, "the
+  most interesting part of the method", and the "taught me more than any amount of reading" wrapper.
+
+---
+
 ## 2026-11-01 — Research page: final shape
 
 - Sections: research interests, education, research experience, industry experience. Projects,
